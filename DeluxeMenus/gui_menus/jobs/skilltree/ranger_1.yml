@@ -1,0 +1,1841 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs | Ranger
+open_command:
+  - jobs skilltree ranger
+  - jobs ranger
+register_command: true
+size: 54
+items:
+  payouts:
+    material: RAW_GOLD
+    slot: 5
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    display_name: '&eAções pagas'
+    lore:
+      - '%imc_dark-color_c%Encontre todas as ações que pode'
+      - '%imc_dark-color_c%executar para ser pago através'
+      - '%imc_dark-color_c%deste trabalho.'
+      - ''
+      - '%imc_darkest-color_c%Ações Pagas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Matar'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pescar'
+      - '%imc_dark-color_c% • %imc_text-color_c%Criar'
+      - '%imc_dark-color_c% • %imc_text-color_c%Domar'
+      - '%imc_dark-color_c% • %imc_text-color_c%Aparar'
+      - '%imc_dark-color_c% • %imc_text-color_c%Militar'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Obter informações de pagamentos'
+    click_commands:
+      - '[openguimenu] jobs_payouts_ranger_kill'
+      - '[sound] UI_BUTTON_CLICK'
+  information_joined:
+    material: LEAD
+    slot: 4
+    priority: 1
+    dynamic_amount: '%jobsr_user_jlevel_ranger%'
+    view_requirement:
+      requirements:
+        joined:
+          type: string contains
+          input: '%jobsr_user_isin_ranger%'
+          output: 'True'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    display_name: '&cRanger %imc_f_latin_{jobsr_user_jlevel_ranger}%'
+    lore:
+      - '%imc_darkest-color_c%Status: &a Trabalhando'
+      - '%imc_darkest-color_c%Empregados: %imc_secondary-color_c%%jobsr_totalplayers_ranger%'
+      - ''
+      - '%imc_dark-color_c%Proteja, crie, pesque,'
+      - '%imc_dark-color_c%e caçe animais.'
+      - ''
+      - '%imc_darkest-color_c%Estatísticas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Nível: %imc_primary-color_c%%jobsr_user_jlevel_ranger%%imc_dark-color_c%/%jobsr_user_jmaxlvl_ranger%'
+      - '%imc_dark-color_c% • %imc_text-color_c%Progress:%imc_job-exp-format_c_ %%jobsr_user_jexp_rounded_ranger%%imc_dark-color_c%/%jobsr_user_jmaxexp_ranger%'
+      - ' %imc_job-progress_{jobsr_user_jexpunf_ranger}_{jobsr_user_jmaxexpunf_ranger}%'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Sair'
+    click_commands:
+      - '[player] jobs leave ranger'
+      - '[sound] BLOCK_COMPOSTER_FILL'
+      - '[refresh]'
+  information_maxjobs:
+    material: LEAD
+    slot: 4
+    priority: 2
+    view_requirement:
+      requirements:
+        maxjobs:
+          type: '=='
+          input: '%jobsr_user_joinedjobcount%'
+          output: '%jobsr_maxjobs%'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    display_name: '&cRanger'
+    lore:
+      - '%imc_darkest-color_c%Status: &e Desempregado'
+      - '%imc_darkest-color_c%Empregados: %imc_secondary-color_c%%jobsr_totalplayers_ranger%'
+      - ''
+      - '%imc_dark-color_c%Proteja, crie, pesque,'
+      - '%imc_dark-color_c%e caçe animais.'
+      - ''
+      - '&c✘ Você só pode ter %jobsr_maxjobs% empregos.'
+  information:
+    material: LEAD
+    slot: 4
+    priority: 3
+    display_name: '&cRanger'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Status: &e Desempregado'
+      - '%imc_darkest-color_c%Empregados: %imc_secondary-color_c%%jobsr_totalplayers_ranger%'
+      - ''
+      - '%imc_dark-color_c%Proteja, crie, pesque,'
+      - '%imc_dark-color_c%e caçe animais.'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Participar'
+    click_commands:
+      - '[player] jobs join ranger'
+      - '[sound] ENTITY_VILLAGER_WORK_CARTOGRAPHER'
+      - '[refresh]'
+  level_1_claimed:
+    material: LIME_CANDLE
+    amount: 1
+    slot: 9
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level1
+    display_name: '&aNível 1'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_100}%'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_1_unlocked:
+    material: YELLOW_CANDLE
+    amount: 1
+    slot: 9
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 1
+    display_name: '&eNível 1'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_100}%'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level1'
+      - '[givemoney] %imc_price-modifier_100%'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_1_locked:
+    material: GRAY_CANDLE
+    amount: 1
+    slot: 9
+    priority: 3
+    display_name: '&cNível 1'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_100}%'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_2_claimed:
+    material: LIME_CANDLE
+    amount: 2
+    slot: 18
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level2
+    display_name: '&aNível 2'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_150}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_5% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_2_unlocked:
+    material: YELLOW_CANDLE
+    amount: 2
+    slot: 18
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 2
+    display_name: '&eNível 2'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_150}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_5% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level2'
+      - '[givemoney] %imc_price-modifier_150%'
+      - '[console] jobs editpoints add %player_name% 5'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_2_locked:
+    material: GRAY_CANDLE
+    amount: 2
+    slot: 18
+    priority: 3
+    display_name: '&cNível 2'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_150}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_5% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_3_claimed:
+    material: LIME_CANDLE
+    amount: 3
+    slot: 27
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level3
+    display_name: '&aNível 3'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_exp-format_c_100% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_3_unlocked:
+    material: YELLOW_CANDLE
+    amount: 3
+    slot: 27
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 3
+    display_name: '&eNível 3'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_exp-format_c_100% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level3'
+      - '[givemoney] %imc_price-modifier_200%'
+      - '[console] minecraft:experience add %player_name% 100'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_3_locked:
+    material: GRAY_CANDLE
+    amount: 3
+    slot: 27
+    priority: 3
+    display_name: '&cNível 3'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_exp-format_c_100% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_4_claimed:
+    material: LIME_CANDLE
+    amount: 4
+    slot: 36
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level4
+    display_name: '&aNível 4'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Cana de pesca %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_4_unlocked:
+    material: YELLOW_CANDLE
+    amount: 4
+    slot: 36
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 1
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(1 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 4
+    display_name: '&eNível 4'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Cana de pesca %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level4'
+      - '[givemoney] %imc_price-modifier_300%'
+      - '[console] minecraft:give %player_name% fishing_rod[enchantments={"minecraft:unbreaking":2}] 1'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_4_locked:
+    material: GRAY_CANDLE
+    amount: 4
+    slot: 36
+    priority: 3
+    display_name: '&cNível 4'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Cana de pesca %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_5_claimed:
+    material: LIME_CANDLE
+    amount: 5
+    slot: 37
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level5
+    display_name: '&aNível 5'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_400}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_10% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_5_unlocked:
+    material: YELLOW_CANDLE
+    amount: 5
+    slot: 37
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 5
+    display_name: '&eNível 5'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_400}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_10% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level5'
+      - '[givemoney] %imc_price-modifier_400%'
+      - '[console] jobs editpoints add %player_name% 10'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_5_locked:
+    material: GRAY_CANDLE
+    amount: 5
+    slot: 37
+    priority: 3
+    display_name: '&cNível 5'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_400}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_10% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_6_claimed:
+    material: LIME_CANDLE
+    amount: 6
+    slot: 38
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level6
+    display_name: '&aNível 6'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_550}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_150% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_6_unlocked:
+    material: YELLOW_CANDLE
+    amount: 6
+    slot: 38
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 6
+    display_name: '&eNível 6'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_550}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_150% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level6'
+      - '[givemoney] %imc_price-modifier_550%'
+      - '[console] minecraft:experience add %player_name% 150'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_6_locked:
+    material: GRAY_CANDLE
+    amount: 6
+    slot: 38
+    priority: 3
+    display_name: '&cNível 6'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_550}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_150% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_7_claimed:
+    material: LIME_CANDLE
+    amount: 7
+    slot: 29
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level7
+    display_name: '&aNível 7'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_700}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Bacalhau cru'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_7_unlocked:
+    material: YELLOW_CANDLE
+    amount: 7
+    slot: 29
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 1
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(1 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 7
+    display_name: '&eNível 7'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_700}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Bacalhau cru'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level7'
+      - '[givemoney] %imc_price-modifier_700%'
+      - '[console] minecraft:give %player_name% cod 32'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_7_locked:
+    material: GRAY_CANDLE
+    amount: 7
+    slot: 29
+    priority: 3
+    display_name: '&cNível 7'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_700}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Bacalhau cru'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_8_claimed:
+    material: LIME_CANDLE
+    amount: 8
+    slot: 20
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level8
+    display_name: '&aNível 8'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_850}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_15% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_8_unlocked:
+    material: YELLOW_CANDLE
+    amount: 8
+    slot: 20
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 8
+    display_name: '&eNível 8'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_850}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_15% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level8'
+      - '[givemoney] %imc_price-modifier_850%'
+      - '[console] jobs editpoints add %player_name% 15'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_8_locked:
+    material: GRAY_CANDLE
+    amount: 8
+    slot: 20
+    priority: 3
+    display_name: '&cNível 8'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_850}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_job-point-format_c_15% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_9_claimed:
+    material: LIME_CANDLE
+    amount: 9
+    slot: 11
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level9
+    display_name: '&aNível 9'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1000}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_200% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_9_unlocked:
+    material: YELLOW_CANDLE
+    amount: 9
+    slot: 11
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 9
+    display_name: '&eNível 9'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1000}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_200% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level9'
+      - '[givemoney] %imc_price-modifier_1000%'
+      - '[console] minecraft:experience add %player_name% 200'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_9_locked:
+    material: GRAY_CANDLE
+    amount: 9
+    slot: 11
+    priority: 3
+    display_name: '&cNível 9'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1000}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_200% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_10_claimed:
+    material: LIME_CANDLE
+    amount: 10
+    slot: 12
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level10
+    display_name: '&aNível 10'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Sela'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Corda'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_10_unlocked:
+    material: YELLOW_CANDLE
+    amount: 10
+    slot: 12
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 2
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(2 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 10
+    display_name: '&eNível 10'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Sela'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Corda'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level10'
+      - '[givemoney] %imc_price-modifier_1200%'
+      - '[console] minecraft:give %player_name% saddle 1'
+      - '[console] minecraft:give %player_name% lead 1'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_10_locked:
+    material: GRAY_CANDLE
+    amount: 10
+    slot: 12
+    priority: 3
+    display_name: '&cNível 10'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Sela'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Corda'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_11_claimed:
+    material: LIME_CANDLE
+    amount: 11
+    slot: 13
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level11
+    display_name: '&aNível 11'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1450}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_20% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_11_unlocked:
+    material: YELLOW_CANDLE
+    amount: 11
+    slot: 13
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 11
+    display_name: '&eNível 11'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1450}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_20% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level11'
+      - '[givemoney] %imc_price-modifier_1450%'
+      - '[console] jobs editpoints add %player_name% 20'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_11_locked:
+    material: GRAY_CANDLE
+    amount: 11
+    slot: 13
+    priority: 3
+    display_name: '&cNível 11'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1450}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_20% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_12_claimed:
+    material: LIME_CANDLE
+    amount: 12
+    slot: 22
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level12
+    display_name: '&aNível 12'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1700}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_250% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_12_unlocked:
+    material: YELLOW_CANDLE
+    amount: 12
+    slot: 22
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 12
+    display_name: '&eNível 12'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1700}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_250% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level12'
+      - '[givemoney] %imc_price-modifier_1700%'
+      - '[console] minecraft:experience add %player_name% 250'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_12_locked:
+    material: GRAY_CANDLE
+    amount: 12
+    slot: 22
+    priority: 3
+    display_name: '&cNível 12'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_1700}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_250% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_13_claimed:
+    material: LIME_CANDLE
+    amount: 13
+    slot: 31
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level13
+    display_name: '&aNível 13'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2000}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Flecha'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Arco %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_13_unlocked:
+    material: YELLOW_CANDLE
+    amount: 13
+    slot: 31
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 2
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(2 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 13
+    display_name: '&eNível 13'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2000}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Flecha'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Arco %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level13'
+      - '[givemoney] %imc_price-modifier_2000%'
+      - '[console] minecraft:give %player_name% arrow 32'
+      - '[console] minecraft:give %player_name% bow[enchantments={"minecraft:unbreaking":2}] 1'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_13_locked:
+    material: GRAY_CANDLE
+    amount: 13
+    slot: 31
+    priority: 3
+    display_name: '&cNível 13'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2000}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%32x Flecha'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Arco %imc_dark-color_c%(Inquebrável II)'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_14_claimed:
+    material: LIME_CANDLE
+    amount: 14
+    slot: 40
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level14
+    display_name: '&aNível 14'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2400}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_25% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_14_unlocked:
+    material: YELLOW_CANDLE
+    amount: 14
+    slot: 40
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 14
+    display_name: '&eNível 14'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2400}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_25% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level14'
+      - '[givemoney] %imc_price-modifier_2400%'
+      - '[console] jobs editpoints add %player_name% 25'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_14_locked:
+    material: GRAY_CANDLE
+    amount: 14
+    slot: 40
+    priority: 3
+    display_name: '&cNível 14'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2400}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_25% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_15_claimed:
+    material: LIME_CANDLE
+    amount: 15
+    slot: 41
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level15
+    display_name: '&aNível 15'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2850}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_300% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_15_unlocked:
+    material: YELLOW_CANDLE
+    amount: 15
+    slot: 41
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 15
+    display_name: '&eNível 15'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2850}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_300% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level15'
+      - '[givemoney] %imc_price-modifier_2850%'
+      - '[console] minecraft:experience add %player_name% 300'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_15_locked:
+    material: GRAY_CANDLE
+    amount: 15
+    slot: 41
+    priority: 3
+    display_name: '&cNível 15'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_2850}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_300% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_16_claimed:
+    material: LIME_CANDLE
+    amount: 16
+    slot: 42
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level16
+    display_name: '&aNível 16'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Etiqueta'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Cenoura dourada'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_16_unlocked:
+    material: YELLOW_CANDLE
+    amount: 16
+    slot: 42
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 2
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(2 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 16
+    display_name: '&eNível 16'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Etiqueta'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Cenoura dourada'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level16'
+      - '[givemoney] %imc_price-modifier_3300%'
+      - '[console] minecraft:give %player_name% name_tag 1'
+      - '[console] minecraft:give %player_name% golden_carrot 16'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_16_locked:
+    material: GRAY_CANDLE
+    amount: 16
+    slot: 42
+    priority: 3
+    display_name: '&cNível 16'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3300}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%1x Etiqueta'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Cenoura dourada'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_17_claimed:
+    material: LIME_CANDLE
+    amount: 17
+    slot: 33
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level17
+    display_name: '&aNível 17'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3900}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_30% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_17_unlocked:
+    material: YELLOW_CANDLE
+    amount: 17
+    slot: 33
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 17
+    display_name: '&eNível 17'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3900}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_30% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level17'
+      - '[givemoney] %imc_price-modifier_3900%'
+      - '[console] jobs editpoints add %player_name% 30'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_17_locked:
+    material: GRAY_CANDLE
+    amount: 17
+    slot: 33
+    priority: 3
+    display_name: '&cNível 17'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_3900}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_30% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_18_claimed:
+    material: LIME_CANDLE
+    amount: 18
+    slot: 24
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level18
+    display_name: '&aNível 18'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_4600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_400% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_18_unlocked:
+    material: YELLOW_CANDLE
+    amount: 18
+    slot: 24
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 18
+    display_name: '&eNível 18'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_4600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_400% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level18'
+      - '[givemoney] %imc_price-modifier_4600%'
+      - '[console] minecraft:experience add %player_name% 400'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_18_locked:
+    material: GRAY_CANDLE
+    amount: 18
+    slot: 24
+    priority: 3
+    display_name: '&cNível 18'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_4600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_400% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_19_claimed:
+    material: LIME_CANDLE
+    amount: 19
+    slot: 15
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level19
+    display_name: '&aNível 19'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_5200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Couro'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Lã branca'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_19_unlocked:
+    material: YELLOW_CANDLE
+    amount: 19
+    slot: 15
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 2
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(2 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 19
+    display_name: '&eNível 19'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_5200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Couro'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Lã branca'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level19'
+      - '[givemoney] %imc_price-modifier_5200%'
+      - '[console] minecraft:give %player_name% leather 16'
+      - '[console] minecraft:give %player_name% white_wool 16'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_19_locked:
+    material: GRAY_CANDLE
+    amount: 19
+    slot: 15
+    priority: 3
+    display_name: '&cNível 19'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_5200}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Couro'
+      - '%imc_dark-color_c% • %imc_text-color_c%16x Lã branca'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_20_claimed:
+    material: LIME_CANDLE
+    amount: 20
+    slot: 16
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level20
+    display_name: '&aNível 20'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6000}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_35% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_20_unlocked:
+    material: YELLOW_CANDLE
+    amount: 20
+    slot: 16
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 20
+    display_name: '&eNível 20'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6000}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_35% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level20'
+      - '[givemoney] %imc_price-modifier_6000%'
+      - '[console] jobs editpoints add %player_name% 35'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_20_locked:
+    material: GRAY_CANDLE
+    amount: 20
+    slot: 16
+    priority: 3
+    display_name: '&cNível 20'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6000}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_35% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_21_claimed:
+    material: LIME_CANDLE
+    amount: 21
+    slot: 17
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level21
+    display_name: '&aNível 21'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6900}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_500% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_21_unlocked:
+    material: YELLOW_CANDLE
+    amount: 21
+    slot: 17
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 21
+    display_name: '&eNível 21'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6900}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_500% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level21'
+      - '[givemoney] %imc_price-modifier_6900%'
+      - '[console] minecraft:experience add %player_name% 500'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_21_locked:
+    material: GRAY_CANDLE
+    amount: 21
+    slot: 17
+    priority: 3
+    display_name: '&cNível 21'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_6900}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_500% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_22_claimed:
+    material: LIME_CANDLE
+    amount: 22
+    slot: 26
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level22
+    display_name: '&aNível 22'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_7800}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Salmão assado'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Flecha'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_22_unlocked:
+    material: YELLOW_CANDLE
+    amount: 22
+    slot: 26
+    priority: 2
+    click_requirement:
+      requirements:
+        empty_slots:
+          type: '>='
+          input: '%player_empty_slots%'
+          output: 2
+      deny_commands:
+        - '[message] $<p:error-prefix> Você não tem espaço no inventário. <p:dark-color>(2 espaços)</p>'
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 22
+    display_name: '&eNível 22'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_7800}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Salmão assado'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Flecha'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level22'
+      - '[givemoney] %imc_price-modifier_7800%'
+      - '[console] minecraft:give %player_name% cooked_salmon 64'
+      - '[console] minecraft:give %player_name% arrow 64'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_22_locked:
+    material: GRAY_CANDLE
+    amount: 22
+    slot: 26
+    priority: 3
+    display_name: '&cNível 22'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_7800}%'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Salmão assado'
+      - '%imc_dark-color_c% • %imc_text-color_c%64x Flecha'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_23_claimed:
+    material: LIME_CANDLE
+    amount: 23
+    slot: 35
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level23
+    display_name: '&aNível 23'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_8700}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_40% %imc_text-color_c%Pontos'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_23_unlocked:
+    material: YELLOW_CANDLE
+    amount: 23
+    slot: 35
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 23
+    display_name: '&eNível 23'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_8700}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_40% %imc_text-color_c%Pontos'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level23'
+      - '[givemoney] %imc_price-modifier_8700%'
+      - '[console] jobs editpoints add %player_name% 40'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_23_locked:
+    material: GRAY_CANDLE
+    amount: 23
+    slot: 35
+    priority: 3
+    display_name: '&cNível 23'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_8700}%'
+      - '%imc_dark-color_c% • %imc_job-point-format_c_40% %imc_text-color_c%Pontos'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  level_24_claimed:
+    material: LIME_CANDLE
+    amount: 24
+    slot: 44
+    priority: 1
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: jobs.ranger.level24
+    display_name: '&aNível 24'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_9600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_600% %imc_text-color_c%Experiências'
+      - ''
+      - '&a✔ Recompensa recolhida.'
+  level_24_unlocked:
+    material: YELLOW_CANDLE
+    amount: 24
+    slot: 44
+    priority: 2
+    view_requirement:
+      requirements:
+        level:
+          type: '>='
+          input: '%jobsr_user_jlevel_ranger%'
+          output: 24
+    display_name: '&eNível 24'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_9600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_600% %imc_text-color_c%Experiências'
+      - ''
+      - '%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Reivindicar Recompensas'
+    click_commands:
+      - '[givepermission] jobs.ranger.level24'
+      - '[givemoney] %imc_price-modifier_9600%'
+      - '[console] minecraft:experience add %player_name% 600'
+      - '[sound] BLOCK_AMETHYST_BLOCK_RESONATE'
+      - '[refresh]'
+  level_24_locked:
+    material: GRAY_CANDLE
+    amount: 24
+    slot: 44
+    priority: 3
+    display_name: '&cNível 24'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Ganhe mais experiência para subir de nível'
+      - '%imc_dark-color_c%e ganhe mais recompensas.'
+      - ''
+      - '%imc_darkest-color_c%Recompensas:'
+      - '%imc_dark-color_c% • %imc_text-color_c%+%imc_eco-format_c_{imc_price-modifier_9600}%'
+      - '%imc_dark-color_c% • %imc_exp-format_c_600% %imc_text-color_c%Experiências'
+      - ''
+      - '&c✘ Você precisa subir de nível para reivindicar esta recompensa.'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_main'
+      - '[sound] UI_BUTTON_CLICK'
+  next_page:
+    material: ARROW
+    slot: 50
+    display_name: '%imc_primary-color_c%Próxima Página'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_ranger_2'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+  background:
+    material: RED_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

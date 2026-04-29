@@ -1,0 +1,1412 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+ranger:
+  fullname: "Ranger"
+  shortname: R
+  description: 'Proteja, crie, pesque, e caçe animais.'
+  ChatColour: RED
+  BossBarColour: RED
+  chat-display: shortfull
+  max-level: 48
+  vip-max-level: 250
+  leveling-progression-equation: 13*(joblevel)+(joblevel*joblevel*50)
+  income-progression-equation: baseincome+(baseincome*(joblevel-2)*0.01)-((baseincome+(baseincome*(joblevel-2)*0.01))
+    * ((numjobs-1)*0.01))
+  points-progression-equation: basepoints+(basepoints*(joblevel-2)*0.01)-((basepoints+(basepoints*(joblevel-2)*0.01))
+    * ((numjobs-1)*0.01))
+  experience-progression-equation: baseexperience-(baseexperience*((numjobs-1) *0.01))
+  rejoinCooldown: 5
+  maxDailyQuests: 1
+  Quests:
+    '1':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;wolf;4
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '2':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;horse;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '3':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;donkey;2
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '4':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;mule;2
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '5':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;cat;2
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '6':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;parrot;1
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '7':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Tame;llama;1
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '8':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;horse;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '9':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;sheep;5
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '10':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;pig;5
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '11':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;cow;5
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '12':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;rabbit;5
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '13':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;chicken;5
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '14':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;goat;3
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '15':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;turtle;2
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '16':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;donkey;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '17':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;llama;2
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '18':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;wolf;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '19':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;ocelot;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '20':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;cat;2
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '21':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;panda;2
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '22':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Breed;fox;2
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '23':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;White;32
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '24':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Red;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '25':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Orange;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '26':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Yellow;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '27':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Green;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '28':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Blue;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '29':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Light_blue;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '30':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Magenta;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '31':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Pink;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '32':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Light_gray;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '33':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Black;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '34':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Brown;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '35':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Purple;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '36':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Cyan;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '37':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Gray;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '38':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Shear;Lime;24
+      RewardAmount: 125
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_125%'
+    '39':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Milk;Cow;8
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '40':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Milk;Cow;16
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '41':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Milk;Cow;24
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '42':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Milk;Cow;32
+      RewardAmount: 200
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_200%'  
+    '43':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Chicken;25
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '44':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Cow;25
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '45':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Pig;25
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '46':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Sheep;25
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '47':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Rabbit;25
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '48':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Skeleton;50
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '49':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Zombie;50
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '50':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Spider;50
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '51':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Creeper;25
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '52':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Blaze;25
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '53':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Piglin;25
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '54':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Phantom;25
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '55':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Kill;Enderman;15
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '56':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Chicken;75
+      RewardCommands:
+      - eco give [playerName] 250
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '57':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Cow;75
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '58':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Pig;75
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '59':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Sheep;75
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '60':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Rabbit;75
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '61':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Skeleton;100
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '62':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Zombie;100
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '63':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Spider;100
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '64':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Creeper;50
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '65':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Blaze;50
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '66':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Kill;Piglin;50
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '67':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Kill;Phantom;50
+      RewardAmount: 300
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_300%'
+    '68':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Kill;Enderman;30
+      RewardAmount: 300
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_300%'
+    '69':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Fish;cod;16
+      RewardAmount: 100
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_100%'
+    '70':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Fish;salmon;16
+      RewardAmount: 150
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_150%'
+    '71':
+      Name: "Ranger - Fácil"
+      Objectives:
+      - Fish;tropical_fish;16
+      RewardAmount: 175
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_175%'
+    '72':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Fish;pufferfish;16
+      RewardAmount: 200
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_200%'
+    '73':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Fish;cod;48
+      RewardAmount: 225 
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_225%'
+    '74':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Fish;salmon;32
+      RewardAmount: 250
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_250%'
+    '75':
+      Name: "Ranger - Médio"
+      Objectives:
+      - Fish;tropical_fish;32
+      RewardAmount: 275
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_275%'
+    '76':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Fish;pufferfish;32
+      RewardAmount: 300
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_300%'
+    '77':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Fish;cod;96
+      RewardAmount: 350
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_350%'
+    '78':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Fish;salmon;64
+      RewardAmount: 375
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_375%'
+    '79':
+      Name: "Ranger -  Difícil"
+      Objectives:
+      - Fish;tropical_fish;64
+      RewardAmount: 375
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_375%'
+    '80':
+      Name: "Ranger - Impossible"
+      Objectives:
+      - Fish;pufferfish;64
+      RewardAmount: 400
+      RewardCommands:
+      - itsmyconfig message [playerName] <p:prefix> Você completou sua missão diária de trabalho e recebeu sua recompensa. <click:run_command:'/jobs quests'><p:primary-color>[✎ Ver Missões]</p></click><sound:entity.villager.work_toolsmith>
+      RewardDesc:
+      - "%imc_dark-color_c%Complete a seguinte missão"
+      - "%imc_dark-color_c%e você será recompensado."
+      - ''
+      - '%imc_text-color_c% • Recompensas: %imc_eco-format_c_400%'
+  Gui:
+    ItemStack: GOLDEN_SWORD
+  Kill:
+    Chicken:
+      income: 2.5
+      points: 0.5
+      experience: 1.5
+    Cow:
+      income: 2.75
+      points: 0.6
+      experience: 1.75
+    mooshroom:
+      income: 4.0
+      points: 1.5
+      experience: 3.50
+    Pig:
+      income: 2.5
+      points: 0.5
+      experience: 1.5
+    Sheep:
+      income: 2.75
+      points: 0.6
+      experience: 1.75
+    Wolf:
+      income: 0.0
+      points: 0.0
+      experience: 0.0
+    Creeper:
+      income: 1.0
+      points: 0.25
+      experience: 0.63
+    Skeleton:
+      income: 0.88
+      points: 0.19
+      experience: 0.5
+    WITHER_SKELETON:
+      income: 1.25
+      points: 0.38
+      experience: 1.38
+    STRAY:
+      income: 0.88
+      points: 0.19
+      experience: 0.5
+    Spider:
+      income: 0.88
+      points: 0.19
+      experience: 0.5
+    CAVE_SPIDER:
+      income: 0.88
+      points: 0.19
+      experience: 0.5
+    Zombie:
+      income: 0.75
+      points: 0.16
+      experience: 0.44
+    DROWNED:
+      income: 0.75
+      points: 0.16
+      experience: 0.44
+    HUSK:
+      income: 0.75
+      points: 0.16
+      experience: 0.44
+    BLAZE:
+      income: 1.0
+      points: 0.44
+      experience: 1.13
+    ENDERMAN:
+      income: 0.05
+      points: 0.05
+      experience: 0.05
+    GHAST:
+      income: 3.13
+      points: 1.0
+      experience: 2.5
+    IRON_GOLEM:
+      income: 2.5
+      points: 0.75
+      experience: 1.63
+    PIGLIN:
+      income: 0.75
+      points: 0.13
+      experience: 0.69
+    SILVERFISH:
+      income: 0.75
+      points: 0.16
+      experience: 0.44
+    SNOWMAN:
+      income: 1.5
+      points: 0.75
+      experience: 1.0
+    SQUID:
+      income: 1.0
+      points: 0.5
+      experience: 0.75
+    GLOW_SQUID:
+      income: 1.5
+      points: 0.4
+      experience: 2.0
+    RABBIT:
+      income: 2.5
+      points: 0.5
+      experience: 1.5
+    GUARDIAN:
+      income: 2.0
+      points: 0.5
+      experience: 2.0
+    ELDER_GUARDIAN:
+      income: 62.5
+      points: 7.5
+      experience: 37.5
+    SHULKER:
+      income: 4.5
+      points: 1.5
+      experience: 2.5
+    PHANTOM:
+      income: 3.75
+      points: 0.5
+      experience: 2.25
+    WITHER:
+      income: 125.0
+      points: 15
+      experience: 75.0
+    ENDER_DRAGON:
+      income: 500.0
+      points: 40.0
+      experience: 250.0
+    Player:
+      income: 1.5
+      points: 0.25
+      experience: 0.75
+    HORSE:
+      income: 3.25
+      points: 0.8
+      experience: 2.5
+    DONKEY:
+      income: 3.25
+      points: 0.8
+      experience: 2.5
+    MULE:
+      income: 3.25
+      points: 0.8
+      experience: 2.5
+    COD:
+      income: 1.0
+      points: 0.2
+      experience: 1.0
+    SALMON:
+      income: 1.5
+      points: 0.4
+      experience: 2.0
+    TURTLE:
+      income: 2.0
+      points: 0.6
+      experience: 2.5
+    STRIDER:
+      income: 3.5
+      points: 1.0
+      experience: 2.75
+    ENDERMITE:
+      income: 3.0
+      points: 0.65
+      experience: 1.75
+    EVOKER:
+      income: 4.0
+      points: 0.9
+      experience: 3.75
+    HOGLIN:
+      income: 9.0
+      points: 2.5
+      experience: 6
+    ZOGLIN:
+      income: 10.0
+      points: 3.0
+      experience: 6.5
+    MAGMA_CUBE:
+      income: 3.25
+      points: 0.7
+      experience: 2.25
+    SLIME:
+      income: 3.0
+      points: 0.65
+      experience: 2.0
+    PILLAGER:
+      income: 3.5
+      points: 0.8
+      experience: 3.0
+    RAVAGER:
+      income: 12.5
+      points: 3.5
+      experience: 8.0
+    VEX:
+      income: 2.5
+      points: 0.6
+      experience: 2.75
+    VINDICATOR:
+      income: 3.5
+      points: 0.8
+      experience: 3.0
+    WITCH:
+      income: 3.75
+      points: 0.85
+      experience: 4.0
+    Goat:
+      income: 2.75
+      points: 0.6
+      experience: 1.75
+    FROG:
+      income: 1.75
+      points: 0.3
+      experience: 2.5
+    CAMEL:
+      income: 3.50
+      points: 0.9
+      experience: 2.75
+    SNIFFER:
+      income: 2.5
+      points: 0.7
+      experience: 3.0
+    BOGGED:
+      income: 2.5
+      points: 0.7
+      experience: 3.0
+    BREEZE:
+      income: 2.5
+      points: 0.7
+      experience: 3.0
+  Tame:
+    Wolf:
+      income: 3.5
+      points: 0.8
+      experience: 4.0
+    Horse:
+      income: 3.5
+      points: 0.8
+      experience: 4.0
+    Donkey:
+      income: 3.5
+      points: 0.8
+      experience: 4.0
+    Mule:
+      income: 3.5
+      points: 0.8
+      experience: 4.0            
+    Cat:
+      income: 3.0
+      points: 0.5
+      experience: 3.5      
+    Parrot:
+      income: 3.0
+      points: 0.5
+      experience: 3.5
+    Ocelot:
+      income: 3.0
+      points: 0.5
+      experience: 3.5
+    Llama:
+      income: 3.5
+      points: 0.8
+      experience: 4.0
+    Allay:
+      income: 4.0
+      points: 0.6
+      experience: 5.0
+  Breed:
+    Horse:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Donkey:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Sheep:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    Cow:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    mushroom_cow:
+      income: 2.75
+      points: 0.4
+      experience: 3.0
+    Pig:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    Chicken:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    Wolf:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Ocelot:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Rabbit:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    Llama:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Turtle:
+      income: 1.75
+      points: 0.35
+      experience: 2.25
+    Goat:
+      income: 0.8
+      points: 0.15
+      experience: 1.5
+    Cat:
+      income: 1.5
+      points: 0.3
+      experience: 2.0
+    Panda:
+      income: 2.0
+      points: 0.35
+      experience: 2.50
+    Fox:
+      income: 2.0
+      points: 0.35
+      experience: 2.75
+    Bee:
+      income: 1.50
+      points: 0.25
+      experience: 2.0
+    Frog:
+      income: 1.25
+      points: 0.15
+      experience: 2.5                                 
+  Shear:
+    Red:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Orange:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Yellow:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Green:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Blue:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Light_Blue:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Magenta:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Pink:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    White:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Light_Gray:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Black:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Brown:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Purple:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Cyan:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Gray:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+    Lime:
+      income: 0.2
+      points: 0.05
+      experience: 0.3
+  Milk:
+    Cow:
+      income: 0.15
+      points: 0.05
+      experience: 0.3
+    mooshroom:
+      income: 0.15
+      points: 0.05
+      experience: 0.3
+  Fish:
+    cod:
+      income: 0.6
+      points: 0.1
+      experience: 0.5
+    salmon:
+      income: 1.75
+      points: 0.35
+      experience: 1.25
+    tropical_fish:
+      income: 2.5
+      points: 0.6
+      experience: 2.0
+    pufferfish:
+      income: 2.0
+      points: 0.35
+      experience: 1.5

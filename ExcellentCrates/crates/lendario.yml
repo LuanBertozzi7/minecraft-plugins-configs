@@ -1,0 +1,865 @@
+Name: Baú Lendário
+Permission_Required: false
+Block:
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: default
+    Y_Offset: 0.0
+  Effect:
+    Model: VORTEX
+    Particle:
+      Name: ELECTRIC_SPARK
+  Positions: []
+Milestones:
+  Repeatable: false
+Rewards:
+  List:
+    '15':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_name":"Arco","minecraft:enchantments":{"minecraft:flame":1,"minecraft:infinity":1,"minecraft:mending":1,"minecraft:piercing":4,"minecraft:power":5,"minecraft:unbreaking":3},"minecraft:repair_cost":15},count:1,id:"minecraft:bow"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":"Arco","minecraft:enchantments":{"minecraft:flame":1,"minecraft:infinity":1,"minecraft:mending":1,"minecraft:piercing":4,"minecraft:power":5,"minecraft:unbreaking":3},"minecraft:repair_cost":15},count:1,id:"minecraft:bow"}'
+            DataVersion: 4440
+    '1':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:beacon"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:beacon"}'
+            DataVersion: 4440
+    '16':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:10,id:"minecraft:diamond_block"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:10,id:"minecraft:diamond_block"}'
+            DataVersion: 4440
+    '17':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:10,id:"minecraft:emerald_block"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:10,id:"minecraft:emerald_block"}'
+            DataVersion: 4440
+    '18':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:64,id:"minecraft:iron_block"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:64,id:"minecraft:iron_block"}'
+            DataVersion: 4440
+    '24':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:2,id:"minecraft:enchanted_golden_apple"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:2,id:"minecraft:enchanted_golden_apple"}'
+            DataVersion: 4440
+    '5':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:3,id:"minecraft:netherite_ingot"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:3,id:"minecraft:netherite_ingot"}'
+            DataVersion: 4440
+    '13':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:enchantments":{"minecraft:mending":1,"minecraft:protection":4,"minecraft:swift_sneak":3,"minecraft:thorns":3,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_leggings"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:enchantments":{"minecraft:mending":1,"minecraft:protection":4,"minecraft:swift_sneak":3,"minecraft:thorns":3,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_leggings"}'
+            DataVersion: 4440
+    '12':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:enchantments":{"minecraft:efficiency":5,"minecraft:fortune":3,"minecraft:mending":1,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_pickaxe"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:enchantments":{"minecraft:efficiency":5,"minecraft:fortune":3,"minecraft:mending":1,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_pickaxe"}'
+            DataVersion: 4440
+    '10':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:enchantments":{"minecraft:fire_aspect":2,"minecraft:knockback":2,"minecraft:mending":1,"minecraft:sharpness":5,"minecraft:sweeping_edge":3,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_sword"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:enchantments":{"minecraft:fire_aspect":2,"minecraft:knockback":2,"minecraft:mending":1,"minecraft:sharpness":5,"minecraft:sweeping_edge":3,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_sword"}'
+            DataVersion: 4440
+    '9':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"Free_Money","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"$ ",underlined:0b},{bold:1b,color:"yellow",italic:0b,text:"5000 "},{bold:0b,color:"gold",italic:0b,text:"$"}],text:""},"minecraft:enchantments":{"minecraft:feather_falling":6},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:1b,text:"-----------------------",underlined:0b}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"➤
+            ",underlined:0b},{color:"yellow",italic:1b,text:"Click + sneak to execute me !"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"gray",italic:1b,obfuscated:0b,strikethrough:0b,text:"Info:",underlined:0b}],text:""},{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"» ",underlined:0b},{color:"yellow",italic:0b,text:"Receive 5000$"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:1b,text:"-----------------------",underlined:0b}],text:""}],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19"}]},"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"Free_Money","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"$ ",underlined:0b},{bold:1b,color:"yellow",italic:0b,text:"5000 "},{bold:0b,color:"gold",italic:0b,text:"$"}],text:""},"minecraft:enchantments":{"minecraft:feather_falling":6},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:1b,text:"-----------------------",underlined:0b}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"➤
+              ",underlined:0b},{color:"yellow",italic:1b,text:"Click + sneak to execute me !"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"gray",italic:1b,obfuscated:0b,strikethrough:0b,text:"Info:",underlined:0b}],text:""},{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"» ",underlined:0b},{color:"yellow",italic:0b,text:"Receive 5000$"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:1b,text:"-----------------------",underlined:0b}],text:""}],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19"}]},"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4440
+    '6':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"cmilib:storedbottledexp":674600}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"|   BottledExp   |",underlined:0b}],text:""},"minecraft:lore":[{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Stored Exp: ",underlined:0b},{color:"gold",italic:0b,text:"674600"}],text:""}]},count:1,id:"minecraft:experience_bottle"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"cmilib:storedbottledexp":674600}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"|   BottledExp   |",underlined:0b}],text:""},"minecraft:lore":[{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Stored Exp: ",underlined:0b},{color:"gold",italic:0b,text:"674600"}],text:""}]},count:1,id:"minecraft:experience_bottle"}'
+            DataVersion: 4440
+    '23':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"cmilib:storedbottledexp":602600}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"|   BottledExp   |",underlined:0b}],text:""},"minecraft:lore":[{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Stored Exp: ",underlined:0b},{color:"gold",italic:0b,text:"602600"}],text:""}]},count:1,id:"minecraft:experience_bottle"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"cmilib:storedbottledexp":602600}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"|   BottledExp   |",underlined:0b}],text:""},"minecraft:lore":[{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Stored Exp: ",underlined:0b},{color:"gold",italic:0b,text:"602600"}],text:""}]},count:1,id:"minecraft:experience_bottle"}'
+            DataVersion: 4440
+    '19':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"brewery:brewdata":[B;86B,1B,0B,0B,10B,45B,3B,0B,0B,0B,0B,0B,5B,86B,111B,100B,107B,97B,0B,0B,0B,15B,1B,0B,2B,83B,73B,0B,6B,80B,79B,84B,65B,84B,79B,0B,0B,0B,10B]}},"minecraft:custom_name":{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"Russian Vodka",underlined:0b}],text:""},"minecraft:lore":[{extra:["§u"],text:""},{extra:["§s",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⭑⭑⭑⭑⭑",underlined:0b}],text:""},{extra:["§p",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"3-vezes
+            Destilado",underlined:0b}],text:""}],"minecraft:potion_contents":{custom_color:16777215},"minecraft:tooltip_display":{hidden_components:["minecraft:potion_contents"]}},count:1,id:"minecraft:potion"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: common
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"brewery:brewdata":[B;86B,1B,0B,0B,10B,45B,3B,0B,0B,0B,0B,0B,5B,86B,111B,100B,107B,97B,0B,0B,0B,15B,1B,0B,2B,83B,73B,0B,6B,80B,79B,84B,65B,84B,79B,0B,0B,0B,10B]}},"minecraft:custom_name":{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"Russian Vodka",underlined:0b}],text:""},"minecraft:lore":[{extra:["§u"],text:""},{extra:["§s",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⭑⭑⭑⭑⭑",underlined:0b}],text:""},{extra:["§p",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"3-vezes
+              Destilado",underlined:0b}],text:""}],"minecraft:potion_contents":{custom_color:16777215},"minecraft:tooltip_display":{hidden_components:["minecraft:potion_contents"]}},count:1,id:"minecraft:potion"}'
+            DataVersion: 4440
+    '2':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:elytra"}'
+          DataVersion: 4440
+      Weight: 10.0
+      Rarity: rare
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:elytra"}'
+            DataVersion: 4440
+    '21':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:custom_name":"Tridente","minecraft:enchantments":{"minecraft:channeling":1,"minecraft:impaling":5,"minecraft:loyalty":3,"minecraft:mending":1,"minecraft:unbreaking":3},"minecraft:repair_cost":7},count:1,id:"minecraft:trident"}'
+          DataVersion: 4440
+      Weight: 15.0
+      Rarity: legendary
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":"Tridente","minecraft:enchantments":{"minecraft:channeling":1,"minecraft:impaling":5,"minecraft:loyalty":3,"minecraft:mending":1,"minecraft:unbreaking":3},"minecraft:repair_cost":7},count:1,id:"minecraft:trident"}'
+            DataVersion: 4440
+    '11':
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:enchantments":{"minecraft:efficiency":5,"minecraft:mending":1,"minecraft:sharpness":5,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_axe"}'
+          DataVersion: 4440
+      Weight: 10.0
+      Rarity: legendary
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:enchantments":{"minecraft:efficiency":5,"minecraft:mending":1,"minecraft:sharpness":5,"minecraft:unbreaking":3}},count:1,id:"minecraft:netherite_axe"}'
+            DataVersion: 4440
+    ominous_bottle:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:ominous_bottle_amplifier":4},count:1,id:"minecraft:ominous_bottle"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:ominous_bottle_amplifier":4},count:1,id:"minecraft:ominous_bottle"}'
+            DataVersion: 4440
+    wind_charge:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:32,id:"minecraft:wind_charge"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:32,id:"minecraft:wind_charge"}'
+            DataVersion: 4440
+    wither_skeleton_skull:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:3,id:"minecraft:wither_skeleton_skull"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:3,id:"minecraft:wither_skeleton_skull"}'
+            DataVersion: 4440
+    enchanted_book:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:stored_enchantments":{"minecraft:density":5}},count:1,id:"minecraft:enchanted_book"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:stored_enchantments":{"minecraft:density":5}},count:1,id:"minecraft:enchanted_book"}'
+            DataVersion: 4440
+    enchanted_book1:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:stored_enchantments":{"minecraft:breach":4}},count:1,id:"minecraft:enchanted_book"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:stored_enchantments":{"minecraft:breach":4}},count:1,id:"minecraft:enchanted_book"}'
+            DataVersion: 4440
+    smithing_template:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:wayfinder_armor_trim_smithing_template"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:wayfinder_armor_trim_smithing_template"}'
+            DataVersion: 4440
+    smithing_template1:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:raiser_armor_trim_smithing_template"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:raiser_armor_trim_smithing_template"}'
+            DataVersion: 4440
+    smithing_template2:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:ward_armor_trim_smithing_template"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:ward_armor_trim_smithing_template"}'
+            DataVersion: 4440
+    music_disc_precipice:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:music_disc_precipice"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:music_disc_precipice"}'
+            DataVersion: 4440
+    music_disc_creator_music_box:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:music_disc_creator_music_box"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:music_disc_creator_music_box"}'
+            DataVersion: 4440
+    smithing_template3:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:host_armor_trim_smithing_template"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:host_armor_trim_smithing_template"}'
+            DataVersion: 4440
+    end_crystal:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:16,id:"minecraft:end_crystal"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:16,id:"minecraft:end_crystal"}'
+            DataVersion: 4440
+    mace:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{count:1,id:"minecraft:mace"}'
+          DataVersion: 4440
+      Weight: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: CUSTOM
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:mace"}'
+            DataVersion: 4440
+Last_Opener: Maxue
+Last_Reward: Elytra
+_dataver: 600
+ItemProvider:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:profile":{id:[I;-802227110,-573097762,-1380608790,170224302],name:"56d7fdb50f14c731",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZkN2ZkYjUwZjE0YzczMWM3MjdiMGUwZDE4OWI2YTg3NDMxOWZjMGQ3OWM4YTA5OWFjZmM3N2M3YjJkOTE5NiJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+    DataVersion: 4440
+Preview:
+  Enabled: true
+  Id: default
+Animation:
+  Enabled: true
+  Id: roulette
+OpeningCooldown:
+  Enabled: false
+  Value: 0
+Description: []
+ItemStackable: true
+CostOptions:
+  lendario:
+    Enabled: true
+    Name: Chave Lendaria
+    Icon:
+      Provider: vanilla
+      Data:
+        Value: '{count:1,id:"minecraft:trial_key"}'
+        DataVersion: 4440
+    Entries:
+      '0':
+        Type: key
+        Key: lendario
+        Amount: 1

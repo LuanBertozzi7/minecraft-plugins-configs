@@ -1,0 +1,77 @@
+# |------------------------------------------------------------------------
+# |                   CommandPanels Custom Floodgate File
+# |                            Official Panel v2
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+conditions: '%player_name% $HASPERM example.permission'
+title: Player Settings
+type: floodgate
+floodgate-type: custom
+
+layout:
+  '0':
+  - dropdown_language
+  '1':
+  - input_status
+  '2':
+  - slider_brightness
+  '3':
+  - toggle_notifications
+  '4':
+  - stepslider_graphics
+
+items:
+  dropdown_language:
+    type: dropdown
+    name: Select Language
+    options:
+    - English
+    - Spanish
+    - French
+    - German
+    - Japanese
+    default: 3
+    actions:
+      commands:
+      - '[msg] &aLanguage set to: %commandpanels_session_dropdown_language%'
+  
+  input_status:
+    type: input
+    name: Set Your Status Message
+    placeholder: Type your status here...
+    default: ''
+    actions:
+      commands:
+      - '[msg] &aStatus updated: %commandpanels_session_input_status%'
+  
+  slider_brightness:
+    type: slider
+    name: Screen Brightness
+    min: 1
+    max: 10
+    step: 1
+    default: 5
+    actions:
+      commands:
+      - '[msg] &eBrightness set to: %commandpanels_session_slider_brightness%'
+  
+  toggle_notifications:
+    type: toggle
+    name: Enable Notifications
+    default: true
+    actions:
+      commands:
+      - '[msg] &dNotifications: %commandpanels_session_toggle_notifications%'
+  
+  stepslider_graphics:
+    type: step-slider
+    name: Graphics Quality
+    steps:
+    - Low
+    - Medium
+    - High
+    - Ultra
+    default: Medium
+    actions:
+      commands:
+      - '[msg] &6Graphics set to: %commandpanels_session_stepslider_graphics%'

@@ -1,0 +1,163 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Lenhador
+open_command:
+  - jobs payouts woodcutter
+register_command: true
+size: 54
+items:
+  break:
+    material: DIAMOND_AXE
+    slot: 4
+    display_name: '%imc_primary-color_c%Quebrar'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Quebrar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_woodcutter_break'
+  break_oak_log:
+    material: oak_log
+    slot: 10
+    display_name: '%imc_primary-color_c%Tronco de carvalho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho descascado'
+  break_spruce_log:
+    material: spruce_log
+    slot: 11
+    display_name: '%imc_primary-color_c%Tronco de abeto'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de abeto descascado'
+  break_birch_log:
+    material: birch_log
+    slot: 12
+    display_name: '%imc_primary-color_c%Tronco de bétula'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de bétula descascado'
+  break_jungle_log:
+    material: jungle_log
+    slot: 13
+    display_name: '%imc_primary-color_c%Tronco da selva'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco da selva descascado'
+  break_acacia_log:
+    material: acacia_log
+    slot: 14
+    display_name: '%imc_primary-color_c%Tronco de acácia'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de acácia descascado'
+  break_dark_oak_log:
+    material: dark_oak_log
+    slot: 15
+    display_name: '%imc_primary-color_c%Tronco de carvalho escuro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho escuro descascado'
+  break_warped_stem:
+    material: warped_stem
+    slot: 16
+    display_name: '%imc_primary-color_c%Pé deformado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pé deformado'
+      - '%imc_dark-color_c% • %imc_text-color_c%Hifas deformadas'
+  break_crimson_stem:
+    material: crimson_stem
+    slot: 19
+    display_name: '%imc_primary-color_c%Pé carmesim'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pé carmesim'
+      - '%imc_dark-color_c% • %imc_text-color_c%Hifas carmesins'
+  break_mangrove_log:
+    material: mangrove_log
+    slot: 20
+    display_name: '%imc_primary-color_c%Tronco de mangue'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de mangue descascado'
+  break_cherry_log:
+    material: cherry_log
+    slot: 21
+    display_name: '%imc_primary-color_c%Tronco de cerejeira'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de cerejeira descascado'
+  break_pale_oak_log:
+    material: pale_oak_log
+    slot: 22
+    display_name: '%imc_primary-color_c%Tronco de carvalho pálido'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tronco de carvalho pálido descascado'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_woodcutter_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: LIME_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

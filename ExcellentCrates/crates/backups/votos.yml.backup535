@@ -1,0 +1,127 @@
+Name: '&5&lBaú de Chaves'
+Preview_Config: default
+Permission_Required: false
+Opening:
+  Cooldown: 0
+Key:
+  Ids: []
+  # Sets whether or not keys are required to open this crate.
+  Required: true
+Block:
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: votos
+    Y_Offset: 0.0
+  Effect:
+    Model: VORTEX
+    Particle:
+      Name: PORTAL
+  Positions:
+  - 806,74,-657,world
+Milestones:
+  Repeatable: false
+Rewards:
+  List:
+    normal:
+      Name: '&a&lBaú Simples'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Preview: k0001800korfdlo6urj5dpq762002lmmirj5cdp62pjk79hnasrkdtmlurj1dlig0ejr49hmur3fe8h3k8jnd1kn8p925gh6it31dhkm68hqcpgmosr55gh78pboegh3k8imdtkm8823e9sn6t31dgg4mpbp49ug600rdlkmspb3e9gmct1qcdqn6t3fdlfmqrr4clm5up31ehgg00177s5005bdd5n6aoric5j78ej3elpn8rrdbti62t311800kqbkclmn6ob4chin420015n62rb5edo62or5008ncrr9chfm6sjpedq62r2ve1gm6qo80016ip0021r6uqb4bthn4ubjehgmonrbclsg02g00ti6isrgdhgni2000h762rb500t7m8jkcls788hq49b6uqb4411n4ubjehgmo82bclsi4b12cdnmorri48t24tr8d5q6a8hc49kn8obcd5hi4ej6c5m76pbt001g03q3elpn8rrd9lnm8pbc8hgn8o8000jju0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ejgc5o6asg0
+      Commands:
+      - crate key give %player_name% simples 1
+      Items: []
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      Weight: 40.0
+      Placeholder_Apply: false
+    uncommon:
+      Name: '&a&lBaú Sofisticado'
+      Chance: 30.0
+      Rarity: common
+      Broadcast: false
+      Preview: 2g0005002j3dtmn0rrecln78so800amqqbeclhn4ob6egt66tbjehnmqnrec5mma01kfch66rrcdtp24eh2etk6it3548m24qbkc5m6iop279j62r3jckm24t35f1q24eh2adgmmtbic4g4mpbp49ug600rdlkmspb3e9gmct1qcdqn6t3fdlfmqrr4clm5up31ehgg0017c85005bdd5n6aoric5j78ej3elpn8rrdbti62t311800kqbkclmn6ob4chin420015n62rb5edo62or50076ar39ehim6sj5c5q7asj5ec4000j9cg00ksr1ddqn4oavddini003007k6tbjehnmqjbfchimoh31ehgg0017c85001r4d5pn0r31f440012ec5mma01kfch78pboegh3k8ijc5lnasj1415mau925gh66rrcdtp24eh2etk6it3548m24qbkc5m6iop279j62r3jclug00000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ejgc5o6asg0
+      Commands:
+      - crate key give %player_name% sofisticada 1
+      Items: []
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      Weight: 20.0
+      Placeholder_Apply: false
+    rare:
+      Name: '&a&lBaú Raro'
+      Chance: 15.0
+      Rarity: common
+      Broadcast: false
+      Preview: 180002g019hmurbgdtn6arjkec4005bdd5n6aoric5j78ej3elpn8rrdbtn62rb500onm8j3dtm6ush278h7eq39ehii4b12d5q62r39cch3kpj1dhpmab12ehingt1278h48qbje1m62u92fk1g06rdd5n6aoric5j78ej3elpn8rrdbtmmup35dhfm8obkc40009qu1801arb9dpim6sj1cpq3korledq6uravchgn8o8a0056it35dlpm2p34clp0g009dpgmqpbje1gm6p801pimoqbkclhn4pb1ehqn4pbj10004qb400c7eqbkcdk66objehin4nr1dpkmqobkcli2qqr5f400k007chkn6s3cc5sgg0049pgmqp8065ti4t35f1q24eh28hkn6s3cc5si4b12cdnmorri48t24tr8d5q6a8hc49kn8obcd5hi4ej6c5m76pbt001g03q3elpn8rrd9lnm8pbc8hgn8o8000jls0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ejgc5o6asg0
+      Commands:
+      - crate key give %player_name% raro 1
+      Items: []
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      Weight: 15.0
+      Placeholder_Apply: false
+    exotic:
+      Name: '&a&lBaú Lendário'
+      Chance: 5.0
+      Rarity: common
+      Broadcast: false
+      Preview: 180002g019hmurbgdtn6arjkec4005bdd5n6aoric5j78ej3elpn8rrdbtn62rb500pnm8j3dtm6ush278h7eq39ehii4b12d5q62r39cch3kpj1dhpmab12ehingt1278h4cob9e9si0ir5f4h7q0o03dmmirj5cdp62pjk79hnasrkdtmlurbfchimonr4c5q620004sg0k00ldlkmspb3e9gmct1qcdqn6t3fdlfm8obkc45002j9ehimqsr1chi6asg8004msobdclpn0ob3ck00gpj1d5p7isr5eg4000j9cg00ipj1d5p7inrbclsg00000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ejgc5o6asg0
+      Commands:
+      - crate key give %player_name% lendário 1
+      Items: []
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      Weight: 1.0
+      Placeholder_Apply: false
+Animation_Config: enclosing
+Last_Opener: parsival9945
+Last_Reward: '&a&lBaú Plebeu'
+Item:
+  Material: PLAYER_HEAD
+  SkinURL: 7a3c8c6d3aaa96363d4bef2578f1024781ea14e9d85a9dcfc0935847a6fb5c8d
+  Name: '&fVote Crate'
+  Item_Flags:
+  - HIDE_ADDITIONAL_TOOLTIP

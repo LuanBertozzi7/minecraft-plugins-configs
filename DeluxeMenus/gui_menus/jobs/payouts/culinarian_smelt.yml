@@ -1,0 +1,149 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Culinário
+size: 54
+items:
+  craft:
+    material: CRAFTING_TABLE
+    slot: 3
+    display_name: '%imc_primary-color_c%Fabricar'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Fabricar os seguintes itens'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_culinarian_craft'
+      - '[sound] UI_BUTTON_CLICK'
+  smelt:
+    material: BLAST_FURNACE
+    slot: 4
+    display_name: '%imc_primary-color_c%Fundir'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Fundir para obter os seguintes'
+      - '%imc_dark-color_c%itens e receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_culinarian_smelt'
+      - '[sound] UI_BUTTON_CLICK'
+  eat:
+    material: APPLE
+    slot: 5
+    display_name: '%imc_primary-color_c%Comer'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Comer os seguintes alimentos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_culinarian_eat'
+      - '[sound] UI_BUTTON_CLICK'
+  smelt_cooked_beef:
+    material: cooked_beef
+    slot: 10
+    display_name: '%imc_primary-color_c%Bife'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bife'
+  smelt_cooked_porkchop:
+    material: cooked_porkchop
+    slot: 11
+    display_name: '%imc_primary-color_c%Costeleta de porco assada'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Costeleta de porco assada'
+  smelt_cooked_cod:
+    material: cooked_cod
+    slot: 12
+    display_name: '%imc_primary-color_c%Bacalhau assado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bacalhau assado'
+  smelt_cooked_salmon:
+    material: cooked_salmon
+    slot: 13
+    display_name: '%imc_primary-color_c%Salmão assado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Salmão assado'
+  smelt_cooked_chicken:
+    material: cooked_chicken
+    slot: 14
+    display_name: '%imc_primary-color_c%Frango assado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Frango assado'
+  smelt_cooked_mutton:
+    material: cooked_mutton
+    slot: 15
+    display_name: '%imc_primary-color_c%Carneiro assado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Carneiro assado'
+  smelt_cooked_rabbit:
+    material: cooked_rabbit
+    slot: 16
+    display_name: '%imc_primary-color_c%Coelho assado'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Coelho assado'
+  smelt_baked_potato:
+    material: baked_potato
+    slot: 19
+    display_name: '%imc_primary-color_c%Batata assada'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Batata assada'
+  smelt_popped_chorus_fruit:
+    material: popped_chorus_fruit
+    slot: 20
+    display_name: '%imc_primary-color_c%Fruta do coro cozinhada'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Fruta do coro cozinhada'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_culinarian_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: BLUE_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

@@ -1,0 +1,470 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Construtor
+open_command:
+  - jobs payouts builder
+register_command: true
+size: 54
+items:
+  place:
+    material: BRICKS
+    slot: 3
+    display_name: '%imc_primary-color_c%Colocar'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Colocar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_place'
+      - '[sound] UI_BUTTON_CLICK'
+  break:
+    material: GRASS_BLOCK
+    slot: 5
+    display_name: '%imc_primary-color_c%Quebrar'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Quebrar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_break'
+      - '[sound] UI_BUTTON_CLICK'
+  place_oak_planks:
+    material: oak_planks
+    slot: 10
+    display_name: '%imc_primary-color_c%Madeira de carvalho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de carvalho descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de carvalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de carvalho'
+  place_spruce_planks:
+    material: spruce_planks
+    slot: 11
+    display_name: '%imc_primary-color_c%Madeira de abeto'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de abeto descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de abeto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de abeto'
+  place_birch_planks:
+    material: birch_planks
+    slot: 12
+    display_name: '%imc_primary-color_c%Madeira de bétula'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de bétula descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de bétula'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de bétula'
+  place_jungle_planks:
+    material: jungle_planks
+    slot: 13
+    display_name: '%imc_primary-color_c%Madeira da selva'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira da selva descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão da selva'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas da selva'
+  place_acacia_planks:
+    material: acacia_planks
+    slot: 14
+    display_name: '%imc_primary-color_c%Madeira de acácia'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de acácia descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de acácia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de acácia'
+  place_dark_oak_planks:
+    material: dark_oak_planks
+    slot: 15
+    display_name: '%imc_primary-color_c%Madeira de carvalho escuro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de carvalho escuro descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de carvalho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de carvalho escuro'
+  place_dead_brain_coral_block:
+    material: dead_brain_coral_block
+    slot: 16
+    display_name: '%imc_primary-color_c%Blocos de Coral Morto'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de coral-de-cérebro morto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de coral-de-bolha morto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de coral-de-fogo morto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de coral-corno-de-cervo morto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de coral-tubular morto'
+  place_stone:
+    material: stone
+    slot: 19
+    display_name: '%imc_primary-color_c%Pedra'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de pedra'
+  place_andesite:
+    material: andesite
+    slot: 20
+    display_name: '%imc_primary-color_c%Andesito'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Andesito'
+  place_granite:
+    material: granite
+    slot: 21
+    display_name: '%imc_primary-color_c%Granito'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Granito'
+  place_diorite:
+    material: diorite
+    slot: 22
+    display_name: '%imc_primary-color_c%Diorito'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Diorito'
+  place_cobblestone:
+    material: cobblestone
+    slot: 23
+    display_name: '%imc_primary-color_c%Pedregulho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedregulho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de pedregulho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de pedregulho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de pedregulho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedregulho com musgo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de pedregulho com musgo'
+  place_white_wool:
+    material: white_wool
+    slot: 24
+    display_name: '%imc_primary-color_c%Lãs'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã branca'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã cinzento-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã cinzenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã preta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã castanha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã vermelha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã amarela'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã verde-lima'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã azul-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã roxa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã magenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lã rosa'
+  place_terracotta:
+    material: terracotta
+    slot: 25
+    display_name: '%imc_primary-color_c%Terracota'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota branca'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cinzento-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cinzenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota amarela'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota rosa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota vermelha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota castanha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota azul-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota roxa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota magenta'
+  place_gold_block:
+    material: gold_block
+    slot: 28
+    display_name: '%imc_primary-color_c%Cuarzos'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de carvão'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de ferro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de ouro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de cobre'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de redstone'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de diamante'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de esmeralda'
+  place_sandstone:
+    material: sandstone
+    slot: 29
+    display_name: '%imc_primary-color_c%Arenito'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de arenito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de arenito'
+  place_bricks:
+    material: bricks
+    slot: 30
+    display_name: '%imc_primary-color_c%Tijolos'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos'
+  place_stone_bricks:
+    material: stone_bricks
+    slot: 31
+    display_name: '%imc_primary-color_c%Tijolos de pedra'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos de pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra com musgo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra rachados'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra esculpidos'
+  place_nether_bricks:
+    material: nether_bricks
+    slot: 32
+    display_name: '%imc_primary-color_c%Tijolos do Nether'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos do Nether'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos do Nether'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos do Nether'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de tijolos do Nether'
+  place_quartz_block:
+    material: quartz_block
+    slot: 33
+    display_name: '%imc_primary-color_c%Bloco de quartzo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de quartzo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de quartzo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de quartzo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pilar de quartzo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de quartzo esculpido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de quartzo liso'
+  place_red_sandstone:
+    material: red_sandstone
+    slot: 34
+    display_name: '%imc_primary-color_c%Arenito vermelho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito vermelho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de arenito vermelho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de arenito vermelho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito vermelho esculpido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito vermelho cortado'
+  place_purpur_block:
+    material: purpur_block
+    slot: 37
+    display_name: '%imc_primary-color_c%Bloco de púrpura'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de púrpura'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de púrpura'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de púrpura'
+  place_crafting_table:
+    material: crafting_table
+    slot: 38
+    display_name: '%imc_primary-color_c%Blocos de Utilidade'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Mesa de trabalho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Estante de livros'
+      - '%imc_dark-color_c% • %imc_text-color_c%Estante de livros esculpida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Baú'
+      - '%imc_dark-color_c% • %imc_text-color_c%Baú armadilhado'
+      - '%imc_dark-color_c% • %imc_text-color_c%Fornalha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Jukebox'
+      - '%imc_dark-color_c% • %imc_text-color_c%Mesa de encantamentos'
+      - '%imc_dark-color_c% • %imc_text-color_c%Baú do Ender'
+      - '%imc_dark-color_c% • %imc_text-color_c%Funil'
+      - '%imc_dark-color_c% • %imc_text-color_c%Para-raios'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vaso decorado'
+  place_obsidian:
+    material: obsidian
+    slot: 39
+    display_name: '%imc_primary-color_c%Obsidiana'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Obsidiana'
+  place_prismarine:
+    material: prismarine
+    slot: 40
+    display_name: '%imc_primary-color_c%Prismarinho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Prismarinho escuro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de prismarinho escuro'
+  place_ice:
+    material: ice
+    slot: 41
+    display_name: '%imc_primary-color_c%Gelo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Gelo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Gelo compactado'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de neve'
+  place_glass:
+    material: glass
+    slot: 42
+    display_name: '%imc_primary-color_c%Vidro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro fosco'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro branco'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro cinzento-claro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro cinzento'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro preto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro castanho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro vermelho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro amarelo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro verde-lima'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro azul-claro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro roxo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro magenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vidro rosa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Todo Vidro Colorido'
+  place_iron_trapdoor:
+    material: iron_trapdoor
+    slot: 43
+    display_name: '%imc_primary-color_c%Bloco de ferro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de ferro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Grades de ferro'
+  next_page:
+    material: ARROW
+    slot: 50
+    display_name: '%imc_primary-color_c%Próxima Página'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_place_2'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_builder_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: GREEN_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

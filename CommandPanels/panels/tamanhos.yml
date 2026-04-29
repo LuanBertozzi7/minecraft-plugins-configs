@@ -1,0 +1,56 @@
+title: '&dᴛᴀᴍᴀɴʜᴏs'
+type: inventory
+rows: 3
+
+layout:
+  fill:
+    - background_glass
+  '10':
+    - formiga_item
+  '13':
+    - steve_item
+  '16':
+    - avatar_item
+  '22':
+    - normal_item
+
+items:
+  background_glass:
+    material: PINK_STAINED_GLASS_PANE
+    name: ' '
+
+  formiga_item:
+    material: SMALL_AMETHYST_BUD
+    name: '&dғᴏʀᴍɪɢᴀ'
+    lore:
+      - '&dᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ғɪᴄᴀʀ ʙᴇᴍ ᴘᴇǩᴜᴇɴᴏ.'
+    left-click:
+      commands:
+        - '[chat] /entitysize 0.5'
+
+  steve_item:
+    material: MEDIUM_AMETHYST_BUD
+    name: '&5ʙᴀɪxɪɴʜᴀ'
+    lore:
+      - '&5ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ғɪᴄᴀʀ ʙᴀɪxɪɴʜᴏ'
+    left-click:
+      commands:
+        - '[chat] /entitysize 0.8'
+
+  avatar_item:
+    material: LARGE_AMETHYST_BUD
+    name: '&1ᴀᴠᴀᴛᴀʀ'
+    lore:
+      - '&1ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ғɪᴄᴀʀ ɢʀᴀɴᴅᴀᴏ'
+    left-click:
+      commands:
+        - '[chat] /entitysize 2'
+
+  normal_item:
+    material: PLAYER_HEAD
+    name: '&bSteve'
+    lore:
+      - '&clique para retornar ao seu tamanho normal'
+    left-click:
+      commands:
+        - '[chat] /entitysize 1'

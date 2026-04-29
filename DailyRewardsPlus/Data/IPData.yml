@@ -1,0 +1,6 @@
+# This file exists due to the fact that you ha(d)(ve) the config setting 'IPLimiter' set to true.
+# The file solely stores key-value pairs of an IP and when it can next be utilised to claim a reward.
+# No additional player data is stored.
+
+'18620456254': 1761011041845
+Example: 0

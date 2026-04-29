@@ -1,0 +1,836 @@
+economy:
+  error:
+    nomoney: $<p:error-prefix> Desculpe, não há dinheiro restante no banco nacional!
+limitedItem:
+  error:
+    levelup: $<p:error-prefix> Você precisa subir de nível em %jobfullname% para usar
+      este item!
+general:
+  info:
+    toplineseparator: $<br><p:prefix> %playername%<br>
+    separator: ''
+    paymentType:
+      MONEY: Dinheiro
+      EXP: Exp
+      POINTS: Pontos
+    paymentTypeValued:
+      MONEY: $<p:eco-format:'%amount%'> <p:text-color>Dinheiro
+      EXP: <p:dark-color>-</p> <p:job-exp-format:'%amount%'> <p:text-color>Exp
+      POINTS: <p:dark-color>-</p> <p:job-point-format:'%amount%'> <p:text-color>Pontos
+    invalidPage: $<p:error-prefix> Página inválida
+    blocks:
+      furnace: Fornalha
+      smoker: Defumador
+      blastfurnace: Alto-forno
+      brewingstand: Fermentador
+    join: Clique para participar do trabalho
+    leave: Clique para sair do trabalho
+  admin:
+    error: $<p:error-prefix> Houve um erro no comando.
+    success: $<p:prefix> Seu comando foi executado.
+  error:
+    noHelpPage: $<p:error-prefix> Não há uma página de ajuda com este número!
+    job: $<p:error-prefix> O trabalho que você selecionou não existe ou você não está
+      nele!
+    jobname: $<p:error-prefix> Não é possível encontrar o trabalho por este nome!
+    # Only %playername% can be used here
+    noinfoByPlayer: $<p:error-prefix> Nenhuma informação encontrada pelo nome do jogador
+      %playername%!
+    worldisdisabled: $<p:error-prefix> Você não pode usar comandos neste mundo!
+    newRegistration: $<p:prefix> Nova propriedade registrada para [block] <p:primary-color>[atual]</p><p:dark-color>/[máximo]</p>
+    reenabledBlock: $<p:prefix> Propriedade reativada
+    noRegistration: $<p:error-prefix> Você atingiu o máximo de [block]
+    blockDisabled: $<p:prefix> Pagamentos de <p:primary-color>[type]</p> estão <red>
+      desativados</p>. <p:dark-color>[localização]
+command:
+  help:
+    output:
+      cmdUsage: '$<p:prefix> Uso: <br>[comando]'
+      label: Jobs
+      cmdInfoFormat: '[command] - [description]'
+      cmdFormat: <p:text-color>▪</p> <p:primary-color>/[command] [arguments]
+      helpPageDescription: $<p:dark-color>[description]
+      title: $<p:prefix> Página de Ajuda dos Jobs
+  boost:
+    help:
+      info: Aumenta ganhos de jobs para todos os jogadores
+      args: exp/money/points [jobname]/all/reset [rate] [time]
+    output:
+      allreset: $<p:prefix> Todos os bônus desativados
+      alltypereset: $<p:prefix> Todos os impulsos de <p:primary-color>%type%</p> desativados
+      jobsboostreset: $<p:prefix> O impulso foi desativado para <p:primary-color>%jobfullname%</p>
+      jobstypeboostreset: $<p:prefix> <p:primary-color>%type%</p> impulso foi desativado
+        para <p:primary-color>%jobfullname%</p>
+      nothingtoreset: Nada para redefinir
+      boostadded: $<p:prefix> Impulso de <p:secondary-color>%boost%</p> adicionado
+        para <p:primary-color>%jobfullname%</p>!
+      infostats: $<p:prefix> %type% taxa x%boost% <green>ativado</green>
+      boostStats: '&6%payments% &e%jobdisplayname%'
+  schedule:
+    help:
+      info: Ativa o agendador fornecido
+      args: enable [scheduleName] [untilTime]
+    output:
+      noScheduleFound: $<p:error-prefix> NaNunca foi encontrada uma agenda com esse
+        nome.
+      alreadyEnabled: $<p:error-prefix> Esta agenda já está ativada.
+      enabled: $<p:prefix> A agenda foi ativada de <p:primary-color>%from%</p> até
+        <p:secondary-color>%until%</p>
+  itembonus:
+    help:
+      info: Ver bônus de itens
+      args: ''
+    output:
+      list: '&e%jobdisplayname%: %money% %points% %exp%'
+      notAplyingList: '&7%jobdisplayname%: %money% %points% %exp%'
+      hover: '&7%itemtype%'
+      hoverLevelLimits: "&7De nível: %from% \n&7Até nível: %until%"
+  edititembonus:
+    help:
+      info: Editar bônus de impulso de item
+      args: list/add/remove [jobname] [itemBoostName]
+  bonus:
+    help:
+      info: Mostrar bônus de trabalho
+      args: '[jobname]'
+    output:
+      topline: $<br><p:prefix> Bônus de Trabalho<br>
+      permission: '$ <p:text-color>▪ Permissão de bônus: <p:eco-format:''%money%''>
+        <p:job-point-format:"%points%"> <p:job-exp-format:"%exp%">'
+      item: '$ <p:text-color>▪ Bônus de item: <p:eco-format:''%money%''> <p:job-point-format:''%points%''>
+        <p:job-exp-format:''%exp%''>'
+      global: '$ <p:text-color>▪ Bônus global: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      dynamic: '$ <p:text-color>▪ Bônus dinâmico: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      nearspawner: 'Bônus de spawner: <p:eco-format:''%money%''> <p:job-point-format:''%points%''>
+        <p:job-exp-format:''%exp%''>'
+      petpay: 'Bônus PetPay: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      area: '$ <p:text-color>▪ Bônus de área: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      mcmmo: '$ <p:text-color>▪ Bônus McMMO: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      final: '$ <p:text-color>▪ Bônus final: <p:eco-format:''%money%''> <p:job-point-format:"%points%">
+        <p:job-exp-format:"%exp%">'
+      specialPrefix: $ <p:text-color>▪ <p:dark-color>*</p>
+      finalExplanation: <red>Inclui Petpay e bônus/penalidade de Near spawner
+  convert:
+    help:
+      info: Converts the database system from one system to another. If you are currently
+        running SQLite, this will convert it to MySQL and vice versa.
+      args: ''
+  limit:
+    help:
+      info: Mostra limites de pagamento para empregos
+      args: '[playername]'
+    output:
+      moneytime: '$<p:prefix> Tempo restante até o reset do limite de <p:secondary-color>dinheiro</p>:
+        <p:primary-color>%time%'
+      moneyLimit: '$<p:prefix> Limite de dinheiro: <p:primary-color>%current%</p><p:dark-color>/%total%'
+      exptime: '$<p:prefix> Tempo restante até o reset do limite de <p:secondary-color>Exp</p>:
+        <p:primary-color>%time%'
+      expLimit: '$<p:prefix> Limite de Exp: <p:primary-color>%current%</p><p:dark-color>/%total%'
+      pointstime: '$<p:prefix> Tempo restante até o reset do limite de <p:secondary-color>Points</p>:
+        <p:primary-color>%time%'
+      pointsLimit: '$<p:prefix> Limite de pontos: <p:primary-color>%current%</p><p:dark-color>/%total%'
+      reachedmoneylimit: $<p:prefix> Você atingiu o limite de dinheiro no tempo dado!
+      reachedmoneylimit2: $<p:prefix> Você pode verificar seu limite com o comando
+        <p:primary-color>/jobs limit</p>
+      reachedmoneylimit3: $<p:prefix> O dinheiro ganho agora é reduzido exponencialmente...
+        Mas você ainda ganha um pouco!
+      reachedexplimit: $<p:prefix> Você atingiu o limite de exp no tempo dado!
+      reachedexplimit2: $<p:prefix> Você pode verificar seu limite com o comando <p:primary-color>/jobs
+        limit</p>
+      reachedpointslimit: $<p:prefix> Você atingiu o limite de pontos no tempo dado!
+      reachedpointslimit2: $<p:prefix> Você pode verificar seu limite com o comando
+        <p:primary-color>/jobs limit</p>
+      notenabled: $<p:prefix> Limite de dinheiro não ativado
+  resetexploreregion:
+    help:
+      info: Redefine os dados da região de exploração
+      args: world [worldname]
+    output:
+      notenabled: $<p:error-prefix> Não ativado.
+      invalidname: $<p:error-prefix> Nome do mundo inválido
+      reseted: '$<p:prefix> Dados da região de exploração foram redefinidos para:
+        <p:primary-color>%worldname%'
+  resetlimit:
+    help:
+      info: Redefine os limites de pagamento de um jogador
+      args: '[playername]'
+    output:
+      reseted: $<p:prefix> Limites de pagamento foram redefinidos para <p:primary-color>%playername%
+  resetquesttotal:
+    help:
+      info: Redefine o contador de quests feitas por um jogador
+      args: '[playername]/all'
+    output:
+      reseted: '$<p:prefix> Quests concluídas foram redefinidas para: <p:primary-color>%playername%'
+  resetquest:
+    help:
+      info: Redefine uma quest de um jogador
+      args: '[playername] [jobname]'
+    output:
+      reseted: $<p:prefix> Quest foi redefinida para <p:primary-color>%playername%
+      noQuests: $<p:error-prefix> Não foi possível encontrar quests
+  points:
+    help:
+      info: Mostra quantos pontos um jogador possui.
+      args: '[playername]'
+    currentpoints: ' &eCurrent point amount: &6%currentpoints%'
+    totalpoints: ' &eTotal amount of collected points until now: &6%totalpoints%'
+  editpoints:
+    help:
+      info: Editar pontos do jogador.
+      args: set/add/take [playername] [amount]
+    output:
+      set: $<p:prefix> Os pontos de <p:primary-color>%playername%</p> foram definidos
+        para <p:job-point-format:'%amount%'>
+      add: $<p:prefix> O jogador <p:primary-color>%playername%</p> recebeu adicionalmente
+        <green>+%amount%</green> pontos. Agora possuem <p:job-point-format:'%total%'>
+      take: $<p:prefix> O jogador <p:primary-color>%playername%</p> perdeu <red>-%amount%</red>
+        pontos. Agora possuem <p:job-point-format:'%total%'>
+  editjobs:
+    help:
+      info: Editar empregos atuais.
+      args: ''
+      list:
+        job: '&aEmpregos&8 ➡'
+        jobs: '  -> [&e%jobdisplayname%&r]'
+        actions: '    -> [&e%actionname%&r]'
+        material: '      -> [&e%materialname%&r]      '
+        materialRemove: '&c[X]'
+        materialAdd: '      -> &e[&2+&e]'
+        money: '        -> &eDinheiro: &6%amount%'
+        exp: '        -> &eExp: &6%amount%'
+        points: '        -> &ePontos: &6%amount%'
+      modify:
+        newValue: $<p:prefix> Insira o novo valor
+        enter: '$<p:prefix> Insira o novo nome ou pressione '
+        hand: '&6MAO '
+        handHover: '&6Pressione para pegar informações do item na sua mão'
+        or: '&eou '
+        look: '&6OLHANDO PARA'
+        lookHover: '&6Pressione para pegar informações do bloco que está olhando'
+  editquests:
+    help:
+      info: Editar quests atuais.
+      args: ''
+      output:
+        list: '&6[questName] &7- &f%jobdisplayname%'
+        name: '&eNome: &f'
+        job: ' &eEmprego: &f'
+        chance: ' &eChance: &f'
+        enabled: ' &eHabilitado: &f'
+        from: '&eNível de: &f'
+        to: ' &eAté: &f'
+        objectives: Objetivos
+        rewards: Comandos de recompensa
+        rewardAmount: ' &eAmount: &f'
+        description: '&eDescrição'
+        areas: '&eÁreas restritas'
+  blockinfo:
+    help:
+      info: Mostra informações sobre o bloco que você está olhando.
+      args: ''
+    output:
+      material: ' &eBlock name: &6%blockname%'
+      id: '&8■ &7Block id: &a(%blockid%)'
+      state: ' &eBlock sate: &6%blockdata%'
+      deprecated: ' &eUsage: &6%first% &eor &6%second%'
+      use: ' &eConfig file usage: &6%usage%'
+  iteminfo:
+    help:
+      info: Mostra informações sobre o item que você está segurando.
+      args: ''
+    output:
+      material: ' &eItem name: &6%itemname%'
+      id: '&8■ &7Item id: &a(%itemid%)'
+      data: '&8■ &7Item data: &a(%itemdata%)'
+      deprecated: ' &eUsage: &6%first% &eor &6%second%'
+      use: ' &eConfig file usage: &6%usage%'
+  placeholders:
+    help:
+      info: Lista todos os placeholders
+      args: (parse) (placeholder)
+    output:
+      list: '&8[place]. &a[placeholder]'
+      outputResult: ' &7result: &e[result]'
+      parse: '&6[placeholder] &7by [source] &6result &8|&f[result]&8|'
+  entitylist:
+    help:
+      info: Mostra todas as entidades possíveis que podem ser usadas com o plugin.
+      args: ''
+  recalculatepermissions:
+    help:
+      info: Reset players permission cache
+      args: (playername)
+    output:
+      reset: '&eResetted permissions for: &6[playername]'
+  stats:
+    help:
+      info: Mostra o nível em cada trabalho do qual você faz parte.
+      args: '[playername]'
+    error:
+      nojob: $<p:error-prefix> Por favor, entre em um trabalho primeiro.
+    output:
+      Level: '&7Level &f%joblevel% &7for &f%jobname%&7: &f%jobxp%&7/&f%jobmaxxp%&7xp'
+      maxLevel: '    &2Max    &7Level &f%joblevel% &7for &f%jobname%'
+    bossBarOutput: '&8【 &7Job %jobdisplayname% ❖ %joblevel%l &8» &d(%jobxp%%gain%
+      &d| %jobmaxxp% xp) &8】'
+    bossBarGain: ' (&f%gain%&7)'
+    barEmpty: '&7▏'
+    barFull: '&2▏'
+  shop:
+    help:
+      info: Abre uma loja especial de empregos.
+      args: ''
+    info:
+      title: Jobs | Shop
+      haveColor: '&2'
+      pointsPrice: '&ePoint cost: &c%currentpoints%&e/&6%price%'
+      moneyPrice: '&eMoney cost: &c%currentbalance%&e/&6%price%'
+      reqJobs: '&8» &7Required jobs:'
+      reqJobsList: '  &c%jobsname% &8| &d%level% lvl'
+      reqTotalLevel: '&8» &7Required total level: &d%totalLevel%'
+      reqJobsColor: '$<p:error-prefix> '
+      reqJobsLevelColor: '&d'
+      reqTotalLevelColor: '&5'
+      cantOpen: $<p:error-prefix> Can't open this page
+      NoPermForItem: $<p:error-prefix> You don't have required permissions for this
+        item!
+      NoPermToBuy: $<p:error-prefix> No permissions to buy this item
+      NoJobReqForitem: $<p:prefix> You don't have the required job &c(%jobdisplayname%)&7
+        with required &d(%joblevel%)&7 level
+      NoPoints: $<p:prefix> You don't have enough &epoints
+      NoMoney: $<p:error-prefix> You don't have enough money
+      NoTotalLevel: $<p:prefix> Total jobs level is too low &5(%totalLevel%)
+      Paid: $<p:prefix> You have paid <p:primary-color>%amount%</p> for this item
+  archive:
+    help:
+      info: Mostra todos os empregos salvos em arquivo pelo usuário.
+      args: '[playername]'
+    error:
+      nojob: Não há empregos salvos.
+  give:
+    help:
+      info: Dá item pelo nome do emprego e nome da categoria do item. Nome do jogador
+        é opcional
+      args: '[playername] [jobname] [items/limiteditems] [jobitemname]'
+    output:
+      notonline: $<p:prefix> O jogador com esse nome não está online!
+      noitem: $<p:prefix> Não foi possível encontrar um item com esse nome!
+  info:
+    help:
+      title: '&2*** &eJobs&2 ***'
+      info: Mostra quanto cada trabalho recebe de pagamento e para o quê.
+      penalty: '&eEste trabalho tem uma penalidade de &c[penalty]% &eporque há muitos
+        jogadores trabalhando nele.'
+      bonus: '&eEste trabalho tem um bônus de &2[bonus]% &eporque há poucos jogadores
+        trabalhando nele.'
+      args: '[jobname] [action]'
+      actions: '&eAções válidas são: &f%actions%'
+      max: ' - &emáximo nível:&f '
+      newMax: ' &eNível máximo: &f[max]'
+      jobName: '&7%jobdisplayname%'
+      material: '&7%material%'
+      levelRange: ' &a(&e%levelFrom% &a- &e%levelUntil% &alevels)'
+      levelFrom: ' &a(de &e%levelFrom% &alevel)'
+      levelUntil: ' &a(para &e%levelUntil% &alevel)'
+      money: ' &2%money%$'
+      points: ' &6%points%pts'
+      exp: ' &e%exp%xp'
+    gui:
+      pickjob: '&8Jobs | Browsing...'
+      jobinfo: '&7%jobdisplayname% info!'
+      actions: '&8■ &7Valid actions are:'
+      leftClick: '&e[Left Click for more info]'
+      middleClick: $<p:error-prefix> [Middle Click to leave this job]
+      qClick: '&eQ key to leave this job'
+      rightClick: '&a[Right Click to join job]'
+      leftSlots: '&8» &7Left slots:&f '
+      working: '&a&l✔ WORKING'
+      cantJoin: $<p:error-prefix> You can't join to the selected job.
+      max: '&8» &7Max level:&d '
+      infoLore:
+      - '&7Close'
+    output:
+      break:
+        info: '&eQuebra'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por quebrar blocos.
+      striplogs:
+        info: '&eLimpar logs'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por limpar logs.
+      tntbreak:
+        info: '&eQuebraTNT'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por quebrar blocos
+          com TNT.
+      place:
+        info: '&eColocar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por colocar blocos.
+      kill:
+        info: '&eMatar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por matar monstros.
+      mmkill:
+        info: '&eMytic Kill'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por matar monstros
+          Miafícos.
+      fish:
+        info: '&ePescar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por pescar.
+      pyrofishingpro:
+        info: '&ePescar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro de pesca.
+      customfishing:
+        info: '&ePescar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro de pesca.
+      craft:
+        info: '&eArtesanato'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro ao fabricar.
+      vtrade:
+        info: '&eComércio com aldeão'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por trocar com aldeões.
+      smelt:
+        info: '&eFundir'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por fundir.
+      brew:
+        info: '&eFermentar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro ao fermentar.
+      enchant:
+        info: '&eEncantar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro ao encantar.
+      repair:
+        info: '&eReparar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por reparar.
+      breed:
+        info: '&eCriar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por reprodução.
+      tame:
+        info: '&eDomesticar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por domesticar.
+      dye:
+        info: '&e Tingir'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por tingir.
+      shear:
+        info: '&e tosar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por tosar ovelhas.
+      milk:
+        info: '&e Ordenhar vacas'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por ordenhar vacas.
+      explore:
+        info: '&eExplorar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por explorar.
+      eat:
+        info: '&eComer'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por comer comida.
+      customkill:
+        info: '&ecustom-kill'
+        none: '%jobname% does not get money for (custom-kill) action.'
+      collect:
+        info: '&eColetar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por coletar blocos.
+      bake:
+        info: '&eAssar'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por cozinhar alimentos.
+      bucket:
+        info: '&eBalde'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por usar baldes.
+      brush:
+        info: '&ePincel'
+        none: $<p:error-prefix> %jobfullname% não recebe dinheiro por escovar blocos.
+      wax:
+        info: '&eWax'
+        none: '%jobname% does not get money for (Wax) action.'
+      scrape:
+        info: '&eScrape'
+        none: '%jobname% does not get money for (Scrape) action.'
+  playerinfo:
+    help:
+      info: Mostra quanto cada trabalho está recebendo de pagamento e para quê em
+        outro jogador.
+      args: '[playername] [jobname] [action]'
+  join:
+    help:
+      info: Entrar no trabalho selecionado.
+      args: '[jobname]'
+    error:
+      alreadyin: $<p:error-prefix> Você já está no trabalho <p:primary-color>%jobfullname%</p>.
+      fullslots: $<p:error-prefix> Você não pode entrar no trabalho <p:primary-color>%jobfullname%</p>,
+        não há vagas disponíveis.
+      maxjobs: $<p:error-prefix> Você já entrou em muitos trabalhos.
+      rejoin: $<p:error-prefix> Não é possível reingressar neste trabalho. Aguarde
+        <reset>[tempo]
+    rejoin: 'Clique para reingressar neste trabalho: '
+    success: $<p:prefix> Você entrou no trabalho <p:primary-color>%jobfullname%</p>.
+    confirm: '&2Clique para confirmar a ação de ingresso no trabalho &7%jobfullname%'
+  leave:
+    help:
+      info: Sair do trabalho selecionado.
+      args: '[oldplayerjob]'
+    success: $<p:prefix> Você saiu do cargo <p:primary-color>%jobfullname%</p>.
+    confirmationNeed: $<p:error-prefix> Você tem certeza de que deseja sair de <p:primary-color>%jobfullname%</p>
+      cargo? Digite o comando novamente dentro de <p:primary-color>[time] segundos</p>
+      para confirmar!
+  leaveall:
+    help:
+      info: Saia de todos os seus cargos.
+    error:
+      nojobs: $<p:prefix> Você não possui cargos para sair!
+    success: $<p:error-prefix> Você saiu de todos os seus cargos.
+    confirmationNeed: $<p:error-prefix> Você tem certeza de que deseja sair de todos
+      os cargos? Digite o comando novamente dentro de <p:primary-color>[time] segundos</p>
+      para confirmar!
+  explored:
+    help:
+      info: Verifique quem visitou este quadro
+    error:
+      noexplore: Ninguém visitou este quadro
+    fullExplore: $<p:prefix> Este quadro está totalmente explorado
+    list: $<p:primary-color>#<b>%place%</b></p> <p:dark-color>-</p> <p:secondary-color>%playername%
+  browse:
+    help:
+      info: Liste os cargos disponíveis para você.
+    error:
+      nojobs: There are no jobs you can join.
+    output:
+      header: 'You are allowed to join the following jobs:'
+      footer: For more information type in /jobs info [JobName]
+      totalWorkers: ' &7Workers: &e[amount]'
+      penalty: ' &4Penalty: &c[amount]%'
+      bonus: ' &2Bonus: &a[amount]%'
+      newHeader: '&2========== [amount] Available Jobs ========='
+      description: '[description]'
+      list: '    &8[place]. &7%jobdisplayname%'
+      console:
+        newHeader: '&2========== [amount] Available Jobs ========='
+        description: '[description]'
+        totalWorkers: ' &7Workers: &e[amount]'
+        penalty: ' &4Penalty: &c[amount]%'
+        bonus: ' &2Bonus: &a[amount]%'
+        list: ' &6%jobdisplayname%'
+        newMax: ' &eMax level: &f[max]'
+      click: '&bClick on the job to see more info about it!'
+      detailed: '&bClick to see more detailed list on job actions'
+      jobHeader: '&2========== %jobdisplayname% ========='
+      chooseJob: '&7&n&oChoose this job'
+      chooseJobHover: '&7Click here to get this job'
+  ownedblocks:
+    help:
+      info: Verifique a propriedade dos blocos
+      args: '[playername]'
+    output:
+      list: '&6[place]. &e[type] -> [location]'
+      listHover: '&6Clique para remover: [location]'
+      disabled: '&6(desativado)'
+      disabledHover: '&6Este bloco foi desativado devido às ações do funil'
+  clearownership:
+    help:
+      info: Limpar propriedade do bloco
+      args: '[playername]'
+    output:
+      cleared: $<p:prefix> Foram removidos os fornos <p:primary-color>[furnaces]</p>
+        e as bancadas de fermentação <p:primary-color>[brewing]</p>
+      lost: $<p:prefix> Perda de propriedade de <p:primary-color>[type]</p> em <p:secondary-color>[location]</p>
+  skipquest:
+    help:
+      info: Pule a missão definida e obtenha uma nova
+      args: '[jobname] [questname] (playerName)'
+    output:
+      questSkipForCost: $<p:prefix> Você pulou a missão e pagou <p:eco-format:'%amount%'>
+    confirmationNeed: $<p:prefix> Você tem certeza de que deseja pular <p:primary-color>[questName]</p>
+      missão? Digite o comando novamente dentro de <p:secondary-color>[time]</p> segundos
+      para confirmar!
+  quests:
+    help:
+      info: Liste as missões disponíveis
+      args: '[playername]'
+    error:
+      noquests: $<p:error-prefix> Não há missões
+    toplineseparator: '&e[playerName] &8| %imc_dark-color_c%(&a[questsDone]&7 missões
+      concluídas)'
+    status:
+      changed: $<p:prefix> O status das missões foi alterado para&r %status%
+      started: $<p:prefix> Iniciado
+      stopped: $<p:error-prefix> Parado
+    output:
+      completed: '&a&l      Concluído&r      '
+      questLine: '%imc_primary-color_c%[questName] %imc_secondary-color_c%[done]%imc_dark-color_c%/[required]'
+      skip: '%imc_dark-color_c%◆ %imc_primary-color_c%Clique:%imc_text-color_c% Pular
+        esta missão'
+      skips: '%imc_darkest-color_c%[skips] pulos restantes'
+      hover: "[desc] \n%imc_text-color_c% • Tempo Restante: [time] \n&f"
+  fire:
+    help:
+      info: Demita o jogador do cargo.
+      args: '[playername] [jobname]'
+    error:
+      nojob: $<p:error-prefix> O jogador não possui o cargo <p:primary-color>%jobfullname%</p>.
+    output:
+      target: $<p:prefix> Você foi demitido de <p:primary-color>%jobfullname%</p>.
+  fireall:
+    help:
+      info: Demita o jogador de todos os seus cargos.
+      args: '[playername]/all'
+    error:
+      nojobs: $<p:error-prefix> O jogador não possui cargos para serem demitidos!
+    output:
+      target: $<p:prefix> Você foi demitido de todos os seus cargos.
+  employ:
+    help:
+      info: Empregue o jogador no cargo.
+      args: '[playername] [jobname]'
+    error:
+      alreadyin: $<p:error-prefix> O jogador já está no cargo <p:primary-color>%jobfullname%</p>.
+      fullslots: $<p:error-prefix> Não é possível entrar no cargo <p:primary-color>%jobfullname%</p>,
+        não há vagas disponíveis.
+    output:
+      target: $<p:prefix> Você foi empregado como um <p:primary-color>%jobfullname%</p>.
+  top:
+    help:
+      info: Mostra os melhores jogadores por nome de cargo.
+      args: '[jobname]'
+    error:
+      nojob: $<p:error-prefix> Não foi possível encontrar um cargo com este nome.
+    output:
+      topline: $<p:prefix> Top <p:primary-color>%amount%</p> jogadores <p:dark-color>-</p>
+        <p:secondary-color>%jobfullname%
+      list: '$<p:primary-color>#<b>%number%</b> <p:secondary-color>%playername%</p>
+        <p:dark-color>-</p> <p:text-color>Nível: <p:primary-color>%level%</p> com
+        <p:job-exp-format:''%exp%''>'
+  gtop:
+    help:
+      info: Mostra os melhores jogadores por nível de trabalho global.
+      args: clear/pageNumber
+    output:
+      topline: $<p:prefix> Top <p:primary-color>%amount%</p> jogadores por nível de
+        trabalho global
+      list: '$<p:primary-color>#<b>%number%</b> <p:secondary-color>%playername%</p>
+        <p:dark-color>-</p> <p:text-color>Nível: <p:primary-color>%level%</p> com
+        <p:job-exp-format:''%exp%''>'
+  gqtop:
+    help:
+      info: Shows top players by quests done.
+      args: clear/pageNumber
+    output:
+      topline: '&aTop&e %amount% &aplayers by done quests'
+      list: '&e%number%&a. &e%playerdisplayname% &alvl &e%level% &awith&e %exp% &aexp'
+  area:
+    help:
+      info: Modifique áreas restritas.
+      args: add/remove/info/list
+      addUsage: '$<p:prefix> Usage: <br><p:text-color>▪</p> <p:primary-color>/Jobs
+        area add [areaName/wg:regionName] [bonus]'
+      removeUsage: '$<p:prefix> Usage: <br><p:text-color>▪</p> <p:primary-color>/Jobs
+        area remove [areaName]'
+    output:
+      addedNew: $<p:prefix> Uma nova área restrita com <p:primary-color>x%bonus%</p>
+        bônus foi adicionada
+      removed: $<p:prefix> A área restrita <p:primary-color>%name%</p> foi removida
+      lists: '&7%number%&f. &7%areaname% &f%worldname% &7(&a%x1%:%y1%:%z1%&7/&e%x2%:%y2%:%z2%&7)
+        &2%money% &6%points% &e%exp%'
+      wgLists: '&7%number%&f. WorldGuard: &7%areaname% &2%money% &6%points% &e%exp%'
+      noAreas: $<p:error-prefix> Não há áreas restritas salvas
+      noAreasByLoc: $<p:error-prefix> Não há áreas restritas nesta localização
+      areaList: '$<p:prefix> Áreas restritas em sua localização: <p:primary-color>%list%'
+      selected1: '$<p:prefix> Primeiro ponto selecionado: <p:primary-color>%x% %y%
+        %z%'
+      selected2: '$<p:prefix> Segundo ponto selecionado: <p:primary-color>%x% %y%
+        %z%'
+      select: $<p:prefix> Selecione <p:primary-color>2</p> pontos com a ferramenta
+        de seleção <p:dark-color>(%tool%)
+      exist: $<p:error-prefix> A área de restrição com este nome já existe
+      dontExist: $<p:error-prefix> A área de restrição com este nome não existe
+      wgDontExist: $<p:error-prefix> A área do WorldGuard com este nome não existe
+  log:
+    help:
+      info: Mostra estatísticas.
+      args: '[playername]'
+    output:
+      topline: '&a %playername%'
+      ls: '&7* &6%number%. &3%action%: &6%item% &eqty: %qty% %money%%exp%%points%'
+      money: '&6money: %amount% '
+      exp: '&eexp: %amount% '
+      points: '&6points: %amount%'
+      totalIncomes: '    &6Total money:&2 %money%&6, Total exp:&2 %exp%&6, Total points:&2
+        %points%'
+      bottomline: ''
+      prev: '&e&l<- Página anterior &8|'
+      next: '&8|&l Próxima página ->'
+      nodata: $<p:error-prefix> Dados não encontrados
+  glog:
+    help:
+      info: Mostra estatísticas globais.
+      args: ''
+    output:
+      topline: '&6Estatísticas globais'
+      ls: '&7* &6%number%. &3%action%: &6%item% &eqty: %qty% %money%%exp%%points%'
+      money: '&6money: %amount% '
+      exp: '&eexp: %amount% '
+      points: '&6points: %amount%'
+      totalIncomes: '    &6Total money:&2 %money%&6, Total exp:&2 %exp%&6, Total points:&2
+        %points%'
+      bottomline: ''
+      nodata: $<p:error-prefix> Dados não encontrados
+  transfer:
+    help:
+      info: Transfere um cargo de um jogador de um cargo antigo para um novo.
+      args: '[playername] [oldjob] [newjob]'
+    output:
+      target: $<p:prefix> Você foi transferido de <p:secondary-color>%oldjobname%</p>
+        para <p:primary-color>%newjobname%</p>.
+  promote:
+    help:
+      info: Promove o jogador X níveis em um cargo.
+      args: '[playername] [jobname] [levels]'
+    output:
+      target: $<p:prefix> Você foi promovido <p:primary-color>%levelsgained%</p> níveis
+        em <p:secondary-color>%jobfullname%</p>.
+  exp:
+    help:
+      info: Altera a experiência do jogador para o cargo.
+      args: '[playername] [jobname] set/add/take [amount](rand_[min]-[max]) (-s) (-sa)'
+    error:
+      nojob: $<p:error-prefix> Este jogador deve primeiro ingressar em um cargo.
+    output:
+      target: $<p:prefix> Sua experiência foi alterada para <p:secondary-color>%jobfullname%</p>
+        e agora você está no nível <p:primary-color>%level%</p> e com <p:job-exp-format:'%exp%'>.
+  level:
+    help:
+      info: Altera o nível do jogador em um cargo.
+      args: '[playername] [jobname] set/add/take [amount]'
+    error:
+      nojob: $<p:error-prefix> Este jogador deve primeiro ingressar em um cargo.
+    output:
+      target: $<p:prefix> Seu nível foi alterado para <p:secondary-color>%jobfullname%</p>
+        e agora você está no nível <p:primary-color>%level%</p> e com <p:job-exp-format:'%exp%'>.
+  demote:
+    help:
+      info: Rebaixa o jogador X níveis em um cargo.
+      args: '[playername] [jobname] [levels]'
+    output:
+      target: $<p:prefix> Você foi rebaixado <p:primary-color>%levelslost%</p> níveis
+        em <p:secondary-color>%jobfullname%</p>.
+  grantxp:
+    help:
+      info: Concede ao jogador X experiência em um cargo.
+      args: '[playername] [jobname] [xp]'
+    output:
+      target: $<p:prefix> Você recebeu <p:job-exp-format:'+%xpgained%'> experiência
+        em <p:secondary-color>%jobfullname%</p>.
+  removexp:
+    help:
+      info: Remove X experiência do jogador em um cargo.
+      args: '[playername] [jobname] [xp]'
+    output:
+      target: $<p:prefix> Você perdeu <p:job-exp-format:'-%xplost%'> experiência em
+        <p:secondary-color>%jobfullname%</p>.
+  signupdate:
+    help:
+      info: Atualiza manualmente uma placa pelo seu nome
+      args: '[jobname]'
+  bp:
+    help:
+      info: Mostra proteções de blocos ao seu redor em um raio de 10 blocos
+      args: ''
+    output:
+      found: $<p:prefix> Encontrados <p:primary-color>%amount%</p> blocos protegidos
+        ao seu redor
+      notFound: $<p:prefix> Nenhum bloco protegido encontrado ao seu redor
+  reload:
+    help:
+      info: $<p:prefix> Recarregar configurações.
+  toggle:
+    help:
+      info: Alterna a saída de pagamento na barra de ação ou na barra de chefes.
+      args: actionbar/bossbar
+    output:
+      turnedoff: $<p:prefix> Este recurso está desativado!
+      paid:
+        main: '$<p:prefix> Você recebeu:'
+        money: <p:eco-format:"+[amount]">
+        exp: <p:job-exp-format:"+[exp]">
+        points: <p:job-point-format:"+[points]">
+        ACmoney: '$<p:eco-format:"+[amount]"> '
+        ACexp: '<p:job-exp-format:"+[exp]"> '
+        ACpoints: <p:job-point-format:"+[points]">
+      Rapid: '$<p:prefix> [type]: <p:primary-color>Rápido'
+      Batched: '$<p:prefix> [type]: <p:primary-color>Agrupado'
+      'Off': '$<p:prefix> [type]: <red>Desligado'
+  howmuch:
+    help:
+      info: Verifique o pagamento potencial pelo personagem alvo ou bloco
+      args: ''
+  version:
+    output:
+      payment: '&e[job] &f[action] &7[target] [exp] [money] [points]'
+      nopayment: '&7Can''t find any payments ([target])'
+      jobsVersion: '&eJobs: &6[version]'
+      jobsVersionNew: '&e-> [newVersion]'
+      dbType: ' &7[db]'
+      newServer: '&eServer: &6[version]'
+      Economy: '&eEconomy: &6[provider] '
+      newVault: '&eVault: &6[version] '
+      CMILib: '&eCMILib: &6[version] '
+      cmilVersionNew: '&e-> [newVersion]'
+    help:
+      info: Informações da versão do plugin
+      args: ''
+message:
+  skillup:
+    broadcast: $<p:prefix> <p:secondary-color>%playername%</p> foi promovido a um
+      <p:primary-color>%titlename%&r</p><p:text-color> em <p:primary-color>%jobfullname%</p>.
+    nobroadcast: $<p:prefix> Parabéns, você foi promovido a um <p:primary-color>%titlename%&r</p><p:text-color>
+      em <p:primary-color>%jobfullname%</p>.
+  levelup:
+    broadcast: $<p:prefix> <p:secondary-color>%playername%</p> agora é um nível <p:primary-color>%joblevel%</p>
+      em <p:primary-color>%jobfullname%</p>.
+    nobroadcast: $<p:prefix> Agora você está no nível <p:primary-color>%joblevel%</p>
+      em <p:primary-color>%jobfullname%</p>.
+  leveldown:
+    message: '$<p:prefix> Você perdeu o nível <p:secondary-color>%lostLevel%</p> em
+      <p:primary-color>%jobfullname%</p>! Nível: <p:primary-color>%joblevel%</p>.'
+  cowtimer: $<actionbar:'<p:prefix> Você ainda precisa esperar <p:primary-color>time%
+    sec</p> para ser pago por este cargo.'>
+  blocktimer: $<actionbar:'<p:prefix> Você precisa esperar <p:primary-color>[time]
+    sec</p> mais para ser pago por isso!'>
+  taxes: $<p:prefix> [amount] impostos do servidor foram transferidos para esta conta
+  boostStarted: $<p:prefix> O tempo de impulso dos cargos começou!
+  boostStoped: $<p:prefix> O tempo de impulso dos cargos foi encerrado!
+  crafting:
+    fullinventory: $<p:error-prefix> Seu inventário está cheio!
+signs:
+  List: '&0[number].&8[player]&7:&4[level]'
+  questList: '&0[number].&8[player]&7:&4[quests]'
+  SpecialList:
+    p1: '&b** &8First &b**'
+    p2: '&b** &8Second &b**'
+    p3: '&b** &8Third &b**'
+    p4: '&b** &8Fourth &b**'
+    p5: '&b** &8Fifth &b**'
+    p6: '&b** &8Sixth &b**'
+    p7: '&b** &8Seventh &b**'
+    p8: '&b** &8Eight &b**'
+    p9: '&b** &8Ninth &b**'
+    p10: '&b** &8Tenth &b**'
+    name: '&9[player]'
+    level: '&8[level] level'
+    quests: '&8[quests] quests'
+    bottom: '&b************'
+  cantcreate: '&4You can''t create this sign!'
+  cantdestroy: '&4You can''t destroy this sign!'
+  topline: '&0[Jobs]'
+  secondline:
+    join: '&0Join'
+    leave: '&0Leave'
+    toggle: '&0Toggle'
+    top: '&0Top'
+    browse: '&0Browse'
+    stats: '&0Stats'
+    limit: '&0Limit'
+    info: '&0Info'
+    archive: '&0Archive'
+scoreboard:
+  topline: '&7Top &e(%jobdisplayname%)'
+  gtopline: '&alGlobal top list'
+  line: '&f%number% | &a%playername% &d(%level%)'

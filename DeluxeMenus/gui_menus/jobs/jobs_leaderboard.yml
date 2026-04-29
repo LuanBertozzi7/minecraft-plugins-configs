@@ -1,0 +1,251 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: 'Jobs | Classificação'
+open_command:
+  - job leaderboard
+  - jobs leaderboard
+  - jobs top
+  - jobs gtop
+size: 54 
+items:
+  information:
+    material: ITEM_FRAME
+    slot: 4
+    display_name: "&aInformação da Classificação"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Classificação para cada nível e'
+      - '%imc_dark-color_c%nível total combinado.'
+      - ''
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_totallevels%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação Global:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_total_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_total_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_total_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_total_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_total_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_total_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_total_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_total_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_total_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_total_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_total_10%☆'
+
+##################################
+#          LEADERBOARD           #
+##################################
+  woodcutter:
+    material: GOLDEN_AXE
+    slot: 20
+    display_name: "&aLenhador"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_woodcutter%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_woodcutter_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_woodcutter_10%☆'
+
+  miner:
+    material: DIAMOND_PICKAXE
+    slot: 21
+    display_name: "&bMinerador"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_miner%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_miner_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_miner_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_miner_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_miner_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_miner_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_miner_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_miner_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_miner_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_miner_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_miner_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_miner_10%☆'
+
+  builder:
+    material: BRICKS
+    slot: 22
+    display_name: "&2Construtor"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_builder%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_builder_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_builder_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_builder_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_builder_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_builder_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_builder_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_builder_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_builder_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_builder_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_builder_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_builder_10%☆'
+
+  blacksmith:
+    material: ANVIL
+    slot: 23
+    display_name: "&6Ferramenteiro"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_blacksmith%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_blacksmith_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_blacksmith_10%☆'
+
+  farmer:
+    material: WHEAT
+    slot: 24
+    display_name: "&eAgricultor"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_farmer%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_farmer_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_farmer_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_farmer_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_farmer_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_farmer_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_farmer_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_farmer_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_farmer_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_farmer_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_farmer_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_farmer_10%☆'
+
+  ranger:
+    material: LEAD
+    slot: 29
+    display_name: "&cRanger"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_ranger%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_ranger_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_ranger_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_ranger_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_ranger_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_ranger_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_ranger_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_ranger_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_ranger_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_ranger_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_ranger_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_ranger_10%☆'
+
+  explorer:
+    material: COMPASS
+    slot: 30
+    display_name: "&3Explorador"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_explorer%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_explorer_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_explorer_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_explorer_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_explorer_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_explorer_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_explorer_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_explorer_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_explorer_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_explorer_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_explorer_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_explorer_10%☆'
+
+  crafter:
+    material: CRAFTING_TABLE
+    slot: 31
+    display_name: "&fFabricante"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_crafter%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_crafter_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_crafter_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_crafter_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_crafter_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_crafter_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_crafter_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_crafter_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_crafter_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_crafter_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_crafter_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_crafter_10%☆'
+
+  culinarian:
+    material: CAKE
+    slot: 32
+    display_name: "&9Culinário"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_culinarian%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_culinarian_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_culinarian_10%☆'
+
+  magician:
+    material: AMETHYST_SHARD
+    slot: 33
+    display_name: "&dMago"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c% • %imc_text-color_c%Seu Nível: %imc_primary-color_c%%jobsr_user_jlevel_magician%☆"
+      - ''
+      - '%imc_darkest-color_c%Classificação:'
+      - '%imc_secondary-color_c%#&l1 %imc_text-color_c%%jobsr_jtop_displayname_magician_1% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_1%☆'
+      - '%imc_secondary-color_c%#&l2 %imc_text-color_c%%jobsr_jtop_displayname_magician_2% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_2%☆'
+      - '%imc_secondary-color_c%#&l3 %imc_text-color_c%%jobsr_jtop_displayname_magician_3% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_3%☆'
+      - '%imc_secondary-color_c%#&l4 %imc_text-color_c%%jobsr_jtop_displayname_magician_4% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_4%☆'
+      - '%imc_secondary-color_c%#&l5 %imc_text-color_c%%jobsr_jtop_displayname_magician_5% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_5%☆'
+      - '%imc_secondary-color_c%#&l6 %imc_text-color_c%%jobsr_jtop_displayname_magician_6% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_6%☆'
+      - '%imc_secondary-color_c%#&l7 %imc_text-color_c%%jobsr_jtop_displayname_magician_7% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_7%☆'
+      - '%imc_secondary-color_c%#&l8 %imc_text-color_c%%jobsr_jtop_displayname_magician_8% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_8%☆'
+      - '%imc_secondary-color_c%#&l9 %imc_text-color_c%%jobsr_jtop_displayname_magician_9% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_9%☆'
+      - '%imc_secondary-color_c%#&l10 %imc_text-color_c%%jobsr_jtop_displayname_magician_10% %imc_dark-color_c%- %imc_primary-color_c%%jobsr_jtop_level_magician_10%☆'
+
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: "%imc_dark-color_c%Voltar"
+    click_commands:
+      - '[openguimenu] jobs_main'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: YELLOW_STAINED_GLASS_PANE
+    display_name: "&f&l"
+    slots: [0, 1, 7, 8, 45, 46, 52, 53]

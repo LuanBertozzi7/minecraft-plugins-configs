@@ -1,0 +1,69 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Explorador
+open_command:
+  - jobs payouts explorer
+register_command: true
+size: 54
+items:
+  explore:
+    material: LEATHER_BOOTS
+    slot: 3
+    display_name: '%imc_primary-color_c%Explorar'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Descobrir blocos para'
+      - '%imc_dark-color_c%receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_explorer_explore'
+  trade:
+    material: EMERALD
+    slot: 5
+    display_name: '%imc_primary-color_c%Troca com aldeões'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Trocar com aldeões os seguintes'
+      - '%imc_dark-color_c%itens para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_explorer_trade'
+  explore_leather_boots:
+    material: leather_boots
+    slot: 10
+    display_name: '%imc_primary-color_c%Descobrir um Chunk'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Descoberta:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Primeira Descoberta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Segunda Descoberta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terceira Descoberta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Quarta Descoberta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Quinta Descoberta'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_explorer_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: CYAN_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

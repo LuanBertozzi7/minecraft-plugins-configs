@@ -1,0 +1,8 @@
+Name: Chave Sofisticada
+Virtual: true
+ItemData:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:custom_name":{extra:["Sofisticada Key"],text:""}},count:1,id:"minecraft:tripwire_hook"}'
+    DataVersion: 4440
+ItemStackable: false

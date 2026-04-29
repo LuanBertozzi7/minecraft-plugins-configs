@@ -1,0 +1,807 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: 'Jobs | Loja de Pontos'
+open_command:
+- jobs shop
+register_command: true
+size: 54
+items:
+  information:
+    material: SUNFLOWER
+    slot: 4
+    display_name: "%imc_primary-color_c%Informação"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - "%imc_dark-color_c%Ganhe %imc_job-point-format_c% Pontos %%imc_dark-color_c% realizando ações pagas"
+      - "%imc_dark-color_c%para seu trabalho ou subindo de nível."
+      - ''
+      - '%imc_text-color_c%Pontos: %imc_job-point-format_c_{jobsr_user_points_fixed}%'
+      - ''
+      - "%imc_darkest-color_c%Para que é usado este dinheiro?"
+      - "%imc_job-point-format_c% permite que você compre"
+      - "%imc_dark-color_c%diversos itens nesta loja."
+      - ''
+      - '%imc_darkest-color_c%Estatísticas:'
+      - "%imc_dark-color_c% • %imc_text-color_c%Pontos coletados de todos os tempos: %imc_job-point-format_c_{jobsr_user_total_points}%"
+
+################## SHOP ITEMS
+
+##################################
+#         GOLDEN APPLE           #
+##################################
+
+  golden_apple_lock:
+    material: GOLDEN_APPLE
+    slot: 19
+    amount: 8
+    priority: 0
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Maçã dourada"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  golden_apple_available:
+    material: GOLDEN_APPLE
+    slot: 19
+    amount: 8
+    priority: 1
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Maçã dourada"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 150'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% golden_apple 8'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x8</p> <p:primary-color>Maçã dourada"
+      - '[refresh]'
+
+
+##################################
+#          GOLDEN CARROT         #
+##################################
+
+  golden_carrot_lock:
+    material: GOLDEN_CARROT
+    slot: 20
+    amount: 32
+    priority: 0
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Cenoura dourada"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes." 
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  golden_carrot_available:
+    material: GOLDEN_CARROT
+    slot: 20
+    amount: 32
+    priority: 1
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Cenoura dourada"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 150'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% golden_carrot 32'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x32</p> <p:primary-color>Cenoura dourada"
+      - '[refresh]'
+
+##################################
+#        EXPERIENCE BOTTLE       #
+##################################
+
+  experience_bottle_lock:
+    material: EXPERIENCE_BOTTLE
+    slot: 21
+    amount: 64
+    priority: 0
+    display_name: "%imc_dark-color_c%x64 %imc_primary-color_c%Frasco encantado"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  experience_bottle_available:
+    material: EXPERIENCE_BOTTLE
+    slot: 21
+    amount: 64
+    priority: 1
+    display_name: "%imc_dark-color_c%x64 %imc_primary-color_c%Frasco encantado"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 150'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% experience_bottle 64'
+      - "[message] $<p:prefix> You have succesfully bought <p:dark-color>x64</p> <p:primary-color>Frasco encantado"
+      - '[refresh]'
+
+##################################
+#              ARROW             #
+##################################
+
+  arrow_lock:
+    material: ARROW
+    slot: 22
+    amount: 64
+    priority: 0
+    display_name: "%imc_dark-color_c%x64 %imc_primary-color_c%Flecha"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  arrow_available:
+    material: ARROW
+    slot: 22
+    amount: 64
+    priority: 1
+    display_name: "%imc_dark-color_c%x64 %imc_primary-color_c%Flecha"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_150 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 150
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 150'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% arrow 64'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x64</p> <p:primary-color>Flecha"
+      - '[refresh]'
+
+##################################
+#           ENDER PEARL          #
+##################################
+
+  ender_pearl_lock:
+    material: ENDER_PEARL
+    slot: 23
+    amount: 8
+    priority: 0
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Pérola do Ender"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_100 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 100
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  ender_pearl_available:
+    material: ENDER_PEARL
+    slot: 23
+    amount: 8
+    priority: 1
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Pérola do Ender"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_100 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 100
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 100'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% ender_pearl 8'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x8</p> <p:primary-color>Pérola do Ender"
+      - '[refresh]'
+
+##################################
+#         TOTEM OF UNDYING       #
+##################################
+
+  totem_of_undying_lock:
+    material: TOTEM_OF_UNDYING
+    slot: 24
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Totem da imortalidade"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  totem_of_undying_available:
+    material: TOTEM_OF_UNDYING
+    slot: 24
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Totem da imortalidade"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 600'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% totem_of_undying 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Totem da imortalidade</p>"
+      - '[refresh]'
+
+##################################
+#          UNBREAKING III        #
+##################################
+
+  book_unbreakingIII_lock:
+    material: ENCHANTED_BOOK
+    slot: 25
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Inquebrável III)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_400 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 400
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  book_unbreakingIII_available:
+    material: ENCHANTED_BOOK
+    slot: 25
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Inquebrável III)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_400 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 400
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 400'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% enchanted_book[stored_enchantments={"minecraft:unbreaking":3}] 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Livro encantado</p> <p:dark-color>(Inquebrável III)</p>"
+      - '[refresh]'
+
+##################################
+#          EFFICIENCY IV         #
+##################################
+
+  book_efficiencyIV_lock:
+    material: ENCHANTED_BOOK
+    slot: 28
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Eficiência IV)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_500 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 500
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  book_efficiencyIV:
+    material: ENCHANTED_BOOK
+    slot: 28
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Eficiência IV)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_500 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 500
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 500'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% enchanted_book[stored_enchantments={"minecraft:efficiency":4}] 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Livro encantado</p> <p:dark-color>(Eficiência IV)</p>"
+      - '[refresh]'
+
+##################################
+#          PROTECTION IV         #
+##################################
+
+  book_protectionIV_lock:
+    material: ENCHANTED_BOOK
+    slot: 29
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Proteção IV)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  book_protectionIV_available:
+    material: ENCHANTED_BOOK
+    slot: 29
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Livro encantado %imc_dark-color_c%(Proteção IV)"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 600'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% enchanted_book[stored_enchantments={"minecraft:protection":4}] 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Livro encantado</p> <p:dark-color>(Proteção IV)</p>"
+      - '[refresh]'
+
+##################################
+#         NETHERITE SCRAP        #
+##################################
+
+  netherite_scrap_lock:
+    material: NETHERITE_SCRAP
+    slot: 30
+    amount: 2
+    priority: 0
+    display_name: "%imc_dark-color_c%2x %imc_primary-color_c%Fragmentos de netherite"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  netherite_scrap_available:
+    material: NETHERITE_SCRAP
+    slot: 30
+    amount: 2
+    priority: 1
+    display_name: "%imc_dark-color_c%2x %imc_primary-color_c%Fragmentos de netherite"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_600 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 600
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 600'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% netherite_scrap 2'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>2x Fragmentos de netherite</p>"
+      - '[refresh]'
+
+##################################
+#          SHULKER SHELL         #
+##################################
+
+  shulker_shell_lock:
+    material: SHULKER_SHELL
+    slot: 31
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Casca de shulker"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_500 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 500
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  shulker_shell_available:
+    material: SHULKER_SHELL
+    slot: 31
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Casca de shulker"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_500 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 500
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 500'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% shulker_shell 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Casca de shulker</p>"
+      - '[refresh]'
+
+##################################
+#            GOAT HORN           #
+##################################
+
+  goat_horn_lock:
+    material: GOAT_HORN
+    slot: 32
+    amount: 1
+    priority: 0
+    display_name: "%imc_primary-color_c%Chifre de cabra"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_100 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 100
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  goat_horn_available:
+    material: GOAT_HORN
+    slot: 32
+    amount: 1
+    priority: 1
+    display_name: "%imc_primary-color_c%Chifre de cabra"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_100 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 100
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 100'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% goat_horn{instrument:ponder_goat_horn} 1'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:primary-color>Chifre de cabra</p>"
+      - '[refresh]'
+
+##################################
+#           SLIME BLOCK          #
+##################################
+
+  slime_block_lock:
+    material: SLIME_BLOCK
+    slot: 33
+    amount: 8
+    priority: 0
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Bloco de slime"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_300 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 300
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  slime_block:
+    material: SLIME_BLOCK
+    slot: 33
+    amount: 8
+    priority: 1
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Bloco de slime"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_300 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 300
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 300'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% slime_block 8'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x8</p> <p:primary-color>Bloco de slime"
+      - '[refresh]'
+
+##################################
+#           HONEY BLOCK          #
+##################################
+
+  honey_block_lock:
+    material: HONEY_BLOCK
+    slot: 34
+    amount: 8
+    priority: 0
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Bloco de mel"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_300 Pontos %'
+      - ''
+      - "&c✘ Você não tem pontos suficientes."
+    view_requirement:
+      requirements:
+        balance:
+          type: '<'
+          input: '%jobsr_user_points_fixed%'
+          output: 300
+    click_commands:
+      - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+
+  honey_block_available:
+    material: HONEY_BLOCK
+    slot: 34
+    amount: 8
+    priority: 1
+    display_name: "%imc_dark-color_c%x8 %imc_primary-color_c%Bloco de mel"
+    item_flags: [HIDE_ATTRIBUTES]
+    lore:
+      - '%imc_dark-color_c%Compre itens usando seus pontos'
+      - ''
+      - '%imc_text-color_c%Preço: %imc_job-point-format_c_300 Pontos %'
+      - ''
+      - "%imc_dark-color_c%◆ %imc_primary-color_c%Clicar:%imc_text-color_c% Comprar"
+    click_requirement:
+      requirements:
+        balance:
+          type: '>='
+          input: '%jobsr_user_points_fixed%'
+          output: 300
+      deny_commands:
+        - "[message] $<p:error-prefix> Você não tem pontos suficientes."
+    click_commands:
+      - '[console] jobs editpoints take %player_name% 300'
+      - '[sound] BLOCK_DECORATED_POT_INSERT'
+      - '[console] minecraft:give %player_name% honey_block 8'
+      - "[message] $<p:prefix> Você comprou com sucesso <p:dark-color>x8</p> <p:primary-color>Bloco de mel"
+      - '[refresh]'
+
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: "%imc_dark-color_c%Voltar"
+    click_commands:
+      - '[openguimenu] jobs_main'
+      - '[sound] UI_BUTTON_CLICK'
+  next_page:
+    material: ARROW
+    slot: 50
+    display_name: "%imc_primary-color_c%Próxima Página"
+    click_commands:
+      - '[openguimenu] jobs_shop_2'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+  background:
+    material: YELLOW_STAINED_GLASS_PANE
+    display_name: "&f&l"
+    slots: [0, 1, 7, 8, 45, 46, 52, 53]

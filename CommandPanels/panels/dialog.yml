@@ -1,0 +1,68 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Dialog File
+# |                           Official Panel v2
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+conditions: '%player_name% $HASPERM example.permission'
+title: '&6Welcome to Our Server!'
+type: dialog
+has-exit-button: false
+escapable: true
+columns: 1
+
+layout:
+  '0':
+  - welcome_text
+  '1':
+  - info_text
+  '3':
+  - welcome_item
+  '5':
+  - input_nickname
+  '7':
+  - btn_confirm
+  '8':
+  - btn_website
+
+items:
+  welcome_text:
+    type: text
+    name: '&eHello, &6%player_name%&e!'
+    lore:
+    - '&7We are glad to have you here.'
+    - '&7Please enter a nickname to use on the server.'
+  
+  info_text:
+    type: text
+    name: '&fYour nickname will be shown to others.'
+    lore:
+    - '&7You can change it anytime in this dialog.'
+  
+  welcome_item:
+    type: item
+    material: NAME_TAG
+    name: '&bNickname Tag'
+    text: Use this tag to set your nickname.
+  
+  input_nickname:
+    type: input
+    name: '&aEnter your new nickname'
+    initial: '%player_name%'
+    placeholder: Type your nickname here...
+  
+  btn_confirm:
+    type: button
+    width: 200
+    name: '&aConfirm Nickname'
+    tooltip: Save your new nickname
+    actions:
+      commands:
+      - '[console] nick %player_name% %commandpanels_session_input_nickname%'
+      - '[msg] &aYour nickname has been set to &6%commandpanels_session_input_nickname%&a.'
+  
+  btn_website:
+    type: button
+    width: 200
+    name: '&bVisit Website'
+    url: https://commandpanels.net/
+    tooltip: Click to visit our website

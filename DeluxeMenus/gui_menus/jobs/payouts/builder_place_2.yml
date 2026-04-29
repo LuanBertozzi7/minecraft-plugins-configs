@@ -1,0 +1,347 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Construtor
+size: 54
+items:
+  place:
+    material: BRICKS
+    slot: 3
+    display_name: '%imc_primary-color_c%Colocar'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Colocar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_place'
+      - '[sound] UI_BUTTON_CLICK'
+  break:
+    material: GRASS_BLOCK
+    slot: 5
+    display_name: '%imc_primary-color_c%Break'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Quebrar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_break'
+      - '[sound] UI_BUTTON_CLICK'
+  place_hay_block:
+    material: hay_block
+    slot: 10
+    display_name: '%imc_primary-color_c%Fardo de feno'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Fardo de feno'
+  place_end_stone_bricks:
+    material: end_stone_bricks
+    slot: 11
+    display_name: '%imc_primary-color_c%Tijolos de pedra do End'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra do End'
+  place_crimson_planks:
+    material: crimson_planks
+    slot: 12
+    display_name: '%imc_primary-color_c%Tábuas carmesins'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas carmesins'
+      - '%imc_dark-color_c% • %imc_text-color_c%Hifas carmesins'
+      - '%imc_dark-color_c% • %imc_text-color_c%Nicélio carmesim'
+  place_warped_planks:
+    material: warped_planks
+    slot: 13
+    display_name: '%imc_primary-color_c%Tábuas deformadas'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas deformadas'
+      - '%imc_dark-color_c% • %imc_text-color_c%Hifas deformadas'
+      - '%imc_dark-color_c% • %imc_text-color_c%Nicélio deformado'
+  place_polished_blackstone:
+    material: polished_blackstone
+    slot: 14
+    display_name: '%imc_primary-color_c%Negrito polido'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Negrito polido esculpido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos de negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de negrito polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de negrito polido rachados'
+  place_white_concrete:
+    material: white_concrete
+    slot: 15
+    display_name: '%imc_primary-color_c%Concretos'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão branco'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão cinzento-claro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão cinzento'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão preto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão castanho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão vermelho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão amarelo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão verde-lima'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão azul-claro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão roxo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão magenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Betão rosa'
+  place_amethyst_block:
+    material: amethyst_block
+    slot: 16
+    display_name: '%imc_primary-color_c%Bloco de ametista'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de ametista'
+  place_copper_block:
+    material: copper_block
+    slot: 19
+    display_name: '%imc_primary-color_c%Bloco de cobre'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de cobre'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cobre cortado'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de cobre cortado'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cobre esculpido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de cobre'
+      - '%imc_dark-color_c% • %imc_text-color_c%Grade de cobre'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de cobre'
+  place_cobbled_deepslate:
+    material: cobbled_deepslate
+    slot: 20
+    display_name: '%imc_primary-color_c%Pedregulho de ardósia'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedregulho de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de pedregulho de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de pedregulho de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de pedregulho de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Ardósia polida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de ardósia polida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de ardósia polida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de ardósia polida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Ladrilhos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de ladrilhos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de ladrilhos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de ladrilhos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Ardósia esculpida'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de tijolos de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de ardósia rachados'
+      - '%imc_dark-color_c% • %imc_text-color_c%Ardósia esculpida'
+  place_candle:
+    material: candle
+    slot: 21
+    display_name: '%imc_primary-color_c%Vela'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela branca'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela cinzento-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela cinzenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela preta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela castanha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela vermelha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela amarela'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela verde-lima'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela azul-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela roxa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela magenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Vela rosa'
+  place_mangrove_planks:
+    material: mangrove_planks
+    slot: 22
+    display_name: '%imc_primary-color_c%Madeira de mangue'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de mangue descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de mangue'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de mangue'
+  place_mud_bricks:
+    material: mud_bricks
+    slot: 23
+    display_name: '%imc_primary-color_c%Tijolos de barro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de barro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de barro'
+  place_cherry_planks:
+    material: cherry_planks
+    slot: 24
+    display_name: '%imc_primary-color_c%Madeira de cerejeira'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Madeira de cerejeira descascada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de cerejeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de cerejeira'
+  place_bamboo_planks:
+    material: bamboo_planks
+    slot: 25
+    display_name: '%imc_primary-color_c%Bambu'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de bambu'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de bambu'
+  place_dried_kelp_block:
+    material: dried_kelp_block
+    slot: 28
+    display_name: '%imc_primary-color_c%Bloco de algas secas'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de algas secas'
+  place_glowstone:
+    material: glowstone
+    slot: 29
+    display_name: '%imc_primary-color_c%Blocos de Luz'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedra luminosa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lanterna marinha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Lâmpada de redstone'
+      - '%imc_dark-color_c% • %imc_text-color_c%Luz-anfíbia verdejante'
+      - '%imc_dark-color_c% • %imc_text-color_c%Luz-anfíbia perolada'
+      - '%imc_dark-color_c% • %imc_text-color_c%Luz-anfíbia ocre'
+  place_tuff_bricks:
+    material: tuff_bricks
+    slot: 30
+    display_name: '%imc_primary-color_c%Tufo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de tijolos de tufo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tufo polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tufo polido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de tufo polido'
+  place_pale_oak_planks:
+    material: pale_oak_planks
+    slot: 31
+    display_name: '%imc_primary-color_c%Madeira de carvalho pálido'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tábuas de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Cerca de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Portão de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Porta de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Alçapão de carvalho pálido'
+      - '%imc_dark-color_c% • %imc_text-color_c%Folhas de carvalho pálido'
+  place_resin_bricks:
+    material: resin_bricks
+    slot: 32
+    display_name: '%imc_primary-color_c%Tijolos de resina'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de resina'
+      - '%imc_dark-color_c% • %imc_text-color_c%Degrau de tijolos de resina'
+      - '%imc_dark-color_c% • %imc_text-color_c%Escadas de tijolos de resina'
+      - '%imc_dark-color_c% • %imc_text-color_c%Muro de tijolos de resina'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de resina esculpidos'
+  previous-page:
+    material: ARROW
+    slot: 48
+    display_name: '%imc_primary-color_c%Página Anterior'
+    click_commands:
+      - '[openguimenu] jobs_payouts_builder_place'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_builder_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: GREEN_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

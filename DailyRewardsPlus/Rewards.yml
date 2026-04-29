@@ -1,0 +1,389 @@
+#---------------------------------------------------------------- EXAMPLE REWARD---------------------------------------------------------------------------------#
+Day Example:
+  # The name of the reward
+  RewardName: "Daily Reward!"
+
+  # The icon for the reward, Input a Minecraft NameSpaced ID, ![IT HAS TO BE A NAMESPACED ID]! {NameSpaced ID Examples: DIAMOND_SWORD, OAK_PLANKS, STONE_HOE etc} ~ A quick google search can help find the NameSpaced ID that you need!
+  RewardIcon: "SUNFLOWER"
+
+  # The commands used to issue the reward, <playername> can be used as a placeholder to specify the users name who claimed
+  # To add more commands just create another line and include - ""
+  # (As shown below)
+  RewardCommands:
+    - "console: eco give %player% 5000"
+    - "console: give %player% diamond 1"
+
+  # This is an [OPTIONAL] field. If you include this within any day, it will override the original Messages.yml RewardClaim message
+  RewardMessage: "You have claimed a special reward!"
+
+  # This is for extra information
+  Extras:
+    # Enchanted represents whether the GUI item should appear enchanted or not
+    Enchanted: false
+    # GUI position relates to the position in the GUI (0 = Top Left, 53 = bottom right) numbers increase across and down the rows
+    # We recommend leaving these to preserve the original GUI shape, causing errors here can stop the plugin from working correctly!
+    GUI Position: 1
+    # The page that the icon is located on, this must be within the range of the total number of GUI pages (declared in the Config.yml)
+    # If the Page number is not within the pre-determined range, the icon will not be visible at all.
+    # If this field is not included, the reward day will default to Page 1
+    GUI Page: 1
+
+
+# This config file contains a default of 30 days of rewards. You may copy/delete fields to ensure that your server has more or less rewards.
+# Not filling out days will not remove the day, but instead default the day to not giving out any reward
+# The built-in placeholder <playerName> can be used in the RewardCommand section of the day to specify the player who redeems the rewards in game name
+
+# If you have any questions you can always get support at: https://discord.gg/9jyHhUepaG
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+
+Day 1:
+  RewardName: '💎 Kit de Reforço'
+  RewardCommands:
+    - 'give <playername> minecraft:bread 10'
+    - 'give <playername> minecraft:coal 16'
+    - 'eco give <playername> 200'
+  RewardIcon: 'minecraft:bread'
+  Extras:
+    Enchanted: true
+    GUI Position: 0
+    GUI Page: 1
+
+Day 2:
+  RewardName: '🛠️ Reparo Express'
+  RewardCommands:
+    - 'give <playername> minecraft:anvil 1'
+    - 'give <playername> minecraft:iron_ingot 16'
+    - 'eco give <playername> 600'
+  RewardIcon: 'minecraft:anvil'
+  Extras:
+    Enchanted: false
+    GUI Position: 1
+    GUI Page: 1
+
+Day 3:
+  RewardName: '🔮 Encantamento Premium'
+  RewardCommands:
+    - 'give <playername> minecraft:enchanted_book[enchantments=[{id="minecraft:unbreaking",level=3}]] 1'
+    - 'give <playername> minecraft:lapis_lazuli 32'
+    - 'eco give <playername> 700'
+  RewardIcon: 'minecraft:enchanted_book'
+  Extras:
+    Enchanted: true
+    GUI Position: 2
+    GUI Page: 1
+
+Day 4:
+  RewardName: '🧪 Poções Úteis'
+  RewardCommands:
+    - 'give <playername> minecraft:potion{potion_contents:{potion:"minecraft:strong_regeneration"}} 1'
+    - 'give <playername> minecraft:potion{potion_contents:{potion:"minecraft:fire_resistance"}} 1'
+    - 'eco give <playername> 800'
+  RewardIcon: 'minecraft:potion'
+  Extras:
+    Enchanted: true
+    GUI Position: 3
+    GUI Page: 1
+
+Day 5:
+  RewardName: '🪓 Ferramenta Avançada'
+  RewardCommands:
+    - 'give <playername> minecraft:diamond_pickaxe{enchantments:[{id:"minecraft:efficiency",lvl:4}]}' 
+    - 'eco give <playername> 900'
+  RewardIcon: 'minecraft:diamond_pickaxe'
+  Extras:
+    Enchanted: true
+    GUI Position: 4
+    GUI Page: 1
+
+Day 6:
+  RewardName: '💰 Recompensa de Elite'
+  RewardCommands:
+    - 'eco give <playername> 1000'
+    - 'give <playername> minecraft:emerald 6'
+  RewardIcon: 'minecraft:emerald'
+  Extras:
+    Enchanted: false
+    GUI Position: 5
+    GUI Page: 1
+
+Day 7:
+  RewardName: '🔥 Fragmentos de Netherite'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_scrap 4'
+    - 'eco give <playername> 1100'
+  RewardIcon: 'minecraft:netherite_scrap'
+  Extras:
+    Enchanted: true
+    GUI Position: 6
+    GUI Page: 1
+
+Day 8:
+  RewardName: '📦 Caixa de Suprimentos'
+  RewardCommands:
+    - 'give <playername> minecraft:shulker_box 1'
+    - 'give <playername> minecraft:ender_pearl 8'
+    - 'eco give <playername> 1200'
+  RewardIcon: 'minecraft:shulker_box'
+  Extras:
+    Enchanted: true
+    GUI Position: 7
+    GUI Page: 1
+
+Day 9:
+  RewardName: '⚔️ Espada Letal'
+  RewardCommands:
+    - 'give <playername> minecraft:diamond_sword{enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:unbreaking",lvl:3}]}' 
+    - 'eco give <playername> 1300'
+  RewardIcon: 'minecraft:diamond_sword'
+  Extras:
+    Enchanted: true
+    GUI Position: 8
+    GUI Page: 1
+
+Day 10:
+  RewardName: '🧱 Blocos Raros'
+  RewardCommands:
+    - 'give <playername> minecraft:obsidian 32'
+    - 'give <playername> minecraft:crying_obsidian 8'
+    - 'eco give <playername> 1400'
+  RewardIcon: 'minecraft:crying_obsidian'
+  Extras:
+    Enchanted: false
+    GUI Position: 9
+    GUI Page: 1
+
+Day 11:
+  RewardName: '🔧 Kit de Manutenção'
+  RewardCommands:
+    - 'give <playername> minecraft:anvil 1'
+    - 'give <playername> minecraft:experience_bottle 24'
+    - 'eco give <playername> 1500'
+  RewardIcon: 'minecraft:experience_bottle'
+  Extras:
+    Enchanted: true
+    GUI Position: 10
+    GUI Page: 1
+
+Day 12:
+  RewardName: '🎯 Arqueiro Supremo'
+  RewardCommands:
+    - 'give <playername> minecraft:bow{enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:infinity",lvl:1}]}' 
+    - 'give <playername> minecraft:arrow 1'
+    - 'eco give <playername> 1600'
+  RewardIcon: 'minecraft:bow'
+  Extras:
+    Enchanted: true
+    GUI Position: 11
+    GUI Page: 1
+
+Day 13:
+  RewardName: '📜 Livro Encantado'
+  RewardCommands:
+    - 'give <playername> minecraft:enchanted_book{stored_enchantments:[{id:"minecraft:mending",lvl:1}]}' 
+    - 'eco give <playername> 1700'
+  RewardIcon: 'minecraft:enchanted_book'
+  Extras:
+    Enchanted: true
+    GUI Position: 12
+    GUI Page: 1
+
+Day 14:
+  RewardName: '⚒️ Ferramenta de Netherite'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_pickaxe{enchantments:[{id:"minecraft:efficiency",lvl:5}]}' 
+    - 'eco give <playername> 1800'
+  RewardIcon: 'minecraft:netherite_pickaxe'
+  Extras:
+    Enchanted: true
+    GUI Position: 13
+    GUI Page: 1
+
+Day 15:
+  RewardName: '🧱 Suprimento de Construção'
+  RewardCommands:
+    - 'give <playername> minecraft:quartz_block 32'
+    - 'give <playername> minecraft:sea_lantern 16'
+    - 'eco give <playername> 1900'
+  RewardIcon: 'minecraft:quartz_block'
+  Extras:
+    Enchanted: false
+    GUI Position: 14
+    GUI Page: 1
+
+Day 16:
+  RewardName: '🪙 Bônus Financeiro'
+  RewardCommands:
+    - 'eco give <playername> 2000'
+    - 'give <playername> minecraft:emerald 10'
+  RewardIcon: 'minecraft:gold_ingot'
+  Extras:
+    Enchanted: true
+    GUI Position: 15
+    GUI Page: 1
+
+Day 17:
+  RewardName: '🪓 Machado de Guerra'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_axe{enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:unbreaking",lvl:3}]}' 
+    - 'eco give <playername> 2200'
+  RewardIcon: 'minecraft:netherite_axe'
+  Extras:
+    Enchanted: true
+    GUI Position: 16
+    GUI Page: 1
+
+Day 18:
+  RewardName: '🧬 Poções Avançadas'
+  RewardCommands:
+    - 'give <playername> minecraft:potion{potion_contents:{potion:"minecraft:strong_swiftness"}} 1'
+    - 'give <playername> minecraft:potion{potion_contents:{potion:"minecraft:strong_strength"}} 1'
+    - 'eco give <playername> 2300'
+  RewardIcon: 'minecraft:potion'
+  Extras:
+    Enchanted: true
+    GUI Position: 17
+    GUI Page: 1
+
+Day 19:
+  RewardName: '💀 Totem de Imortalidade'
+  RewardCommands:
+    - 'give <playername> minecraft:totem_of_undying 1'
+    - 'eco give <playername> 2500'
+  RewardIcon: 'minecraft:totem_of_undying'
+  Extras:
+    Enchanted: true
+    GUI Position: 18
+    GUI Page: 1
+
+Day 20:
+  RewardName: '🪽 Asas Renovadas'
+  RewardCommands:
+    - 'give <playername> minecraft:elytra 1'
+    - 'eco give <playername> 2600'
+  RewardIcon: 'minecraft:elytra'
+  Extras:
+    Enchanted: true
+    GUI Position: 19
+    GUI Page: 1
+
+Day 21:
+  RewardName: '🚀 Foguetes de Voo'
+  RewardCommands:
+    - 'give <playername> minecraft:firework_rocket 64'
+    - 'eco give <playername> 2700'
+  RewardIcon: 'minecraft:firework_rocket'
+  Extras:
+    Enchanted: false
+    GUI Position: 20
+    GUI Page: 1
+
+Day 22:
+  RewardName: '💎 Upgrade Completo'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_ingot 2'
+    - 'eco give <playername> 2800'
+  RewardIcon: 'minecraft:netherite_ingot'
+  Extras:
+    Enchanted: true
+    GUI Position: 21
+    GUI Page: 1
+
+Day 23:
+  RewardName: '⚡ Livro Supremo'
+  RewardCommands:
+    - 'give <playername> minecraft:enchanted_book{stored_enchantments:[{id:"minecraft:fortune",lvl:3}]}' 
+    - 'eco give <playername> 3000'
+  RewardIcon: 'minecraft:enchanted_book'
+  Extras:
+    Enchanted: true
+    GUI Position: 22
+    GUI Page: 1
+
+Day 24:
+  RewardName: '📦 Caixa de Bônus'
+  RewardCommands:
+    - 'give <playername> minecraft:shulker_box 1'
+    - 'give <playername> minecraft:experience_bottle 32'
+    - 'eco give <playername> 3200'
+  RewardIcon: 'minecraft:shulker_box'
+  Extras:
+    Enchanted: true
+    GUI Position: 23
+    GUI Page: 1
+
+Day 25:
+  RewardName: '⭐ Estrela do Nether'
+  RewardCommands:
+    - 'give <playername> minecraft:nether_star 1'
+    - 'eco give <playername> 3500'
+  RewardIcon: 'minecraft:nether_star'
+  Extras:
+    Enchanted: true
+    GUI Position: 24
+    GUI Page: 1
+
+Day 26:
+  RewardName: '🔆 O Farol Supremo'
+  RewardCommands:
+    - 'give <playername> minecraft:beacon 1'
+    - 'eco give <playername> 3700'
+  RewardIcon: 'minecraft:beacon'
+  Extras:
+    Enchanted: true
+    GUI Position: 25
+    GUI Page: 1
+
+Day 27:
+  RewardName: '🐉 Essência Dracônica'
+  RewardCommands:
+    - 'give <playername> minecraft:dragon_breath 4'
+    - 'eco give <playername> 4000'
+  RewardIcon: 'minecraft:dragon_breath'
+  Extras:
+    Enchanted: true
+    GUI Position: 26
+    GUI Page: 1
+
+Day 28:
+  RewardName: '🏆 Recompensa Mítica'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_ingot 4'
+    - 'eco give <playername> 4500'
+  RewardIcon: 'minecraft:netherite_ingot'
+  Extras:
+    Enchanted: true
+    GUI Position: 27
+    GUI Page: 1
+
+Day 29:
+  RewardName: '💫 Tesouro Supremo'
+  RewardCommands:
+    - 'give <playername> minecraft:totem_of_undying 2'
+    - 'give <playername> minecraft:elytra 1'
+    - 'eco give <playername> 5000'
+  RewardIcon: 'minecraft:elytra'
+  Extras:
+    Enchanted: true
+    GUI Position: 28
+    GUI Page: 1
+
+Day 30:
+  RewardName: '🎉 Recompensa Lendária'
+  RewardCommands:
+    - 'give <playername> minecraft:netherite_ingot 6'
+    - 'give <playername> minecraft:totem_of_undying 2'
+    - 'give <playername> minecraft:nether_star 1'
+    - 'eco give <playername> 6000'
+    - 'say <playername> completou 30 dias e recebeu a recompensa LENDÁRIA!'
+  RewardIcon: 'minecraft:netherite_ingot'
+  Extras:
+    Enchanted: true
+    GUI Position: 29
+    GUI Page: 1
+
+
+# Need more rewards? No problem!
+# Just Copy-Paste one of the previous reward fields and adjust the Day [Number] to the subsequent day.
+# If you need any support with this, reach out in our Discord Support Server! (https://discord.gg/9jyHhUepaG)

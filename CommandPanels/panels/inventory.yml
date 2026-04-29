@@ -1,0 +1,70 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Inventory File
+# |                            Official Panel v2
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+
+conditions: '%player_name% $HASPERM example.permission'
+title: '&3&lServer Selector'
+type: inventory
+
+floodgate: floodgate_simple
+rows: 3
+
+layout:
+  fill:
+  - background_glass
+  '10':
+  - hub_item
+  '12':
+  - survival_item
+  '14':
+  - skyblock_item
+  '16':
+  - minigames_item
+
+items:
+  
+  background_glass:
+    material: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  
+  hub_item:
+    material: ENDER_PEARL
+    name: '&a&lHub'
+    lore:
+    - '&7Return to the main lobby.'
+    - '&eClick to go to the Hub!'
+    left-click:
+      commands:
+      - '[msg] &aConnecting to Hub...'
+  
+  survival_item:
+    material: IRON_PICKAXE
+    name: '&2&lSurvival'
+    lore:
+    - '&7Survive and explore.'
+    - '&eClick to join Survival!'
+    left-click:
+      commands:
+      - '[msg] &2Connecting to Survival...'
+  
+  skyblock_item:
+    material: GRASS_BLOCK
+    name: '&b&lSkyblock'
+    lore:
+    - '&7Your island in the sky.'
+    - '&eClick to join Skyblock!'
+    left-click:
+      commands:
+      - '[msg] &bConnecting to Skyblock...'
+  
+  minigames_item:
+    material: SLIME_BALL
+    name: '&e&lMinigames'
+    lore:
+    - '&7Fun challenges and games!'
+    - '&eClick to join Minigames!'
+    left-click:
+      commands:
+      - '[msg] &eConnecting to Minigames...'

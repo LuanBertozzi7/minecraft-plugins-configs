@@ -1,0 +1,128 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Ferramenteiro
+size: 54
+items:
+  craft:
+    material: CRAFTING_TABLE
+    slot: 3
+    display_name: '%imc_primary-color_c%Fabricar'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Fabricar os seguintes itens'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_blacksmith_craft'
+      - '[sound] UI_BUTTON_CLICK'
+  smelt:
+    material: BLAST_FURNACE
+    slot: 4
+    display_name: '%imc_primary-color_c%Fundir'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Fundir para obter os seguintes'
+      - '%imc_dark-color_c%itens e receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_blacksmith_smelt'
+      - '[sound] UI_BUTTON_CLICK'
+  repair:
+    material: ANVIL
+    slot: 5
+    display_name: '%imc_primary-color_c%Repair'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Reparar os seguintes itens'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_blacksmith_repair'
+      - '[sound] UI_BUTTON_CLICK'
+  repair_iron_sword:
+    material: iron_sword
+    slot: 10
+    display_name: '%imc_primary-color_c%Espadas'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Itens:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de madeira'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de ferro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de ouro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de diamante'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espada de netherite'
+  repair_netherite_helmet:
+    material: netherite_helmet
+    slot: 11
+    display_name: '%imc_primary-color_c% Capacetes'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Capacete de netherite'
+  repair_netherite_chestplate:
+    material: netherite_chestplate
+    slot: 12
+    display_name: '%imc_primary-color_c% Peitorais'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Peitoral de netherite'
+  repair_netherite_leggings:
+    material: netherite_leggings
+    slot: 13
+    display_name: '%imc_primary-color_c%Calças'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Perneiras de netherite'
+  repair_netherite_boots:
+    material: netherite_boots
+    slot: 14
+    display_name: '%imc_primary-color_c%Botas'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Item:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Botas de netherite'
+  repair_bow:
+    material: bow
+    slot: 15
+    display_name: '%imc_primary-color_c%Arcos'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Itens:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arco'
+      - '%imc_dark-color_c% • %imc_text-color_c%Besta'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_blacksmith_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: ORANGE_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

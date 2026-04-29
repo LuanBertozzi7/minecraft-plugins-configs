@@ -1,0 +1,284 @@
+############################
+# 
+# ITSMYSTUDIO - Configuration for Jobs
+# https://itsmy.studio/discord
+#
+############################
+menu_title: Jobs Payouts | Minerador
+open_command:
+  - jobs payouts miner
+register_command: true
+size: 54
+items:
+  break:
+    material: DIAMOND_PICKAXE
+    slot: 3
+    display_name: '%imc_primary-color_c%Quebrar'
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Quebrar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_miner_break'
+  place:
+    material: GRASS_BLOCK
+    slot: 5
+    display_name: '%imc_primary-color_c%Colocar'
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_dark-color_c%Colocar os seguintes blocos'
+      - '%imc_dark-color_c%para receber seu pagamento.'
+    click_commands:
+      - '[openguimenu] jobs_payouts_miner_place'
+  break_stone:
+    material: stone
+    slot: 10
+    display_name: '%imc_primary-color_c%Pedra'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedra'
+      - '%imc_dark-color_c% • %imc_text-color_c%Andesito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Granito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Diorito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedregulho com musgo'
+      - '%imc_dark-color_c% • %imc_text-color_c%Ardósia'
+  break_sandstone:
+    material: sandstone
+    slot: 11
+    display_name: '%imc_primary-color_c%Arenito'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Arenito vermelho'
+  break_coal_ore:
+    material: coal_ore
+    slot: 12
+    display_name: '%imc_primary-color_c%Minério de carvão'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de carvão'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de carvão de ardósia'
+  break_iron_ore:
+    material: iron_ore
+    slot: 13
+    display_name: '%imc_primary-color_c%Minério de ferro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de ferro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de ferro de ardósia'
+  break_gold_ore:
+    material: gold_ore
+    slot: 14
+    display_name: '%imc_primary-color_c%Minério de ouro'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de ouro'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de ouro de ardósia'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de ouro do Nether'
+  break_copper_ore:
+    material: copper_ore
+    slot: 15
+    display_name: '%imc_primary-color_c%Minério de cobre'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de cobre'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de cobre de ardósia'
+  break_redstone_ore:
+    material: redstone_ore
+    slot: 16
+    display_name: '%imc_primary-color_c%Minério de redstone'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de redstone'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de redstone de ardósia'
+  break_lapis_ore:
+    material: lapis_ore
+    slot: 19
+    display_name: '%imc_primary-color_c%Minério de lápis-lazúli'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de lápis-lazúli'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de lápis-lazúli de ardósia'
+  break_diamond_ore:
+    material: diamond_ore
+    slot: 20
+    display_name: '%imc_primary-color_c%Minério de diamante'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de diamante'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de diamante de ardósia'
+  break_emerald_ore:
+    material: emerald_ore
+    slot: 21
+    display_name: '%imc_primary-color_c%Minério de esmeralda'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de esmeralda'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de esmeralda de ardósia'
+  break_nether_quartz_ore:
+    material: nether_quartz_ore
+    slot: 22
+    display_name: '%imc_primary-color_c%Minério de quartzo do Nether'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Minério de quartzo do Nether'
+  break_obsidian:
+    material: obsidian
+    slot: 23
+    display_name: '%imc_primary-color_c%Obsidiana'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Obsidiana'
+  break_netherrack:
+    material: netherrack
+    slot: 24
+    display_name: '%imc_primary-color_c%Netherrack'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Netherrack'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos do Nether'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de magma'
+      - '%imc_dark-color_c% • %imc_text-color_c%Basalto'
+      - '%imc_dark-color_c% • %imc_text-color_c%Negrito'
+      - '%imc_dark-color_c% • %imc_text-color_c%Negrito dourado'
+  break_ancient_debris:
+    material: ancient_debris
+    slot: 25
+    display_name: '%imc_primary-color_c%Detritos ancestrais'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Detritos ancestrais'
+  break_prismarine:
+    material: prismarine
+    slot: 28
+    display_name: '%imc_primary-color_c%Prismarinho'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de prismarinho'
+      - '%imc_dark-color_c% • %imc_text-color_c%Prismarinho escuro'
+  break_end_stone:
+    material: end_stone
+    slot: 29
+    display_name: '%imc_primary-color_c%Pedra do End'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pedra do End'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tijolos de pedra do End'
+      - '%imc_dark-color_c% • %imc_text-color_c%Bloco de púrpura'
+      - '%imc_dark-color_c% • %imc_text-color_c%Pilar de púrpura'
+  break_terracotta:
+    material: terracotta
+    slot: 30
+    display_name: '%imc_primary-color_c%Terracota'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Blocos:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota branca'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cinzento-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cinzenta'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota laranja'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota amarela'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota rosa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota vermelha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota castanha'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota verde'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota azul-clara'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota cíano'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota azul'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota roxa'
+      - '%imc_dark-color_c% • %imc_text-color_c%Terracota magenta'
+  break_amethyst_cluster:
+    material: amethyst_cluster
+    slot: 31
+    display_name: '%imc_primary-color_c%Agregado de ametista'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Agregado de ametista'
+  break_calcite:
+    material: calcite
+    slot: 32
+    display_name: '%imc_primary-color_c%Calcite'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Calcite'
+  break_tuff:
+    material: tuff
+    slot: 33
+    display_name: '%imc_primary-color_c%Tufo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Tufo'
+  break_pointed_dripstone:
+    material: pointed_dripstone
+    slot: 34
+    display_name: '%imc_primary-color_c%Espeleotema pontiagudo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '%imc_darkest-color_c%Bloco:'
+      - '%imc_dark-color_c% • %imc_text-color_c%Espeleotema pontiagudo'
+  back:
+    material: REDSTONE
+    slot: 49
+    display_name: '%imc_dark-color_c%Voltar'
+    click_commands:
+      - '[openguimenu] jobs_skilltree_miner_1'
+      - '[sound] UI_BUTTON_CLICK'
+  background:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    display_name: '&l'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 45
+      - 46
+      - 52
+      - 53

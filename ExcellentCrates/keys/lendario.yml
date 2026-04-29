@@ -1,0 +1,8 @@
+Name: Chave Lendária
+Virtual: true
+ItemData:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:custom_name":{extra:["Lendario Key"],text:""}},count:1,id:"minecraft:tripwire_hook"}'
+    DataVersion: 4440
+ItemStackable: false

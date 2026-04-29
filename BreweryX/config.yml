@@ -14,7 +14,7 @@ resolveUpdatesFrom: GITHUB
 autosave: 10
 
 # Prefix used on messages
-pluginPrefix: 'pluginPrefix: '&2[BebidasTN]&f '2[Bebidas]pluginPrefix: '&2[BebidasTN]&f 'f '
+pluginPrefix: '&2[Bebidas]&f '
 
 # Show debug messages in logs [false]
 debug: false
