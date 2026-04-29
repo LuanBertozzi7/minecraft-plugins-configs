@@ -1,0 +1,300 @@
+Command:
+  Argument:
+    Name:
+      Crate: crate
+      Key: chave
+      X: x
+      Y: y
+      Z: z
+  Editor:
+    Desc: Abrir editor de caixas.
+  Drop:
+    Desc: Spawnar item de caixa no mundo.
+    Done: <gray>Caixa <soft_yellow>%crate_name%</soft_yellow> dropada em <soft_yellow>%location_x%, %location_y%, %location_z%</soft_yellow> no mundo <soft_yellow>%location_world%</soft_yellow>.</gray>
+  DropKey:
+    Desc: Spawnar item de chave no mundo.
+    Done: <gray>Chave <soft_yellow>%key_name%</soft_yellow> dropada em <soft_yellow>%location_x%, %location_y%, %location_z%</soft_yellow> no mundo <soft_yellow>%location_world%</soft_yellow>.</gray>
+  Open:
+    Desc: Abrir uma caixa.
+  OpenFor:
+    Desc: Abrir caixa para um jogador.
+    Done: <gray>Caixa <soft_yellow>%crate_name%</soft_yellow> aberta para <soft_yellow>%player_name%</soft_yellow>.</gray>
+    Notify: <gray>Você foi forçado a abrir a caixa <soft_yellow>%crate_name%</soft_yellow>.</gray>
+  Give:
+    Desc: Dar caixa a um jogador.
+    Done: <gray>Dado <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%crate_name%</soft_yellow> para <soft_yellow>%player_name%</soft_yellow>.</gray>
+    Notify: <gray>Você recebeu <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%crate_name%</soft_yellow>.</gray>
+  Key:
+    Desc: Gerenciar chaves do jogador.
+    Give:
+      Desc: Dar chave a um jogador.
+      Done: <gray>Dado <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%key_name%</soft_yellow> para <soft_yellow>%player_name%</soft_yellow>.</gray>
+      Notify: <gray>Você recebeu <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%key_name%</soft_yellow>!</gray>
+    Take:
+      Desc: Remover chave de um jogador.
+      Done: <gray>Removido <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%key_name%</soft_yellow> de <soft_yellow>%player_name%</soft_yellow>.</gray>
+      Notify: <gray>Você perdeu <soft_red>x%amount%</soft_red> <soft_red>%key_name%</soft_red>.</gray>
+    Set:
+      Desc: Definir quantidade de chaves para um jogador.
+      Done: <gray>Definido <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%key_name%</soft_yellow> para <soft_yellow>%player_name%</soft_yellow>.</gray>
+      Notify: <gray>A quantidade de <soft_yellow>%key_name%</soft_yellow> foi alterada para <soft_yellow>x%amount%</soft_yellow>.</gray>
+    Show:
+      Desc: Inspecionar chaves virtuais do jogador.
+      Format:
+        List:
+        - '[prefix="false"]'
+        - ' '
+        - '<soft_yellow><b>Chaves Virtuais de %player_name%: </b></soft_yellow>'
+        - '%entry%'
+        - ' '
+        Entry: '<soft_yellow>▪ <gray>%key_name%: </gray>x%amount%</soft_yellow>'
+    GiveAll:
+      Desc: Dar chave a todos os jogadores online.
+      Done: <gray>Dado <soft_yellow>x%amount%</soft_yellow> de <soft_yellow>%key_name%</soft_yellow> para <soft_yellow>todos os jogadores</soft_yellow>.</gray>
+  Preview:
+    Desc: Abrir prévia da caixa.
+    Done:
+      Others: <gray>Aberta prévia de <soft_yellow>%crate_name%</soft_yellow> para <soft_yellow>%player_display_name%</soft_yellow>.</gray>
+  ResetCooldown:
+    Desc: Resetar cooldown de abertura de caixa do jogador.
+    Done: <gray>Cooldown de <soft_yellow>%player_name%</soft_yellow> para <soft_yellow>%crate_name%</soft_yellow> resetado.</gray>
+  Menu:
+    Desc: Abrir menu de caixas.
+    Done:
+      Others: <gray>Menu de caixas aberto para <soft_yellow>%player_display_name%</soft_yellow>.</gray>
+Error:
+  Command:
+    Argument:
+      InvalidCrate: <gray><soft_red>%value%</soft_red> não é uma caixa válida!</gray>
+      InvalidKey: <gray><soft_red>%value%</soft_red> não é uma chave válida!</gray>
+Crate:
+  Open:
+    Error:
+      InventorySpace:
+      - '[title_times="20:60:20",sound="minecraft:entity.villager.no;0.8;1.0",type="title"]'
+      - <soft_red><b>Inventário Cheio!</b></soft_red>
+      - <gray>Libere espaço no inventário para abrir caixas.</gray>
+      Cooldown:
+        Temporary:
+        - '[title_times="20:60:20",sound="minecraft:entity.villager.no;0.8;1.0",type="title"]'
+        - <soft_red><b>Caixa em Cooldown!</b></soft_red>
+        - <gray>Você pode abri-la em <soft_red>%time%</soft_red></gray>
+        OneTimed:
+        - '[title_times="20:60:20",sound="minecraft:entity.villager.no;0.8;1.0",type="title"]'
+        - <soft_red><b>Ops!</b></soft_red>
+        - <gray>Você já abriu esta caixa única!</gray>
+      NoRewards:
+      - '[title_times="20:60:20",sound="minecraft:entity.villager.no;0.8;1.0",type="title"]'
+      - <red><b>Ops!</b></red>
+      - <gray>Não há recompensas para você! Tente mais tarde.</gray>
+      Already:
+      - '[title_times="20:60:20",sound="minecraft:entity.villager.no;0.8;1.0",type="title"]'
+      - <red><b>Ops!</b></red>
+      - <gray>Você já está abrindo uma caixa!</gray>
+    TooExpensive:
+    - '[prefix="false"]'
+    - ' '
+    - <red><b>CAIXA NÃO ABERTA:</b></red>
+    - '<red>» </red><gray>Caixa: </gray><white>%crate_name%</white>'
+    - '<red>» </red><gray>Você não tem recursos suficientes: %costs%</gray>'
+    - ' '
+    Milestone:
+      Completed: '[sound="minecraft:entity.player.levelup;0.8;1.0",prefix="false"]<gray>Você completou o marco de <green>%milestone_openings% aberturas</green> e recebeu <green>%reward_name%</green> como recompensa!</gray>'
+    Reward:
+      Broadcast:
+      - '[sound="minecraft:block.note_block.bell;0.8;1.0",prefix="false"]'
+      - ' '
+      - <gray><light_purple>%player_display_name%</light_purple> abriu <light_purple>%crate_name%</light_purple> e recebeu <light_purple>%reward_name%</light_purple>!</gray>
+      - ' '
+      - '<gray>Compre chaves: <click:open_url:"https://YOUR_LINK_HERE.xyz"><light_purple>[Clique para abrir a Loja]</light_purple></click></gray>'
+      - ' '
+  Rewards:
+  - '[prefix="false"]'
+  - ' '
+  - <yellow><b>CAIXA ABERTA:</b></yellow>
+  - '<yellow>» </yellow><gray>Caixa: </gray><white>%crate_name%</white>'
+  - '<yellow>» </yellow><gray>Recompensas: </gray><white>%rewards%</white>'
+  - ' '
+  Preview:
+    Error:
+      Cooldown: <gray>Você pode ver a prévia desta caixa novamente em <soft_red>%time%</soft_red></gray>
+Other:
+  Cooldown:
+    Ready: <green>Pronto para Abrir!</green>
+  LastOpener:
+    Empty: '-'
+  LastReward:
+    Empty: '-'
+  NextMilestone:
+    Empty: '-'
+  Midnight: Meia-noite
+  Free: Grátis
+EffectModel:
+  None: Nenhum
+  Helix: Hélice
+  Spiral: Espiral
+  Sphere: Esfera
+  Heart: Coração
+  Pulsar: Pulsar
+  Beacon: Beacon
+  Tornado: Tornado
+  Vortex: Vórtice
+  Simple: Simples
+Inspection:
+  Problems: '%amount% problema(s)'
+  NoProblems: Nenhum problema encontrado
+Inspections:
+  Generic:
+    Overview:
+      onTrue: Nenhum problema detectado.
+      onFalse: Problemas detectados!
+    Item:
+      onTrue: Item válido.
+      onFalse: Item inválido!
+  Crate:
+    Preview:
+      onTrue: Prévia válida.
+      onFalse: Prévia inválida!
+    Opening:
+      onTrue: Abertura válida.
+      onFalse: Abertura inválida!
+    Hologram:
+      onTrue: Template de holograma válido.
+      onFalse: Template de holograma inválido!
+  Reward:
+    Preview:
+      onTrue: Item de prévia válido.
+      onFalse: Item de prévia inválido!
+    Items:
+      onTrue: Todos os itens são válidos.
+      onFalse: Itens inválidos detectados!
+    NoItems: Nenhum item adicionado.
+    Commands:
+      onTrue: Todos os comandos são válidos.
+      onFalse: Comandos inválidos detectados!
+    NoCommands: Nenhum comando definido.
+UI:
+  Costs:
+    Option:
+      Available:
+        Name: <white>%cost_name%</white>
+        Lore:
+        - '%costs%'
+        - '%empty-if-above%'
+        - '<yellow><b>ABERTURAS DISPONÍVEIS: </b></yellow><white><u>%available%</u></white>'
+        - ''
+        - <green>→ <u>Clique para selecionar</u></green>
+      Unavailable:
+        Name: <white>%cost_name%</white>
+        Lore:
+        - '%costs%'
+        - '%empty-if-above%'
+        - <red><b>VOCÊ NÃO TEM RECURSOS SUFICIENTES</b></red>
+    Entry0:
+      Available: <white>%entry%</white> <gray>(<green>✔</green>)</gray>
+      Unavailable: <white>%entry%</white> <gray>(<red>✘</red>)</gray>
+  OpenAmount:
+    Single:
+      Name: <yellow><b>Abrir Uma</b></yellow>
+      Lore:
+      - <gray>Abre uma única caixa.</gray>
+      - ''
+      - <yellow>→ <u>Clique para selecionar</u></yellow>
+    All:
+      Name: <yellow><b>Abrir Todas</b></yellow>
+      Lore:
+      - <gray>Abre até <white>%max%</white> caixas.</gray>
+      - ''
+      - <yellow>→ <u>Clique para selecionar</u></yellow>
+Editor:
+  Title:
+    Main: <black>Editor ExcellentCrates</black>
+    Crates: <black>Editor de Caixas</black>
+    Crate:
+      Settings: <black>Configurações da Caixa</black>
+      CostOptions: <black>Opções de Custo</black>
+      CostOption: <black>Configurações de Opção de Custo</black>
+      Milestones: <black>Marcos da Caixa</black>
+    Reward:
+      List: <black>Recompensas da Caixa</black>
+      Content: <black>Itens da Recompensa</black>
+      Settings: <black>Configurações da Recompensa</black>
+    Keys: <black>Editor de Chaves</black>
+    Key:
+      Settings: <black>Configurações da Chave</black>
+  Enter:
+    Amount: <gray>Digite <green>[Quantidade]</green></gray>
+  Reward:
+    Enter:
+      Id: <gray>Digite <green>[Identificador da Recompensa]</green></gray>
+  Button:
+    Main:
+      Crates:
+        Name: <green><b>Caixas</b></green>
+        Lore:
+        - <gray>Há <green>%amount%</green> caixas criadas.</gray>
+        - ' '
+        - <green>→ <u>Clique para abrir</u></green>
+      Keys:
+        Name: <gold><b>Chaves</b></gold>
+        Lore:
+        - <gray>Há <gold>%amount%</gold> chaves criadas.</gray>
+        - ' '
+        - <gold>→ <u>Clique para abrir</u></gold>
+    Crates:
+      Crate:
+        Name: '%crate_name%'
+        Lore:
+        - '<gray><dark_gray>» </dark_gray>Status: <white>%inspection%</white></gray>'
+        - '<gray><dark_gray>» </dark_gray>ID: <white>%crate_id%</white></gray>'
+        - ' '
+        - <soft_yellow>→ <u>Clique para abrir</u></soft_yellow>
+      Create:
+        Name: <green><b>Nova Caixa</b></green>
+        Lore:
+        - <gray>Use este botão para criar</gray>
+        - <gray>novas caixas!</gray>
+        - ' '
+        - <green>→ <u>Clique para criar</u></green>
+    Crate:
+      Delete:
+        Name: <red><b>Deletar Caixa</b></red>
+        Lore:
+        - <gray>Deleta permanentemente a caixa.</gray>
+        - ' '
+        - <red>→ <u>Pressione [<key:key.drop>] para deletar</u></red>
+      DisplayName:
+        Name: <soft_yellow><b>Nome</b></soft_yellow>
+        Lore:
+        - '<gray><dark_gray>» </dark_gray>Atual: <white>%crate_name%</white></gray>'
+        - ' '
+        - <gray>Define o nome de exibição da caixa.</gray>
+        - ' '
+        - <soft_yellow>→ <u>Clique para alterar</u></soft_yellow>
+      Description:
+        Name: <soft_yellow><b>Descrição</b></soft_yellow>
+        Lore:
+        - '%crate_description%'
+        - '%empty-if-above%'
+        - <gray>Define a descrição da caixa.</gray>
+        - ' '
+        - <soft_yellow>→ <u>Clique para editar</u></soft_yellow>
+      Item:
+        Name: <soft_yellow><b>Item da Caixa</b></soft_yellow>
+        Lore:
+        - '<gray><dark_gray>» </dark_gray>Status: <white>%inspection%</white></gray>'
+        - '<gray><dark_gray>» </dark_gray>Empilhável: <white>%state%</white></gray>'
+        - ' '
+        - <gray>Solte um item em <soft_yellow>este</soft_yellow> botão</gray>
+        - <gray>para substituir o item da caixa.</gray>
+        - ' '
+        - <soft_yellow>→ <u>Clique para alternar empilhamento</u></soft_yellow>
+      Preview:
+        Set:
+          Name: <soft_yellow><b>GUI de Prévia</b></soft_yellow>
+          Lore:
+          - '<gray><dark_gray>» </dark_gray>Status: <white>%inspection%</white></gray>'
+          - '<gray><dark_gray>» </dark_gray>ID da Prévia: <white>%value%</white></gray>'
+          - ' '
+          - <gray>Define a GUI de prévia para a caixa.</gray>
+          - ' '

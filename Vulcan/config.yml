@@ -7,20 +7,20 @@ alerts:
   # %severity% for changing colors depending on the violations (options found in severity option below), %x% (player's X-coordinate),
   # %y% (player's Y-coordinate), %z% (player's Z-coordinate), %world% (player's world), %complex-type% which will show a more
   # advanced name for the check, such as Speed (Ground) instead of Speed (Type B)
-  format: '%prefix% &f%player% &7failed &f%check% %dev%&7(&fType %type%&7)%dev% &7[&4%vl%&7/&4%max-vl%&7]'
+  format: '%prefix% &f%player% &7foi flagado em &f%check% %dev%&7(Tipo %type%&7)%dev% &7[&4%vl%&7/&4%max-vl%&7]'
   # This is the hover text that will be displayed when you hover over the alert message in chat.
   # All of the same placeholders as the ones for the format are valid.
   hover-message:
-  - '&7Ping: &c%ping% &8| &7TPS: &c%tps% &8| &7Version: &c%version% &8| &7Client:
+  - '&7Ping: &c%ping% &8| &7TPS: &c%tps% &8| &7Versão: &c%version% &8| &7Client:
     &c%client-brand%'
   - ''
-  - '&7Description:'
+  - '&7Descrição:'
   - '&7%description%'
   - ''
-  - '&7Information:'
+  - '&7Informações:'
   - '&7%info%'
   - ''
-  - '&7Click to teleport to &b%player%&7.'
+  - '&7Clique para teleportar até &b%player%&7.'
   # This is the command that will be executed when you click the alert message. Unfortunately we are limited to one
   # command per ChatComponent so we use a little magic and make our own command that is able to execute a list of any commands.
   # Valid placeholders
@@ -30,9 +30,9 @@ alerts:
   click-alert-command-commands:
   - tp %player%
   # The message that will be sent when you toggle on alerts. Valid placeholder are %prefix%.
-  toggled-on-message: '%prefix% &7Vulcan alerts &aenabled&7!'
+  toggled-on-message: '%prefix% &7Alertas do Vulcan &aativados&7!'
   # The message that will be sent when you toggle off alerts. Valid placeholder are %prefix%.
-  toggled-off-message: '%prefix% &7Vulcan alerts &cdisabled&7!'
+  toggled-off-message: '%prefix% &7Alertas do Vulcan &cdesativados&7!'
   # Whether or not alerts will be printed to the console.
   print-to-console: true
   # The format for printing alerts to the console
@@ -83,7 +83,7 @@ unloaded-chunks:
   # Whether or not people should be setback for sending motion which is equal to unloaded chunks
   setback-enabled: false
   # Whether or not staff should be alerted, set to '' to disable this message
-  message: '%prefix% &c%player% &7was setback for being in an unloaded chunk!'
+  message: '%prefix% &c%player% &7foi revertido por estar em um chunk não carregado!'
   # Max amount of ticks before someone gets set back
   max-ticks: 40
 punishment-file:
@@ -97,7 +97,7 @@ violation-reset:
   # Whether or not a message will be sent when violations are reset (this is only sent to staff who have /alerts enabled).
   message-enabled: true
   # The message that is sent (only to staff with /alerts enabled) when violations are reset.
-  message: '%prefix% &7Violations for all online players were reset!'
+  message: '%prefix% &7Violações de todos os jogadores online foram resetadas!'
 client-brand-alerts:
   # Whether or not Vulcan should even try to resolve the player's client brand - disabling this won't register
   # the messaging channel at all.
@@ -110,11 +110,11 @@ client-brand-alerts:
   - vanilla
   # The message sent when a player joins the server. Valid placeholder are %player (player name), %prefix% (plugin prefix),
   # %client-brand% (the user's client brand), and %client-version% (the user's client version).
-  message: '%prefix% &c%player% &7joined using &f%client-brand%&7!'
+  message: '%prefix% &c%player% &7entrou usando &f%client-brand%&7!'
   # A list of client brands that will not be allowed and will be kicked automatically when they join. This uses
   # string comparison so it doesnt need to be exact, for example, 'forge' will block Forge, 'lunar' will block lunar, etc.
   blocked-client-brands: []
-  unallowed-client-brand-kick-message: '&cYou can''t join with %client-brand%!'
+  unallowed-client-brand-kick-message: '&cVocê não pode entrar com %client-brand%!'
   # Whether or not client brand alerts should be sent to the console
   console: false
   # The message that should be printed to the console (if the above option is enabled)
@@ -129,65 +129,64 @@ connection:
   debug-messages: false
   invalid:
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for sending an invalid
-      confirmation packet! (ID: &c%id%&7)'
-    console-alert-message: '[Vulcan] &c%player% &7was kicked for sending an invalid
-      confirmation packet! (ID: &c%id%&7)'
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por enviar um pacote de
+      confirmação inválido! (ID: &c%id%&7)'
+    console-alert-message: '[Vulcan] &c%player% &7foi kickado por enviar um pacote de
+      confirmação inválido! (ID: &c%id%&7)'
   out-of-order:
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for sending an out of order
-      confirmation packet! (&7Received &c%id% &7!= Expected &c%last-id%&7)'
-    console-alert-message: '[Vulcan] %player% was kicked for sending an out of order
-      confirmation packet! (&7Received &c%id% &7!= Expected &c%last-id%&7)'
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por enviar um pacote fora
+      de ordem! (&7Recebido &c%id% &7!= Esperado &c%last-id%&7)'
+    console-alert-message: '[Vulcan] %player% foi kickado por enviar um pacote fora
+      de ordem! (&7Recebido &c%id% &7!= Esperado &c%last-id%&7)'
   no-response:
     delay-in-seconds: 30
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for not replying to confirmation
-      packets! (&c%delay%&7ms)'
-    console-alert-message: '[Vulcan] %player% was kicked for not replying to confirmation
-      packets! (&c%delay%&7ms)'
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por não responder aos pacotes
+      de confirmação! (&c%delay%&7ms)'
+    console-alert-message: '[Vulcan] %player% foi kickado por não responder aos pacotes
+      de confirmação! (&c%delay%&7ms)'
   max-size:
     amount: 500
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for too many pending confirmations!
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por muitas confirmações pendentes!
       (&c%size%&7)'
-    console-alert-message: '[Vulcan] %player% was kicked for too many pending confirmations!
+    console-alert-message: '[Vulcan] %player% foi kickado por muitas confirmações pendentes!
       (&c%size%&7)'
   keepalive:
     kick-enabled: true
     max-delay: 45000
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for not replying to KeepAlive
-      Packets! &7(&c%delay%ms&7)'
-    console-message: '[Vulcan] &c%player% &7was kicked for not replying to KeepAlive
-      Packets! &7(&c%delay%ms&7)'
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por não responder aos pacotes
+      KeepAlive! &7(&c%delay%ms&7)'
+    console-message: '[Vulcan] &c%player% &7foi kickado por não responder aos pacotes
+      KeepAlive! &7(&c%delay%ms&7)'
   max-ping:
     kick-enabled: true
     max-ping: 20000
     max-ticks: 20
     kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'
-    staff-alert-message: '%prefix% &c%player% &7was kicked for having too high ping!
+    staff-alert-message: '%prefix% &c%player% &7foi kickado por ping muito alto!
       &7(&c%ping%ms&7)'
-    console-message: '[Vulcan] &c%player% &7kicked for having too high ping! &7(&c%ping%ms&7)'
+    console-message: '[Vulcan] &c%player% &7kickado por ping muito alto! &7(&c%ping%ms&7)'
 punishments:
   # The message that is sent when a player is punished (only sent to staff with /alerts enabled)
-  message: '%prefix% &c%player% &7was punished for &f%check% &7(&fType %type%&7) &7[&4x%vl%&7]'
+  message: '%prefix% &c%player% &7foi punido por &f%check% &7(Tipo %type%&7) &7[&4x%vl%&7]'
   # The message that will be broadcast to the whole server when a player is punished
   broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&cVulcan &7has detected &c%player% &7to be cheating and has removed them from
-    the network.'
+  - '&cVulcan &7detectou que &c%player% &7estava trapaceando e o removeu do servidor.'
   - '&7&m---»--*-------------------------------------*--«---'
 judgement-days:
   # The message that wil be broadcast to the server when someone has executed /jday start
   started-broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&cVulcan Judgement Day v1 has commenced...'
+  - '&cVulcan Judgement Day v1 iniciado...'
   - '&7&m---»--*-------------------------------------*--«---'
   # The message that will be broadcast to the server when the judgement day has ended.
   ended-broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&cThe Judgement Day has ended... %amount% players were punished.'
+  - '&cO Judgement Day encerrou... %amount% jogadores foram punidos.'
   - '&7&m---»--*-------------------------------------*--«---'
   # The commands that will be executed, %player% indicates a player who was added to judgement day (/jday add (name)))
   commands:
@@ -195,7 +194,7 @@ judgement-days:
   # The broadcast that will be sent to the server when someone is punished in a judgement day.
   broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&c%player% &7was banned for &c[Vulcan] Judgement Day v1&7.'
+  - '&c%player% &7foi banido por &c[Vulcan] Judgement Day v1&7.'
   - '&7&m---»--*-------------------------------------*--«---'
   # How long we should wait in between players who are queued in judgement days
   cooldown: 1000

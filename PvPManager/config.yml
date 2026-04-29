@@ -50,7 +50,7 @@ Combat Tag:
     Action Bar:
       Enabled: true
       # You can use any PlaceholderAPI placeholders here
-      Message: '&8[&c&lCOMBAT&8] &7<time>s &8• &a<barsLeft>&#AA5555<barsPassed> &8• &7%pvpmanager_current_enemy%
+      Message: '&8[&c&lCOMBATE&8] &7<time>s &8• &a<barsLeft>&#AA5555<barsPassed> &8• &7%pvpmanager_current_enemy%
         &8(&c%pvpmanager_current_enemy_health%❤&8)'
       # Symbol to use for the progress bar and how many times to repeat it. Other symbols ▊,▮,▯,|
       Symbol: ▊
@@ -130,7 +130,7 @@ Combat Log Punishments:
   # List of commands to execute on combat log, use '{player}' for player name
   # The 'announce' command can be optionally used to broadcast, you can add more or to disable just delete the command
   Commands On Combat Log:
-    - 'announce {prefix} #f09a11{player} #ed5e26tried to escape combat!'
+    - 'announce {prefix} #f09a11{player} #ed5e26tentou fugir do combate!'
 
 ######################
 ####  PvP Toggle  ####
@@ -261,7 +261,7 @@ Player Kills:
     Warn Before: true
     # Possible variables are {player} and {victim}
     Commands on Abuse:
-      - 'kick {player} &cKill Abuse Is Not Allowed!'
+      - 'kick {player} &cMatar o mesmo jogador repetidamente não é permitido!'
     # After respawn, how many seconds should players be protected (0 to disable)
     Respawn Protection: 3
 

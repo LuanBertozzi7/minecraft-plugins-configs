@@ -105,7 +105,7 @@ Settings:
       - '&7does not exist in this version of Minecraft'
   # Visit this page for all the languages that Minecraft offers
   # https://loohpjames.com/minecraft/languages/
-  Language: en_us
+  Language: pt_br
   # Use individual permissions for custom placeholders
   # For example the first custom placeholder will have the permission
   # interactivechat.module.custom.1
