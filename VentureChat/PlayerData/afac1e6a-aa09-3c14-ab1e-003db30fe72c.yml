@@ -1,0 +1,16 @@
+name: _asupool
+current: Global
+ignores: ''
+listen: Announcement,Local,Global
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: false
+messagetoggle: true
+bungeetoggle: true
+date: 2025/Nov/09 22:06:13

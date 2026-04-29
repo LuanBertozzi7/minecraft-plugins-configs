@@ -1,0 +1,109 @@
+MyAnimation1:
+  change-interval: 100
+  texts:
+    - '&6-&e--------------'
+    - '&e-&6-&e-------------'
+    - '&e--&6-&e------------'
+    - '&e---&6-&e-----------'
+    - '&e----&6-&e----------'
+    - '&e-----&6-&e---------'
+    - '&e------&6-&e--------'
+    - '&e-------&6-&e-------'
+    - '&e--------&6-&e------'
+    - '&e---------&6-&e-----'
+    - '&e----------&6-&e----'
+    - '&e-----------&6-&e---'
+    - '&e------------&6-&e--'
+    - '&e-------------&6-&e-'
+    - '&e--------------&6-'
+    - '&e-------------&6-&e-'
+    - '&e------------&6-&e--'
+    - '&e-----------&6-&e---'
+    - '&e----------&6-&e----'
+    - '&e---------&6-&e-----'
+    - '&e--------&6-&e------'
+    - '&e-------&6-&e-------'
+    - '&e------&6-&e--------'
+    - '&e-----&6-&e---------'
+    - '&e----&6-&e----------'
+    - '&e---&6-&e-----------'
+    - '&e--&6-&e------------'
+    - '&e-&6-&e-------------'
+    - '&6-&e--------------'
+ServerName:
+  change-interval: 300
+  texts:
+    - '&6&lBaunilha'
+    - '&e&lBaunilha'
+    - '&f&lBaunilha'
+    - '&e&lBaunilha'
+    - '&6&lBaunilha'
+web:
+  change-interval: 200
+  texts:
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&6w&eww.domain.com'
+  - '&ew&6w&ew.domain.com'
+  - '&eww&6w&e.domain.com'
+  - '&ewww&6.&edomain.com'
+  - '&ewww.&6d&eomain.com'
+  - '&ewww.d&6o&emain.com'
+  - '&ewww.do&6m&eain.com'
+  - '&ewww.dom&6a&ein.com'
+  - '&ewww.doma&6i&en.com'
+  - '&ewww.domai&6n&e.com'
+  - '&ewww.domain&6.&ecom'
+  - '&ewww.domain.&6c&eom'
+  - '&ewww.domain.c&6o&em'
+  - '&ewww.domain.co&6m'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+vote:
+  change-interval: 1000
+  texts:
+  - '&avote.domain.com'
+  - '&a&nvote.domain.com'
+  - '&5vote.domain.com'
+  - '&5&nvote.domain.com'
+Welcome:
+  change-interval: 400
+  texts:
+  - '&7&lB_'
+  - '&7&lBe_'
+  - '&7&lBem_'
+  - '&7&lBem-_'
+  - '&7&lBem-v_'
+  - '&7&lBem-vi_'
+  - '&7&lBem-vin_'
+  - '&7&lBem-vind_'
+  - '&7&lBem-vindo_'
+  - '&7&lBem-vindo_'
+  - '&7&lBem-vindo_'
+  - '&7&lBem-vind_'
+  - '&7&lBem-vin_'
+  - '&7&lBem-vi_'
+  - '&7&lBem-v_'
+  - '&7&lBem-_'
+  - '&7&lBem_'
+  - '&7&lBe_'
+  - '&7&lB_'
+time:
+  change-interval: 3000
+  texts:
+    - '&7Time &b%time%'
+    - '&7Date &b%date%'
+barcolors:
+  change-interval: 1000
+  texts:
+    - YELLOW
+    - GOLD
+    - GREEN

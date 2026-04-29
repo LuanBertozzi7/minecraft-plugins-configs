@@ -1,0 +1,16 @@
+name: ManelCezar
+current: Global
+ignores: ''
+listen: Announcement,Local,Global
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: false
+messagetoggle: true
+bungeetoggle: true
+date: 2026/Jan/05 20:18:32

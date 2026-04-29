@@ -1,0 +1,280 @@
+# Arquivo de Configuração do MarriageMaster
+
+# Configurações de Idioma
+Language:
+  # Define o idioma usado e o arquivo correspondente. O arquivo de idioma correspondente será colocado ao lado do config.yml com o nome: <Idioma>.yml
+  Language: pt
+  # Opções:
+  #     Overwrite (apaga todas as alterações do arquivo e extrai um novo arquivo de idioma)
+  #     Upgrade (extrai um novo arquivo de idioma e copia todas as configurações do arquivo antigo)
+  #     Update (adiciona os valores de texto padrão (em inglês) para todos os valores ausentes, com formatação básica)
+  UpdateMode: Upgrade
+
+# Configurações do Banco de Dados
+Database:
+  # SQLite = dados salvos em um arquivo SQLite, MySQL = dados salvos em um banco de dados MySQL (veja a seleção abaixo), Shared = usa um pool de conexão compartilhado da PCGF PluginLib
+  Type: SQLite
+  # Define o formato de armazenamento para UUIDs para compatibilidade com outros plugins (tabela de usuários compartilhada).
+  # true: formato: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (com hífens)
+  # false: formato: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (sem hífens)
+  UseUUIDSeparators: false
+  # Opções: auto, online, offline | 'auto' decidirá com base na opção de modo online do servidor.
+  # Se você estiver usando BungeeCord, defina para o que você usa no seu servidor BungeeCord!!!
+  UUID_Type: auto
+  SQL:
+    Host: "localhost"
+    Database: "minecraft"
+    User: "minecraft"
+    Password: "minecraft"
+    # A quantidade máxima de conexões com o banco de dados que o pool de conexões abrirá.
+    # Você pode querer ajustar esta configuração com base na carga do seu servidor de banco de dados e na quantidade de jogadores.
+    MaxConnections: 2
+    # Permite definir as propriedades da conexão.
+    # Exemplo de Propriedades: ["useSSL=false"]
+    Properties: []
+    Tables:
+      User: marry_players
+      Partner: marry_partners
+      Home: marry_home
+      Priests: marry_priests
+  # Configurações que controlam o comportamento do cache do plugin. Você pode otimizá-lo um pouco dependendo da sua contagem de jogadores, gargalos de RAM ou CPU.
+  Cache:
+    UnCache:
+      # A estratégia usada para remover jogadores offline do cache. Opções:
+      #     interval (jogadores offline são removidos do cache a cada x segundos)
+      #     intervalChecked (como o 'interval', mas também garante que o jogador já esteja offline por pelo menos o tempo do intervalo)
+      #     ondisconnect (o jogador é removido instantaneamente do cache assim que se desconecta, pode adicionar sobrecarga se outros plugins tentarem acessar os dados do jogador quando eles saem, também pode ser problemático para jogadores com conexões instáveis)
+      #     ondisconnectdelayed (o jogador é removido do cache x segundos depois de ficar offline, adiciona sobrecarga na desconexão, você não deve usar isso com muitos jogadores entrando e saindo.)
+      Strategy: interval
+      # Usado para os algoritmos de remoção de cache baseados em intervalo. Também usado como atraso para 'ondisconnectdelayed'. Valor em segundos. Padrão: 600 = 10 minutos
+      Interval: 600
+      Delay: 600
+
+Marriage:
+  # Define se os jogadores precisam ser casados por um padre ou se podem se casar por conta própria.
+  RequirePriest: false
+  # Esta opção define se um padre é necessário para divorciar 2 jogadores ou se eles podem se divorciar por conta própria.
+  # Opções: true, false, auto (auto copiará o valor de RequirePriest)
+  DivorceRequiresPriest: auto
+  # Número máximo de parceiros que um jogador pode ter. Valores < 1 desativam o limite.
+  MaxPartners: 1
+  # Esta configuração desativa o comando "/marry setpriest". Os jogadores ainda podem ser promovidos a padre com a permissão "marry.priest".
+  DisableSetPriestCommand: false
+  Surnames:
+    Enable: false
+    Force: false
+    # Requisitos do sobrenome
+    AllowColors: false
+    AllowedCharacters: A-Za-z
+    BannedNames: []
+    # Valores abaixo de 3 serão definidos como 3
+    MinLength: 3
+    # Valores abaixo do comprimento mínimo serão definidos como o comprimento mínimo
+    MaxLength: 16
+    # Opções: None (Nenhum), Player (Jogador), BothPlayers (Ambos os Jogadores)
+    Confirmation: None
+  # Define se os casamentos devem ser anunciados para todos os jogadores.
+  AnnounceOnMarriage: true
+  # Define se os divórcios devem ser anunciados para todos os jogadores. 'auto' espelha a configuração AnnounceOnMarriage
+  AnnounceOnDivorce: auto
+  Confirmation:
+    Enable: true
+    AutoDialog: true
+    BothPlayersOnDivorce: false
+    OtherPlayerOnSelfDivorce: false
+
+InfoOnPartnerJoinLeave:
+  Enable: true
+  # Atraso para a informação de parceiros online ao entrar. Em segundos
+  JoinDelay: 0
+
+# As opções de prefixo/sufixo não funcionam com todos os plugins de chat!
+# Se o seu plugin de chat suportar APIs de placeholder, seria melhor usá-las! Mais detalhes: https://github.com/GeorgH93/MarriageMaster/wiki/Placeholders
+Prefix:
+  Enable: true
+  # Placeholders: {Surname}, {PartnerName}, {PartnerDisplayName}, {StatusHeart}, {MagicHeart} (Sobrenome, NomeParceiro, NomeDeExibicaoParceiro, CoracaoStatus, CoracaoMagico)
+  String: "{StatusHeart}"
+  OnLineBeginning: true
+Suffix:
+  Enable: false
+  # Placeholders: {Surname}, {PartnerName}, {PartnerDisplayName}, {StatusHeart}, {MagicHeart} (Sobrenome, NomeParceiro, NomeDeExibicaoParceiro, CoracaoStatus, CoracaoMagico)
+  String: "{Surname}"
+
+Gift:
+  Enable: true
+  AllowedGameModesAllowed: ["SURVIVAL"]
+  AllowedGameModesReceive: ["SURVIVAL"]
+  # Lista de mundos onde os jogadores não podem receber presentes
+  BlacklistedWorlds: []
+  # Se esta opção estiver ativada, o parceiro terá que aceitar o presente.
+  RequireConfirmation: true
+  ItemFilter:
+    # Ativa o filtro de itens. Certifique-se de definir os itens a serem filtrados.
+    Enabled: false
+    # Muda o modo do filtro, pode ser blacklist (apenas materiais não listados são permitidos) ou whitelist (apenas materiais listados são permitidos)
+    Mode: blacklist
+    # Listas de filtros abaixo. Um item será bloqueado (no modo blacklist) ou permitido (no modo whitelist) se corresponder a um dos filtros fornecidos.
+    # Lista de materiais que devem ser filtrados. Pode ser o nome ou o ID (ID apenas para versões do MC anteriores à 1.13!).
+    Materials: []
+    # Lista de nomes que devem ser filtrados. Deve corresponder exatamente ao nome de exibição do item. Códigos de cor com '&' serão convertidos automaticamente.
+    Names: []
+    # Lista de descrições (lore) que devem ser filtradas. Pode ser uma única linha ou todas as linhas da descrição.
+    Lore: []
+
+Kiss:
+  # Enables the kiss command
+  Enable: true
+  # Enables kissing by sneak + right click
+  EnableInteract: true
+  # Tempo entre dois beijos em segundos, 0 para desativar o cooldown
+  WaitTime: 0
+  # Quantos corações devem aparecer
+  HearthCount: 400
+
+Hug:
+  # Enables the hug command
+  Enable: true
+  # Tempo entre dois abraços em segundos, 0 para desativar o cooldown
+  WaitTime: 0
+  # How many particles should be spawned, 0 to disable
+  ParticleCount: 100
+
+List:
+  UseFooter: true
+  EntriesPerPage: 8
+
+PvP:
+  AllowBlocking: true
+
+BonusXp:
+  Enable: true
+  # Valores menores ou iguais a 1 desativarão o bônus de XP, mas ainda permitem dividir o XP entre os jogadores
+  Multiplier: 2
+  # Se ativado, o XP coletado será dividido entre ambos os jogadores. Assim, cada jogador receberá (xp * multiplicador / 2) de xp
+  SplitXpOnPickup: true
+  # Se ativado, o XP será dividido com todos os parceiros que estiverem no alcance. Assim, cada jogador receberá (xp * multiplicador / contagem_de_parceiros_no_alcance) de xp. Requer que SplitXpOnPickup esteja ativado.
+  SplitWithAllPartnersInRange: false
+  SkillAPI:
+    Enable: false
+    # Lista de fontes que devem ser excluídas do bônus de XP. A fonte de comando é sempre excluída!
+    ExcludeSources: []
+    Multiplier: 2
+    # Se a divisão estiver ativada, a quantidade multiplicada será dividida entre ambos os parceiros. Assim, cada jogador receberá (xp * multiplicador / 2) de xp
+    SplitXp: true
+    # Se ativado, o XP será dividido com todos os parceiros que estiverem no alcance. Assim, cada jogador receberá (xp * multiplicador / contagem_de_parceiros_no_alcance) de xp. Requer que SplitXp esteja ativado.
+    SplitWithAllPartnersInRange: false
+  McMMO:
+    Enable: false
+    Multiplier: 2
+    # Se a divisão estiver ativada, a quantidade multiplicada será dividida entre ambos os parceiros. Assim, cada jogador receberá (xp * multiplicador / 2) de xp
+    SplitXp: true
+    # Se ativado, o XP será dividido com todos os parceiros que estiverem no alcance. Assim, cada jogador receberá (xp * multiplicador / contagem_de_parceiros_no_alcance) de xp. Requer que SplitXp esteja ativado.
+    SplitWithAllPartnersInRange: false
+    # Lista de fontes que devem ser excluídas do bônus de XP.
+    ExcludeSources: ["COMMAND"]
+    # Lista de habilidades que devem ser excluídas do bônus de XP.
+    ExcludeSkills: []
+
+HealthRegain:
+  Enable: true
+  Multiplier: 2
+  # Lista de mundos onde os jogadores não podem receber o bônus de regeneração de vida
+  BlacklistedWorlds: []
+
+Chat:
+  Enabled: true
+  AllowSurveillance: true
+
+# Distâncias para ações
+# -1 sem limite de distância e sem limite de mundo, 0 sem limite de distância mas no mesmo mundo, >= 1 limite de distância em metros/blocos
+Range:
+  Marry: 25
+  Divorce: 25
+  Backpack: 5
+  Gift: 0
+  Kiss: 2
+  KissInteract: 5 # Distância para beijar com interação (sneak + clique)
+  Hug: 2
+  HearthVisible: 128 # Distância que os corações são visíveis
+  HugParticleVisible: 128 # Distância que as partículas de abraço são visíveis
+  BonusXP: 10
+  Heal: 3
+
+# Estas configurações serão usadas para todos os teletransportes (para casa e para o parceiro)
+Teleport:
+  Delay: true
+  # Tempo em segundos
+  DelayTime: 5
+  # Lista de mundos para onde você pode/não pode se teletransportar (baseado no FilterMode)
+  FilteredWorlds: []
+  # Define como os MundosFiltrados serão tratados, block = impede os jogadores de se teletransportarem para esses mundos; allow = permite que os jogadores se teletransportem apenas para esses mundos
+  FilterMode: "block"
+  # Esta opção controla se uma verificação de segurança é realizada antes que o jogador seja teletransportado.
+  CheckSafety: true
+  # Esta opção controla se o plugin tenta encontrar um local seguro se a verificação de segurança falhar. Ativar isso pode permitir que o jogador atravesse paredes.
+  FindSafeLocation: true
+  # Se esta opção estiver ativada, o parceiro deve aceitar o pedido de teleporte antes que o jogador seja teletransportado. Aplicável apenas para teleporte para outro jogador.
+  RequireConfirmation: false
+
+# Config options for sharing backpacks between partners
+# Opções de configuração para compartilhar mochilas entre parceiros
+# Atualmente, o único plugin de mochila suportado é o Minepacks
+BackpackShare:
+  # Ativa o recurso de compartilhamento de mochila (com plugins suportados)
+  Enable: true
+
+Economy:
+  Enable: true
+  # Cada um dos dois jogadores terá que pagar metade do valor. Exemplo: custo=100 -> jogador_a paga 50 e jogador_b paga 50
+  Marry: 100.0
+  # Cada um dos dois jogadores terá que pagar metade do valor. Exemplo: custo=100 -> jogador_a paga 50 e jogador_b paga 50
+  Divorce: 1000.0
+  Tp: 250
+  Gift: 10.0
+  HomeTp: 25.0
+  SetHome: 100.0
+  ChangeSurname: 0
+
+# Permite a execução de comandos em certos eventos relacionados ao casamento
+CommandExecutor:
+  Enable: false
+  # Informações gerais sobre o executor de comandos:
+  # Os comandos podem conter placeholders no formato {PlaceholderName} (As {} fazem parte do nome. Os placeholders disponíveis estão listados acima do evento).
+  # Cada evento pode executar múltiplos comandos na lista. Os comandos não precisam começar com / !
+  # Comandos a serem executados:
+  # Será executado quando dois jogadores se casarem, sem um padre
+  # Placeholders permitidos: {Player1}, {Player2}
+  # OnMarry: [ "eco give {Player1} 100", "pex user {Player2} add example.perm" ]
+  OnMarry: []
+  # Será executado quando dois jogadores se casarem por um padre
+  # Placeholders permitidos: {Player1}, {Player2}, {Priest}
+  OnMarryWithPriest: []
+  # Será executado quando dois jogadores se divorciarem, sem um padre
+  # Placeholders permitidos: {Player1}, {Player2}
+  OnDivorce: []
+  # Será executado quando dois jogadores se divorciarem através de um padre
+  # Placeholders permitidos: {Player1}, {Player2}, {Priest}
+  OnDivorceWithPriest: []
+
+# O comando que deve ser usado se nenhum sub-comando for utilizado.
+# Opções: help (/marry help), custom_help (exibirá as mensagens definidas no arquivo de idioma em Language.Ingame.Help.CustomHelp)
+DefaultCommand: "help"
+# A cor do casamento é usada para o coração mágico/colorido e é definida para um valor aleatório por padrão.
+AllowPlayersToChangeMarriageColor: true
+
+Sound:
+  # Configuração global para usar sons. Cada efeito sonoro pode ser desativado individualmente definindo-o como 'DISABLED'.
+  Enable: true
+  Married: ORB_PICKUP
+  Divorced: ORB_PICKUP
+
+Misc:
+  AutoUpdate:
+    # Quando a atualização automática está desativada, você ainda pode usar a função de atualização interna manualmente com /marry update
+    Enable: true
+    Channel: Release
+  # Ative esta opção se você estiver em um ambiente BungeeCord. Por favor, instale também o plugin em seu servidor BungeeCord para permitir que os dados sejam sincronizados em todos os seus servidores.
+  UseBungeeCord: false
+
+# Versão do Arquivo de Configuração. Não toque!
+Version: 108

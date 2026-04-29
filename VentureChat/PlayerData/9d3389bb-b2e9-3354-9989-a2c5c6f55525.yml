@@ -1,0 +1,16 @@
+name: _Trabalhador
+current: Global
+ignores: ''
+listen: Announcement,Local,Global
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: false
+messagetoggle: true
+bungeetoggle: true
+date: 2026/Mar/12 00:01:23

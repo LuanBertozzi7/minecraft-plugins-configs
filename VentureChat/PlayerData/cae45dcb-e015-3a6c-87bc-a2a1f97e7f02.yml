@@ -1,0 +1,16 @@
+name: Gabyggp
+current: Global
+ignores: ''
+listen: Announcement,Staff,Local,Global
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: true
+messagetoggle: true
+bungeetoggle: true
+date: 2025/Dec/21 10:59:30

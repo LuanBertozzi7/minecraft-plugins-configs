@@ -1,0 +1,213 @@
+# !!! IMPORTANT: BreweryX configuration files do NOT support external comments! If you add any comments, they will be overwritten !!!
+# Translations for BreweryX
+
+# Brew
+Brew_-times: -vezes
+Brew_BadPotion: Cerveja arruinada
+Brew_BarrelRiped: Envelhecido em Barril
+Brew_DistillUndefined: Destilado Turvo
+Brew_Distilled: Destilado
+Brew_LessDistilled: Menos Destilado
+Brew_HundredsOfYears: Centenas de Anos
+Brew_Ingredients: Ingredientes
+Brew_MinutePluralPostfix: s
+Brew_OneYear: Um Ano
+Brew_ThickBrew: Cerveja Lamacenta
+Brew_Undefined: Cerveja de Caldeirão
+Brew_Woodtype: Tipo de Barril
+Brew_Years: Anos
+Brew_fermented: fermentado
+Brew_minute: minuto
+Brew_Alc: Alc &v1ml
+Brew_Alcoholic: Alcoólico
+Brew_Brewer: 'Cervejeiro: &v1'
+
+# CMD
+CMD_Copy_Error: '&6&v1 &cPoções não couberam no seu inventário'
+CMD_Info_Drunk: '&v1 está &6&v2% &fbêbado, com uma qualidade de &6&v3'
+CMD_Info_NotDrunk: '&v1 não está bêbado'
+CMD_NonStatic: '&eA poção não é mais estática e envelhecerá normalmente em barris.'
+CMD_Player: '&a&v1 agora está &6&v2% &abêbado, com uma qualidade de &6&v3'
+CMD_Player_Error: '&cA qualidade precisa ser entre 1 e 10!'
+CMD_Reload: '&aConfiguração recarregada com sucesso'
+CMD_Created: '&aCerveja Criada'
+CMD_Configname: '&aO nome para a Config é: &f&v1'
+CMD_Configname_Error: '&cNão foi possível encontrar o item em sua mão'
+CMD_Static: '&aA poção agora é estática e não mudará em barris ou suportes de poções.'
+CMD_UnLabel: '&aRótulo removido!'
+CMD_Drink: '&aVocê bebeu um(a) &v1'
+CMD_DrinkOther: '&a&v1 bebeu um(a) &v2'
+CMD_Set: '&aEmbriaguez de &v1 definida com sucesso para &v2 com qualidade de &v3.'
+CMD_Distilled: '&aCerveja destilada &v1 vezes'
+CMD_Aged: '&aCerveja envelhecida por &v1 anos'
+CMD_Simulated: '&aCerveja Simulada Criada'
+CMD_Invalid_Option: '&c"&v1" não é uma opção válida'
+CMD_Duplicate_Option: '&cOpção duplicada "&v1"'
+CMD_Invalid_Cook_Time: '&cO tempo de cozimento "&v1" deve ser um número inteiro positivo'
+CMD_Invalid_Distill_Runs: '&cAs corridas de destilação "&v1" devem ser um número inteiro
+  positivo'
+CMD_Invalid_Wood_Type: '&cTipo de barril inválido "&v1"'
+CMD_Invalid_Age_Time: '&cO tempo de envelhecimento "&v1" deve ser um número positivo'
+CMD_Ingredient: ingrediente
+CMD_Invalid_Ingredient: '&c"&v1" não é um ingrediente válido, você quis dizer "&v2/&v1"?'
+CMD_Missing_Cook_Time: '&cA simulação deve ter uma opção "--cook" ou "--recipe"'
+CMD_Missing_Ingredients: '&cA simulação deve ter pelo menos um ingrediente'
+CMD_Cannot_Distill: '&cEsses ingredientes não podem ser destilados'
+CMD_Distill_Ruined: '&eA cerveja foi arruinada no processo de destilação'
+CMD_Age_Ruined: '&eA cerveja foi arruinada no processo de envelhecimento'
+
+# Brew Defects
+Defect_WrongIngredient:
+- Tem algo aqui que não deveria estar...
+- Um dos ingredientes não tem um gosto bom...
+Defect_MissingIngredient:
+- Parece que algo está faltando...
+- Precisa de algo mais...
+Defect_LowCount:
+- Você mal consegue sentir o gosto de um dos ingredientes...
+- O sabor de um dos ingredientes está muito fraco...
+Defect_HighCount:
+- Um dos ingredientes está se sobressaindo...
+- O sabor de um dos ingredientes está muito forte...
+Defect_NeedsDistill:
+- Isso precisa de um pouco de destilação...
+Defect_NeedsDistillAlc:
+- Você não consegue sentir o gosto do álcool...
+Defect_BadDistill:
+- A cerveja evaporou...
+- O sabor desapareceu...
+Defect_Uncooked:
+- Ainda está cru...
+- Não ficou tempo suficiente no fogo...
+Defect_Overcooked:
+- Está queimado...
+- Tempo demais no fogo...
+Defect_UnderAged:
+- Isso precisa de fermentação...
+- A cerveja tem um gosto muito forte...
+Defect_OverAged:
+- Esta cerveja cheira a vencido...
+- Esta cerveja é antiga...
+Defect_OverAgedAlc:
+- Esta cerveja cheira a vinagre...
+- Esta cerveja é antiga...
+Defect_BadAged:
+- Esta cerveja não deveria ter sido envelhecida...
+Defect_WrongWood:
+- Tem gosto forte demais de &v1...
+- O &v1 está se sobressaindo...
+Defect_NoRecipesRegistered:
+- Este universo não suporta a fabricação de cerveja...
+
+# Error
+Error_ConfigUpdate: 'Versão desconhecida da configuração do Brewery: v&v1, a configuração
+  não foi atualizada!'
+Error_ItemNotPotion: '&cO item em sua mão não pôde ser identificado como uma poção!'
+Error_SealingTableDisabled: '&cA Mesa de Selagem está desativada'
+Error_SealedAlwaysStatic: Cervejas Seladas são sempre estáticas!
+Error_AlreadyUnlabeled: '&cA Cerveja em sua mão já está sem rótulo!'
+Error_NoBarrelAccess: '&cVocê não tem permissão para acessar este barril!'
+Error_NoBrewName: '&cNenhuma Receita com o Nome: ''&v1&c'' encontrada!'
+Error_NoPermissions: '&cVocê não tem permissão para fazer isso!'
+Error_PlayerCommand: '&cEste comando só pode ser executado por um jogador!'
+Error_Recipeload: '&cNem todas as receitas puderam ser restauradas: Mais informações
+  no log do servidor!'
+Error_ShowHelp: Use &6/brew help &fpara exibir a ajuda
+Error_UnknownCommand: Comando Desconhecido
+Error_YmlRead: Não foi possível ler o arquivo config.yml, por favor, certifique-se
+  de que o arquivo está em formato yml válido (espaços corretos, usando ' ' etc.)
+Error_NoPlayer: '&cJogador não encontrado: &v1'
+Error_InvalidAmount: '&cQuantidade inválida: &v1'
+Error_InvalidPluginItem: '&cNão foi possível encontrar o item do plugin: &v1'
+Error_InvalidMaterial: '&cNão foi possível encontrar o material: &v1'
+
+# Etc
+Etc_Barrel: Barril
+Etc_Page: Página
+Etc_Usage: 'Uso:'
+Etc_SealingTable: Mesa de Selagem de Cerveja
+Etc_NewRelease: '&rUma nova versão do BreweryX está disponível! &2&v1 &r-> &2&v2&r
+  Baixar&7: &2&v3'
+Etc_LandsFlag_Title: Acesso ao Barril
+Etc_LandsFlag_Description: '&r&7Permite abrir\n&r&7barris do BreweryX.'
+
+# Help
+Help_Copy: '&6/brew copy [Quantidade]&9 Copia a poção em sua mão'
+Help_Create: '&6/brew create <Receita> [Qualidade] [Jogador] &9Cria uma Cerveja com
+  qualidade opcional (1-10)'
+Help_Give: '&6/brew give <Receita> [Qualidade] [Jogador] &9Apelido para /brew create'
+Help_Simulate: '&6/brew simulate <Opções...> [Ingredientes...] &9Simula a fabricação
+  de cerveja'
+Help_Simulate_Options: '&eOpções:'
+Help_Simulate_Recipe: '&6-r/--recipe <Receita>'
+Help_Simulate_Cook: '&6-c/--cook <Tempo de Cozimento>'
+Help_Simulate_Distill: '&6-d/--distill <Corridas de Destilação>'
+Help_Simulate_Age: '&6-a/--age <Tipo de Barril> <Tempo de Envelhecimento>'
+Help_Simulate_Brewer: '&6-b/--brewer <Jogador>'
+Help_Simulate_Player: '&6-p/--player <Jogador>'
+Help_Distill: '&6/brew distill [Corridas] &9Destila a poção em sua mão'
+Help_Age: '&6/brew age <Tipo de Barril> <Tempo> &9Envelhece a poção em sua mão'
+Help_Delete: '&6/brew delete &9Deleta a poção em sua mão'
+Help_Help: '&6/brew help [Página] &9Mostra uma página de ajuda específica'
+Help_Info: '&6/brew info&9 Exibe sua Embriaguez e Qualidade atuais'
+Help_InfoOther: '&6/brew info [Jogador]&9 Exibe a Embriaguez e Qualidade atuais de
+  [Jogador]'
+Help_Reload: '&6/brew reload &9Recarrega a configuração'
+Help_Configname: '&6/brew ItemName &9Exibe o nome do item na mão para a configuração'
+Help_Static: '&6/brew static &9Torna a Cerveja estática -> Sem mais envelhecimento
+  ou destilação'
+Help_Set: '&6/brew set <jogador> <embriaguez> [qualidade] &9Define a Embriaguez (e
+  Qualidade) de um Jogador'
+Help_UnLabel: '&6/brew unlabel &9Remove o rótulo detalhado de uma poção'
+Help_Seal: '&6/brew seal &9Sela Cervejas para vender em lojas'
+Help_Wakeup: '&6/brew wakeup list <Página>&9 Lista todos os pontos de despertar'
+Help_WakeupAdd: '&6/brew wakeup add &9Adiciona um ponto de despertar na sua posição
+  atual'
+Help_WakeupCheck: '&6/brew wakeup check &9Teleporta para todos os pontos de despertar'
+Help_WakeupCheckSpecific: '&6/brew wakeup check <id> &9Teleporta para o ponto de despertar
+  com <id>'
+Help_WakeupList: '&6/brew wakeup list <Página> [Mundo]&9 Lista todos os pontos de
+  despertar de <mundo>'
+Help_WakeupRemove: '&6/brew wakeup remove <id> &9Remove o ponto de despertar com <id>'
+Help_Puke: '&6/brew puke [Jogador] [Quantidade] &9Faz você ou [Jogador] vomitar'
+Help_Drink: '&6/brew drink <Receita> [Qualidade] [Jogador] &9Simula [Jogador] bebendo
+  uma Cerveja'
+
+# Perms
+Perms_NoBarrelCreate: '&cVocê não tem permissão para criar barris!'
+Perms_NoBigBarrelCreate: '&cVocê não tem permissão para criar barris grandes!'
+Perms_NoCauldronFill: '&cVocê não tem permissão para encher garrafas deste caldeirão!'
+Perms_NoCauldronInsert: '&cVocê não tem permissão para colocar ingredientes em caldeirões!'
+Perms_NoSmallBarrelCreate: '&cVocê não tem permissão para criar barris pequenos!'
+
+# Player
+Player_BarrelCreated: Barril criado
+Player_BarrelFull: '&cEste barril não pode mais conter bebidas'
+Player_CantDrink: Você não consegue beber mais.
+Player_CauldronInfo1: Este caldeirão está fervendo por &v1 minutos.
+Player_CauldronInfo2: Este caldeirão acabou de começar a ferver.
+Player_DrunkPassOut: Você bebeu demais e desmaiou.
+Player_LoginDeny: Seu personagem tenta entrar, mas está bêbado demais para encontrar
+  o servidor. Tente novamente!
+Player_LoginDenyLong: Seu personagem está muito bêbado e desmaiou. Tente novamente
+  em 10 minutos!
+Player_TriedToSay: '&v1 tentou dizer: &0&v2'
+Player_Wake: Ah não! Não consigo me lembrar como cheguei aqui...
+Player_WakeAlreadyDeleted: '&cO Ponto de Despertar com o id: &6&v1 &cjá foi deletado!'
+Player_WakeCancel: '&6Verificação de Ponto de Despertar foi cancelada'
+Player_WakeCreated: '&aPonto de Despertar com id: &6&v1 &afoi criado com sucesso!'
+Player_WakeDeleted: '&aO Ponto de Despertar com o id: &6&v1 &afoi deletado com sucesso!'
+Player_WakeFilled: '&cO Ponto de Despertar com o id: &6&v1&c na posição &6&v2 &v3,
+  &v4, &v5&c está preenchido com Blocos!'
+Player_WakeHint1: 'Para o Próximo Ponto de Despertar: Dê um soco no ar'
+Player_WakeHint2: 'Para Cancelar: &9/brew wakeup cancel'
+Player_WakeLast: '&aEste foi o último Ponto de Despertar'
+Player_WakeNoCheck: '&cNenhuma verificação de Ponto de Despertar está ativa no momento'
+Player_WakeNoPoints: '&cNão há Pontos de Despertar!'
+Player_WakeNotExist: '&cO Ponto de Despertar com o id: &6&v1 &cnão existe!'
+Player_WakeTeleport: 'Teleporte para o Ponto de Despertar com o id: &6&v1&f Na posição:
+  &6&v2 &v3, &v4, &v5'
+Player_ShopSealBrew: '&eÉ recomendado trocar/vender Cervejas &6seladas'
+Player_Drunkeness: Embriaguez
+Player_Hangover: Sua Ressaca
+

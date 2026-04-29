@@ -1,0 +1,506 @@
+# !!! IMPORTANT: BreweryX configuration files do NOT support external comments! If you add any comments, they will be overwritten !!!
+# -- Recipes for Potions --
+
+# Proper guide for this section can be found in our wiki here - https://brewery.lumamc.net/guide/recipies/
+
+# enabled: true if the recipe should be enabled, false if it should be disabled
+
+# name: Different names for bad/normal/good (Formatting codes possible: such as &6 or hex as &#123123)
+#   name: "Worst drink/Good Drink/Best drink i had in my entire life!"
+
+# ingredients: List of 'material/amount'
+#   With an item in your hand, use /brew ItemName to get its material for use in a recipe
+#   A list of materials can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#   Plugin items with 'plugin:id' (Currently supporting Brewery, Garden (BreweryX Garden Addon), Oraxen, ItemsAdder, Nexo, Slimefun)
+#   Example: '- itemsadder:grape/5'
+#   Custom items from 'custom-items.yml' do not require any prefixes ('- example_custom_item/10')
+#   You can also use drinks as ingredients for other drinks. Correct format for this would be: 'brewery:ID/amount'
+#   Example: '- brewery:wheatbeer/1'
+
+# cookingtime: Time in real minutes ingredients have to boil
+
+# distillruns: How often it has to be distilled for full alcohol (0=without distilling)
+
+# distilltime: How long (in seconds) one distill-run takes (0=Default time of 40 sec) MC Default would be 20 sec
+
+# wood: Wood of the barrel:
+#   Can be a string, a number (see conversion below), or a list of wood types.
+#   0=any 1=Birch 2=Oak 3=Jungle 4=Spruce
+#   5=Acacia 6=Dark Oak 7=Crimson 8=Warped
+#   9=Mangrove 10=Cherry 11=Bamboo 12=Cut Copper 13=Pale Oak
+#     you can also use id or name, instead of number:
+#     wood: 13
+#     wood: pale_oak
+#     wood: Pale Oak
+#   Vanilla Minecraft barrel is considered oak
+
+# age: Time, in "years", the potion has to age in a barrel 0=no aging
+
+# color: Color of the potion after distilling/aging.
+#   Usable Colors: DARK_RED, RED, BRIGHT_RED, ORANGE, YELLOW, PINK, PURPLE, BLUE, CYAN, WATER, TEAL, OLIVE, GREEN, LIME, BLACK, GREY, BRIGHT_GREY, WHITE
+#   Or RGB colors (color: 99FF33) (search for "HTML color" on the internet)
+
+# difficulty: 1-10 accuracy needed to get good quality (1 = unaccurate/easy, 10 = very precise/hard)
+
+# alcohol: Absolute amount of alcohol 0-100 in a perfect potion (will be added directly to the player, where 100 means fainting)
+
+# lore: List of additional text on the finished brew. (Formatting codes possible: such as &6)
+#   Specific lore for quality possible, using + bad, ++ normal, +++ good, added to the front of the line.
+#   - +++ This is the best drink!
+#   - ++ This is decent drink.
+#   - + This is the worst drink
+
+# servercommands: List of Commands executed by the -Server- when drinking the brew (Can use %player_name%  %quality%)
+#   Specific Commands for quality possible, using + bad, ++ normal, +++ good, added to the front of the line.
+#   - +++ op %player_name%
+#   - ++ money give %player_name% 10
+#   - + kill %player_name%
+#   Command execution can be delayed by adding "/ <amount>s" to the end, like this:
+#   - op Jsinco / 3s
+
+# playercommands: List of Commands executed by the -Player- when drinking the brew (Can use %player_name%  %quality%)
+#   Specific Commands for quality possible, using + bad, ++ normal, +++ good, added to the front of the line.
+#   - +++ spawn
+#   - ++ home
+#   - + suicide
+#   Command execution can be delayed by adding "/ <amount>s" to the end, like this:
+#   - op Jsinco / 3s
+
+# drinkmessage: Chat-message to the Player when drinking the Brew
+
+# drinktitle: Title on Screen to the Player when drinking the Brew
+
+# glint: Boolean if the item should have a glint (enchant glint)
+
+# customModelData: Custom Model Data Tag. This is a number that can be used to add custom textures to the item.
+#   Can specify one for all, or one for each quality, separated by /
+#   customModelData: 1
+#   customModelData: 1/2/3
+
+# effects: List of effect/level/duration  Special potion-effect when drinking, duration in seconds.
+#   Possible Effects: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+#   Level or Duration ranges may be specified with a "-", ex. 'SPEED/1-2/30-40' = lvl 1 and 30 sec at worst and lvl 2 and 40 sec at best
+#   Ranges also work high-low, ex. 'POISON/3-1/20-5' for weaker effects at good quality.
+#   Highest possible Duration: 1638 sec. Instant Effects dont need any duration specified.
+
+
+# 'ex' showcases every available option for a recipe:
+recipes:
+  cerveja_trigo:
+    enabled: true
+    name: Cerveja de Trigo Ruim/Cerveja de Trigo/Cerveja de Trigo Fina
+    ingredients:
+    - Wheat/3
+    cookingtime: 6
+    distillruns: 0
+    wood: 1
+    age: 2
+    color: ffb84d
+    difficulty: 1
+    alcohol: 5
+    lore:
+    - + &8Um pouco aguada.
+    - ++ &8Refrescante.
+    - +++ &8Leve e refrescante.
+  cerveja:
+    enabled: true
+    name: Cerveja Ruim/Cerveja/Cerveja Fina
+    ingredients:
+    - Wheat/6
+    cookingtime: 7
+    distillruns: 0
+    wood: 0
+    age: 3
+    color: ffd333
+    difficulty: 2
+    alcohol: 6
+    lore:
+    - + &8Um sabor genérico.
+    - ++ &8Sabor nítido.
+    - +++ &8A clássica, perfeitamente equilibrada.
+  cidra:
+    enabled: true
+    name: Cidra Ruim/Cidra de Maçã/Ótima Cidra de Maçã
+    ingredients:
+    - Apple/14
+    cookingtime: 7
+    distillruns: 0
+    wood: 0
+    age: 3
+    color: f86820
+    difficulty: 3
+    alcohol: 7
+    lore:
+    - + &cUm pouco azeda.
+    - ++ &aRefrescante e frutada.
+    - +++ &aA cidra perfeita, leve e efervescente.
+  hidromel:
+    enabled: true
+    name: Hidromel Estranho/Hidromel/Hidromel Dourado
+    ingredients:
+    - Sugar_Cane/6
+    cookingtime: 3
+    distillruns: 0
+    wood: 2
+    age: 4
+    color: ORANGE
+    difficulty: 2
+    alcohol: 9
+    lore:
+    - + &eUm pouco sem graça.
+    - ++ &eDoce e aromático.
+    - +++ &6Brilhante e com sabor divino.
+  vinho_tinto:
+    enabled: true
+    name: Vinho Tinto Ruim/Vinho Tinto/Vinho Tinto Envelhecido
+    ingredients:
+    - Sweet_Berries/5
+    cookingtime: 5
+    distillruns: 0
+    wood: 0
+    age: 20
+    color: RED
+    difficulty: 4
+    alcohol: 8
+    lore:
+    - + &8Áspero e com gosto de rolha.
+    - ++ &8Suave e agradável.
+    - +++ &8Encorpado e com final persistente.
+  hidromel_maca:
+    enabled: true
+    name: Hidromel de Maçã/Hidromel de Maçã Doce/Hidromel Dourado de Maçã Doce
+    ingredients:
+    - Sugar_Cane/6
+    - Apple/2
+    cookingtime: 4
+    distillruns: 0
+    wood: 2
+    age: 4
+    color: ORANGE
+    difficulty: 4
+    alcohol: 11
+    lore:
+    - + &cQuase não tem maçã.
+    - ++ &aCom sabor refrescante de maçã.
+    - +++ &6O mais doce toque de maçã, dourado e perfeito.
+    effects:
+    - WATER_BREATHING/1-2/100-150
+  licor_maca:
+    enabled: true
+    name: Licor de Maçã Azedo/Licor de Maçã/Calvados
+    ingredients:
+    - Apple/12
+    cookingtime: 14
+    distillruns: 3
+    wood: 5
+    age: 6
+    color: BRIGHT_RED
+    difficulty: 5
+    alcohol: 14
+    lore:
+    - + &cAzedo como vinagre.
+    - ++ &aUm bom licor de maçã.
+    - +++ &eCalvados autêntico, suave e frutado.
+  cachaca:
+    enabled: true
+    name: Cachaça Ruim/Cachaça/Cachaça Envelhecida
+    ingredients:
+    - Sugar_Cane/20
+    cookingtime: 8
+    distillruns: 2
+    distilltime: 45
+    wood: 2
+    age: 10
+    color: ffe5a9
+    difficulty: 5
+    alcohol: 35
+    effects:
+    - SPEED/1/30-60
+    - CONFUSION/1/10-5
+  vinho_melao:
+    enabled: true
+    name: Vinho de Melão Azedo/Vinho de Melão/Vinho de Melão Doce
+    ingredients:
+    - melon_slice/16
+    cookingtime: 6
+    distillruns: 0
+    wood: 0
+    age: 15
+    color: ff6b6b
+    difficulty: 3
+    alcohol: 7
+  saque:
+    enabled: true
+    name: Saquê Turvo/Saquê/Saquê Premium
+    ingredients:
+    - Wheat_Seeds/15
+    cookingtime: 10
+    distillruns: 1
+    distilltime: 40
+    wood: 11
+    age: 5
+    color: ffffe0
+    difficulty: 5
+    alcohol: 16
+  uisque:
+    enabled: true
+    name: Uísque Ruim/Uísque/Uísque Escocês
+    ingredients:
+    - Wheat/10
+    cookingtime: 10
+    distillruns: 2
+    distilltime: 50
+    wood: 4
+    age: 18
+    color: ORANGE
+    difficulty: 7
+    alcohol: 26
+    lore:
+    - + &7Áspero e sem refino.
+    - ++ &7Puro malte, com sabor marcante.
+    - +++ &7Uísque escocês, envelhecido e complexo.
+  bourbon:
+    enabled: true
+    name: Uísque de Milho/Bourbon/Bourbon Envelhecido
+    ingredients:
+    - Wheat/12
+    cookingtime: 12
+    distillruns: 2
+    distilltime: 50
+    wood: 2
+    age: 20
+    color: e07b00
+    difficulty: 7
+    alcohol: 28
+  rum:
+    enabled: true
+    name: Rum Amargo/Rum Picante/&6Rum Dourado
+    ingredients:
+    - Sugar_Cane/18
+    cookingtime: 6
+    distillruns: 2
+    distilltime: 30
+    wood: 2
+    age: 14
+    color: DARK_RED
+    difficulty: 6
+    alcohol: 30
+    lore:
+    - + &8Amargo demais para beber
+    - ++ &8Temperado pelo barril
+    - +++ &eOuro Temperado
+    effects:
+    - FIRE_RESISTANCE/1/20-100
+    - POISON/1-0/30-0
+  vodka:
+    enabled: true
+    name: Vodka Ruim/Vodka/Vodka Russa
+    ingredients:
+    - Potato/10
+    cookingtime: 15
+    distillruns: 3
+    age: 0
+    color: WHITE
+    difficulty: 4
+    alcohol: 20
+    lore:
+    - + &8Quase intragável, queima na descida.
+    - ++ &8Pura e sem sabor.
+    - +++ &8Vodka russa, cristalina e suave.
+    effects:
+    - WEAKNESS/1/15
+    - POISON/1/10
+  vodka_cogumelo:
+    enabled: true
+    name: Vodka de Cogumelo/Vodka de Cogumelo/Vodka de Cogumelo Brilhante
+    ingredients:
+    - Potato/10
+    - Red_Mushroom/3
+    - Brown_Mushroom/3
+    cookingtime: 18
+    distillruns: 5
+    age: 0
+    color: ff9999
+    difficulty: 7
+    alcohol: 18
+    lore:
+    - + &cCom gosto de terra.
+    - ++ &aUma vodka peculiar.
+    - +++ &aBrilha no escuro, com um toque místico.
+    effects:
+    - WEAKNESS/1/80
+    - CONFUSION/1/27
+    - NIGHT_VISION/1/50-80
+    - BLINDNESS/1/12-2
+    - SLOW/1/10-3
+  gin:
+    enabled: true
+    name: Gin Pálido/Gin/Gin Old Tom
+    ingredients:
+    - Wheat/9
+    - Apple/1
+    cookingtime: 6
+    distillruns: 2
+    color: 99ddff
+    difficulty: 6
+    alcohol: 20
+    lore:
+    - + &bUm gin sem graça.
+    - ++ &bCom o sabor clássico de zimbro.
+    - +++ &bGin Old Tom, perfeitamente finalizado com zimbro.
+  tequila:
+    enabled: true
+    name: Mezcal/Tequila/Tequila Añejo
+    ingredients:
+    - Cactus/8
+    cookingtime: 15
+    distillruns: 2
+    wood: 1
+    age: 12
+    color: f5f07e
+    difficulty: 5
+    alcohol: 20
+    lore:
+    - + &eMezcal rústico.
+    - ++ &eO verdadeiro espírito do deserto.
+    - +++ &eTequila Añejo, envelhecida e complexa.
+  absinto:
+    enabled: true
+    name: Absinto Ruim/Absinto/Absinto Forte
+    ingredients:
+    - Grass/15
+    cookingtime: 3
+    distillruns: 6
+    distilltime: 70
+    color: GREEN
+    difficulty: 8
+    alcohol: 42
+    lore:
+    - + &2Amargo e turvo.
+    - ++ &2O licor da fada verde.
+    - +++ &2Absinto forte, com um toque de loucura.
+    effects:
+    - POISON/1/15-25
+  absinto_verde:
+    enabled: true
+    name: Absinto Ruim/Absinto Verde/Absinto Verde Brilhante
+    ingredients:
+    - Grass/17
+    - Poisonous_Potato/2
+    cookingtime: 5
+    distillruns: 6
+    distilltime: 85
+    color: LIME
+    difficulty: 9
+    alcohol: 46
+    lore:
+    - + &aParece venenoso, e é.
+    - ++ &aAbsinto verde, com um brilho peculiar.
+    - +++ &aAbsinto verde brilhante, cuidado com a fada!
+    effects:
+    - POISON/1/25-40
+    - HARM/2
+    - NIGHT_VISION/1/40-60
+  moonshine:
+    enabled: true
+    name: Aguardente Duvidosa/Aguardente Caseira/Aguardente Pura
+    ingredients:
+    - Sugar/25
+    cookingtime: 5
+    distillruns: 3
+    distilltime: 25
+    age: 0
+    color: e6f2ff
+    difficulty: 5
+    alcohol: 45
+    effects:
+    - CONFUSION/1/15-5
+    - BLINDNESS/1/10-2
+  uisque_fogo:
+    enabled: true
+    name: Uísque de Pólvora/Uísque Ardente/Uísque Flamejante
+    ingredients:
+    - Wheat/10
+    - Blaze_Powder/2
+    cookingtime: 12
+    distillruns: 3
+    distilltime: 55
+    wood: 4
+    age: 18
+    color: ORANGE
+    difficulty: 7
+    alcohol: 28
+    lore:
+    - + &4Queima a garganta.
+    - ++ &4Um uísque com um toque ardente.
+    - +++ &4Uísque flamejante, para os corajosos.
+    drinkmessage: Você sente uma queimação na boca
+  cafe_amargo:
+    enabled: true
+    name: café
+    ingredients:
+    - Cocoa_Beans/12
+    cookingtime: 4
+    distillruns: 0
+    age: 0
+    color: 4b3621
+    difficulty: 4
+    alcohol: 0
+    lore:
+    - + &8Forte e sem açúcar.
+    - ++ &6Amargo?
+    - +++ &6Café puro
+    effects:
+    - SPEED/1/60-120
+  cafe_normal:
+    enabled: true
+    name: café
+    ingredients:
+    - Cocoa_Beans/10
+    - Sugar/3
+    cookingtime: 5
+    distillruns: 0
+    age: 0
+    color: 6b4f38
+    difficulty: 3
+    alcohol: 0
+    lore:
+    - + &8Simplesmente, café
+    effects:
+    - SPEED/1/60-120
+  cafe_doce:
+    enabled: true
+    name: café doce
+    ingredients:
+    - Cocoa_Beans/10
+    - Sugar/8
+    - Milk_Bucket/1
+    cookingtime: 6
+    distillruns: 0
+    age: 0
+    color: c89666
+    difficulty: 4
+    alcohol: -8
+    lore:
+    - + &eDoce demais, quase uma sobremesa.
+    effects:
+    - SPEED/2/40-120
+
+# More recipe ideas:
+# Dandelion Liquor
+# Beetroot Spirit
+# Poppy Liquor: Macum/Grand Poppy
+# Bamboo Liquor: Chu Yeh Ching
+# Cachaca
+# Cognac
+# Sake
+# Buorbon
+# Moonshine
+# Different Wines
+# Brandy
+# Amaretto
+# etc. as well as variations like,
+# Pumpkin Spice Beer
+# Melon Vodka
+
+# There are a lot of items in Minecraft like Vines, Milk and items added by plugins that would make great ingredients.
