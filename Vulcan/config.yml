@@ -118,7 +118,7 @@ client-brand-alerts:
   # Whether or not client brand alerts should be sent to the console
   console: false
   # The message that should be printed to the console (if the above option is enabled)
-  console-message: '[Vulcan] %player% joined using %client-brand%!'
+  console-message: '[Vulcan] %player% entrou usando %client-brand%!'
   # Whether or not the client brand whitelist should be enabled. Anyone joining with a client brand that is not
   # included in the list below will not be allowed to join
   whitelist-enabled: false
@@ -181,20 +181,20 @@ judgement-days:
   # The message that wil be broadcast to the server when someone has executed /jday start
   started-broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&cVulcan Judgement Day v1 iniciado...'
+  - '&cVulcan Dia do Julgamento v1 iniciado...'
   - '&7&m---»--*-------------------------------------*--«---'
   # The message that will be broadcast to the server when the judgement day has ended.
   ended-broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&cO Judgement Day encerrou... %amount% jogadores foram punidos.'
+  - '&cO Dia do Julgamento encerrou... %amount% jogadores foram punidos.'
   - '&7&m---»--*-------------------------------------*--«---'
   # The commands that will be executed, %player% indicates a player who was added to judgement day (/jday add (name)))
   commands:
-  - ban %player% &c[Vulcan] Judgement Day v1
+  - ban %player% &c[Vulcan] Dia do Julgamento v1
   # The broadcast that will be sent to the server when someone is punished in a judgement day.
   broadcast:
   - '&7&m---»--*-------------------------------------*--«---'
-  - '&c%player% &7foi banido por &c[Vulcan] Judgement Day v1&7.'
+  - '&c%player% &7foi banido por &c[Vulcan] Dia do Julgamento v1&7.'
   - '&7&m---»--*-------------------------------------*--«---'
   # How long we should wait in between players who are queued in judgement days
   cooldown: 1000
@@ -227,7 +227,7 @@ ghost-blocks-fix:
   # Whether or not the player will get sent a message when ghost blocks around them are updated
   message-enabled: false
   # The message that will get sent to players when they're on a ghost block (if the above is enabled)
-  message: '&cYou were walking on a ghost block. It has been updated!'
+  message: '&cVocê estava andando sobre um bloco fantasma. atualizado!'
   # Whether or not staff should be sent a message when someone is setback for being on a ghost block
   staff-message-enabled: true
   # The message that will be sent to staff when a player's position is updated for being on a ghost block.
