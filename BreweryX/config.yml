@@ -345,7 +345,7 @@ words:
   percentage: 30
 - replace: write
   to: wreitt
-  pre: you can,you can still,you can not
+  pre: voce pode, voce ainda pode, voce nao pode mais...
   match: false
   alcohol: 50
   percentage: 80
